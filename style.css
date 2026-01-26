@@ -44,7 +44,7 @@ body {
 .hero-logo {
   width: 90px;
   height: 90px;
-  border: 2px solid #ffffff;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
