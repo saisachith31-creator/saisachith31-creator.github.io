@@ -5,3 +5,10 @@ body {
   text-align: center;
   padding-top: 60px;
 }
+.container {
+  background-color: #161616;
+  width: 60%;
+  margin: auto;
+  padding: 40px;
+  border-radius: 12px;
+}
