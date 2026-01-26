@@ -1,77 +1,35 @@
+/* ===== RESET & BASE ===== */
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #000000;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding-top: 120px;
 }
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 80px 40px;
-}
+
+/* ===== NAVBAR ===== */
 .navbar {
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  padding: 18px 60px;
-  border-bottom: 1px solid #e5e5e5;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  box-sizing: border-box;
   z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  padding: 18px 60px;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
 }
+
 .logo {
   font-size: 26px;
   font-weight: 700;
 }
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  color: #fff;
-  padding: 120px 80px;
-  min-height: 80vh;
-}
 
-.hero-left {
-  max-width: 45%;
-}
-
-.hero-logo {
-  width: 90px;
-  height: 90px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 25px;
-}
-
-.hero-left h1 {
-  font-size: 52px;
-  margin: 0 0 20px;
-}
-
-.hero-left p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #dddddd;
-}
-
-.hero-right {
-  max-width: 45%;
-}
-
-.hero-right img {
-  width: 100%;
-  max-width: 500px;
-  filter: brightness(0.9) contrast(1.2);
+.nav-links {
+  margin: 0 auto;
 }
 
 .nav-links a {
@@ -81,78 +39,15 @@ body {
   font-size: 15px;
   font-weight: 600;
 }
+
 .nav-links a:hover {
   opacity: 0.7;
 }
-.nav-links {
-  margin: 0 auto;
-}
-h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-p {
-  font-size: 18px;
-  color: #444;
-  max-width: 700px;
-  margin: 0 auto;
-}
+
+/* ===== HERO SECTION ===== */
 .hero {
-  height: 90vh;
-  background: 
-    linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-    url("bmw-headlights.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin-top: 80px; /* space for navbar */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  color: #ffffff;
-}
-
-.hero-content {
-  max-width: 800px;
-  padding: 20px;
-}
-
-.hero-logo {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 25px;
-
-  border: 2px solid #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.hero h1 {
-  font-size: 56px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #dddddd;
-}
-.hero-right img {
-  width: 500px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  filter: brightness(1.1) contrast(1.2);
-}
-.hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,4 +64,75 @@ p {
   background-repeat: no-repeat;
 
   color: #ffffff;
+}
+
+/* ===== HERO LEFT ===== */
+.hero-left {
+  max-width: 45%;
+}
+
+.hero-logo {
+  margin-bottom: 25px;
+
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 3px;
+
+  /* 🔥 SS GLOW */
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.6),
+    0 0 18px rgba(255,255,255,0.4),
+    0 0 30px rgba(255,255,255,0.2);
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  margin: 0 0 20px;
+}
+
+.hero-left p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #dddddd;
+  max-width: 520px;
+}
+
+/* ===== HERO RIGHT ===== */
+.hero-right {
+  max-width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-right img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+  /* 🔥 HEADLIGHT GLOW */
+  filter:
+    brightness(1.2)
+    contrast(1.25)
+    drop-shadow(0 0 25px rgba(255, 220, 120, 0.6))
+    drop-shadow(0 0 50px rgba(255, 200, 80, 0.4));
+}
+
+/* ===== RESPONSIVE (MOBILE) ===== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 30px;
+  }
+
+  .hero-left,
+  .hero-right {
+    max-width: 100%;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+    justify-content: center;
+  }
 }
