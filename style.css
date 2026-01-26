@@ -145,20 +145,28 @@ p {
   line-height: 1.7;
   color: #dddddd;
 }
-/* HERO SECTION FIX */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 80vh;
-  padding: 0 80px;
-  background: radial-gradient(circle at center, #222 0%, #000 70%);
-}
-
 .hero-right img {
   width: 500px;
   max-width: 100%;
   height: auto;
   display: block;
   filter: brightness(1.1) contrast(1.2);
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 90vh;
+  padding: 0 80px;
+
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.95), rgba(0,0,0,0.6)),
+    url("bmw-headlights.jpg");
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
 }
