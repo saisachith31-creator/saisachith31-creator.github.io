@@ -31,19 +31,19 @@
         Clean, protect, and shine — anytime, anywhere.
       </p>
 
-      <form class="booking-form">
-        <input type="text" placeholder="Full Name" required>
+      <form class="booking-form" onsubmit="sendWhatsApp(); return false;">
+  <input type="text" id="name" placeholder="Full Name" required>
 
-        <input type="tel" placeholder="Phone Number" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
 
-        <input type="text" placeholder="Vehicle Type (e.g. Sedan, SUV)">
+  <input type="text" id="vehicle" placeholder="Vehicle Type (e.g. Sedan, SUV)">
 
-        <input type="text" placeholder="Delivery Location">
+  <input type="text" id="location" placeholder="Delivery Location">
 
-        <textarea placeholder="Any questions or notes? (optional)"></textarea>
+  <textarea id="notes" placeholder="Any questions or notes? (optional)"></textarea>
 
-        <button type="submit">Place Order</button>
-      </form>
+  <button type="submit">Place Order</button>
+</form>
     </div>
   </div>
 
