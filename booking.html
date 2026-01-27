@@ -5,6 +5,31 @@
   <title>Order SwiftShine</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+function sendWhatsApp() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const vehicle = document.getElementById("vehicle").value;
+  const location = document.getElementById("location").value;
+  const notes = document.getElementById("notes").value;
+
+  const whatsappNumber = "659XXXXXXXX"; 
+  // ↑ REPLACE with your WhatsApp number (Singapore format, no +)
+
+  const message =
+    "SwiftShine Product Order%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Vehicle: " + vehicle + "%0A" +
+    "Location: " + location + "%0A" +
+    "Notes: " + notes;
+
+  const url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+  window.open(url, "_blank");
+}
+</script>
+
 <body>
 
   <!-- NAVBAR (FIXED TOP) -->
