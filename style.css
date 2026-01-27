@@ -237,3 +237,6 @@ body {
 .booking-form button:hover {
   background: #0a2a43;
 }
+.booking-page {
+  padding-top: 160px; /* pushes content below navbar */
+}
