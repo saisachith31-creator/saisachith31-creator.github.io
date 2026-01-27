@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Booking | SwiftShine</title>
+  <meta charset="UTF-8">
+  <title>Order SwiftShine</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="booking-container">
-  <h1>Book a Car Wash</h1>
-  <p class="booking-subtext">
-    Schedule your waterless car wash easily.  
-    Fill in the details and we’ll contact you shortly.
-  </p>
-  <form class="booking-form">
-    <input type="text" placeholder="Full Name" required>
 
-    <input type="tel" placeholder="Phone Number" required>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">SwiftShine</div>
 
-    <input type="text" placeholder="Vehicle Type (e.g. Sedan, SUV)" required>
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="about.html">About</a>
+      <a href="how-to-use.html">How to Use</a>
+      <a href="guide.html">Guide</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 
-    <input type="text" placeholder="Preferred Location">
+  <!-- BOOKING / ORDER PAGE -->
+  <div class="booking-page">
+    <div class="booking-card">
+      <h1>Order SwiftShine</h1>
 
-    <textarea placeholder="Additional Notes (optional)"></textarea>
+      <p class="booking-subtext">
+        Order our premium waterless car care product.<br>
+        Designed for busy drivers who care about their cars.
+      </p>
 
-    <button type="submit">Submit Booking</button>
-  </form>
-</div>
+      <form class="booking-form">
+        <input type="text" placeholder="Full Name" required>
+
+        <input type="tel" placeholder="Phone Number" required>
+
+        <input type="text" placeholder="Vehicle Type (e.g. Sedan, SUV)">
+
+        <input type="text" placeholder="Delivery Location">
+
+        <textarea placeholder="Any questions or notes? (optional)"></textarea>
+
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
