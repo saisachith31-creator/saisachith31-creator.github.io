@@ -4,7 +4,106 @@
   <meta charset="UTF-8">
   <title>Order SwiftShine</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f4c75, #3282b8);
+      padding-top: 120px;
+    }
+
+    /* BOOKING CARD */
+    .booking-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 50px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    .booking-wrapper h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .booking-wrapper p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .booking-wrapper label {
+      font-weight: 600;
+      display: block;
+      margin-top: 20px;
+    }
+
+    .booking-wrapper input,
+    .booking-wrapper select,
+    .booking-wrapper textarea {
+      width: 100%;
+      padding: 14px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .qty-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .qty-row input {
+      width: 100px;
+    }
+
+    .submit-btn {
+      margin-top: 30px;
+      width: 100%;
+      padding: 16px;
+      background: #000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.85;
+    }
+  </style>
+
+  <script>
+    function sendToWhatsApp() {
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const product = document.getElementById("product").value;
+      const qty = document.getElementById("quantity").value;
+      const location = document.getElementById("location").value;
+      const notes = document.getElementById("notes").value;
+
+      const message =
+        `SwiftShine Product Order%0A%0A` +
+        `Name: ${name}%0A` +
+        `Phone: ${phone}%0A` +
+        `Product: ${product}%0A` +
+        `Quantity: ${qty}%0A` +
+        `Delivery Location: ${location}%0A` +
+        `Notes: ${notes}`;
+
+      const whatsappURL =
+        `https://wa.me/6590040534?text=${message}`;
+
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -20,33 +119,39 @@
     </div>
   </div>
 
-  <!-- BOOKING PAGE BACKGROUND -->
-  <div class="booking-page">
+  <!-- BOOKING FORM -->
+  <div class="booking-wrapper">
+    <h1>Order SwiftShine Product</h1>
+    <p>Premium waterless car care product for drivers who care about their cars.</p>
 
-    <div class="booking-card">
-      <h1>Order SwiftShine Product</h1>
-      <p class="subtitle">
-        Premium waterless car care solution for busy drivers.
-      </p>
+    <label>Full Name</label>
+    <input type="text" id="name" placeholder="Your name" required>
 
-      <form class="booking-form">
-        <label>Choose Product</label>
-        <select>
-          <option>SwiftShine Waterless Wash</option>
-        </select>
+    <label>Phone Number</label>
+    <input type="text" id="phone" placeholder="Your phone number" required>
 
-        <label>Quantity</label>
-        <input type="number" min="1" value="1">
+    <label>Choose Product</label>
+    <select id="product">
+      <option>SwiftShine Waterless Wash</option>
+      <option>SwiftShine Microfiber Towel</option>
+    </select>
 
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="text" placeholder="Delivery Location" required>
+    <label>Quantity</label>
+    <input type="number" id="quantity" value="1" min="1">
 
-        <textarea placeholder="Additional notes (optional)"></textarea>
+    <label>Delivery Location</label>
+    <input type="text" id="location" placeholder="Your address">
 
-        <button type="submit">Place Order</button>
-      </form>
-    </div>
+    <label>Additional Notes (optional)</label>
+    <textarea id="notes" rows="4" placeholder="Anything we should know?"></textarea>
+
+    <button class="submit-btn" onclick="sendToWhatsApp()">
+      PLACE ORDER VIA WHATSAPP
+    </button>
+  </div>
+
+</body>
+</html>
 
   </div>
 
