@@ -2,95 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SwiftShine | Order Product</title>
+  <title>Order SwiftShine</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <div class="logo">SwiftShine</div>
-  <div class="nav-links">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">About</a>
-    <a href="how-to-use.html">How to Use</a>
-    <a href="guide.html">Guide</a>
-    <a href="booking.html"><strong>Booking</strong></a>
-    <a href="contact.html">Contact</a>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">SwiftShine</div>
+    <div class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="about.html">About</a>
+      <a href="how-to-use.html">How to Use</a>
+      <a href="guide.html">Guide</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
-</div>
 
-<!-- BOOKING SECTION -->
-<div class="booking-wrapper">
+  <!-- BOOKING PAGE BACKGROUND -->
+  <div class="booking-page">
 
-  <div class="booking-card">
-    <h1>Order SwiftShine Product</h1>
-    <p class="subtitle">
-      Premium waterless car care solution for busy drivers.
-    </p>
+    <div class="booking-card">
+      <h1>Order SwiftShine Product</h1>
+      <p class="subtitle">
+        Premium waterless car care solution for busy drivers.
+      </p>
 
-    <!-- PRODUCT SELECT -->
-    <label>Choose Product</label>
-    <select id="product" required>
-      <option value="SwiftShine Waterless Wash">SwiftShine Waterless Wash</option>
-      <option value="SwiftShine Interior Cleaner">SwiftShine Interior Cleaner</option>
-      <option value="SwiftShine Combo Pack">SwiftShine Combo Pack</option>
-    </select>
+      <form class="booking-form">
+        <label>Choose Product</label>
+        <select>
+          <option>SwiftShine Waterless Wash</option>
+        </select>
 
-    <!-- QUANTITY -->
-    <label>Quantity</label>
-    <div class="qty-box">
-      <button type="button" onclick="changeQty(-1)">−</button>
-      <input type="text" id="quantity" value="1" readonly>
-      <button type="button" onclick="changeQty(1)">+</button>
+        <label>Quantity</label>
+        <input type="number" min="1" value="1">
+
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="Delivery Location" required>
+
+        <textarea placeholder="Additional notes (optional)"></textarea>
+
+        <button type="submit">Place Order</button>
+      </form>
     </div>
 
-    <!-- CUSTOMER INFO -->
-    <input type="text" id="name" placeholder="Full Name" required>
-    <input type="tel" id="phone" placeholder="Phone Number" required>
-    <input type="text" id="location" placeholder="Delivery Location">
-
-    <textarea id="notes" placeholder="Additional notes (optional)"></textarea>
-
-    <button class="order-btn" onclick="sendWhatsApp()">Place Order</button>
   </div>
-
-</div>
-
-<!-- SCRIPT -->
-<script>
-function changeQty(value) {
-  const qtyInput = document.getElementById("quantity");
-  let qty = parseInt(qtyInput.value);
-  qty = qty + value;
-  if (qty < 1) qty = 1;
-  qtyInput.value = qty;
-}
-
-function sendWhatsApp() {
-  const product = document.getElementById("product").value;
-  const quantity = document.getElementById("quantity").value;
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const location = document.getElementById("location").value;
-  const notes = document.getElementById("notes").value;
-
-  const whatsappNumber = "6590040534"; 
-
-  const message =
-    "🧼 SwiftShine Product Order %0A%0A" +
-    "Product: " + product + "%0A" +
-    "Quantity: " + quantity + "%0A%0A" +
-    "Name: " + name + "%0A" +
-    "Phone: " + phone + "%0A" +
-    "Location: " + location + "%0A" +
-    "Notes: " + notes;
-
-  const url = "https://wa.me/" + whatsappNumber + "?text=" + message;
-  window.open(url, "_blank");
-}
-</script>
 
 </body>
 </html>
