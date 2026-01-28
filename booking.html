@@ -2,75 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Order SwiftShine</title>
+  <title>SwiftShine | Order Product</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">SwiftShine</div>
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">About</a>
+    <a href="how-to-use.html">How to Use</a>
+    <a href="guide.html">Guide</a>
+    <a href="booking.html"><strong>Booking</strong></a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<!-- BOOKING SECTION -->
+<div class="booking-wrapper">
+
+  <div class="booking-card">
+    <h1>Order SwiftShine Product</h1>
+    <p class="subtitle">
+      Premium waterless car care solution for busy drivers.
+    </p>
+
+    <!-- PRODUCT SELECT -->
+    <label>Choose Product</label>
+    <select id="product" required>
+      <option value="SwiftShine Waterless Wash">SwiftShine Waterless Wash</option>
+      <option value="SwiftShine Interior Cleaner">SwiftShine Interior Cleaner</option>
+      <option value="SwiftShine Combo Pack">SwiftShine Combo Pack</option>
+    </select>
+
+    <!-- QUANTITY -->
+    <label>Quantity</label>
+    <div class="qty-box">
+      <button type="button" onclick="changeQty(-1)">−</button>
+      <input type="text" id="quantity" value="1" readonly>
+      <button type="button" onclick="changeQty(1)">+</button>
+    </div>
+
+    <!-- CUSTOMER INFO -->
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="text" id="location" placeholder="Delivery Location">
+
+    <textarea id="notes" placeholder="Additional notes (optional)"></textarea>
+
+    <button class="order-btn" onclick="sendWhatsApp()">Place Order</button>
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function changeQty(value) {
+  const qtyInput = document.getElementById("quantity");
+  let qty = parseInt(qtyInput.value);
+  qty = qty + value;
+  if (qty < 1) qty = 1;
+  qtyInput.value = qty;
+}
+
 function sendWhatsApp() {
+  const product = document.getElementById("product").value;
+  const quantity = document.getElementById("quantity").value;
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
-  const vehicle = document.getElementById("vehicle").value;
   const location = document.getElementById("location").value;
   const notes = document.getElementById("notes").value;
 
-  const whatsappNumber = "6590040534"; 
+  const whatsappNumber = "659XXXXXXXX"; 
+  // 🔴 Replace with YOUR WhatsApp number (no +65)
 
   const message =
-    "SwiftShine Product Order%0A%0A" +
+    "🧼 SwiftShine Product Order %0A%0A" +
+    "Product: " + product + "%0A" +
+    "Quantity: " + quantity + "%0A%0A" +
     "Name: " + name + "%0A" +
     "Phone: " + phone + "%0A" +
-    "Vehicle: " + vehicle + "%0A" +
     "Location: " + location + "%0A" +
     "Notes: " + notes;
 
   const url = "https://wa.me/" + whatsappNumber + "?text=" + message;
-
   window.open(url, "_blank");
 }
 </script>
 
-<body>
-
-  <!-- NAVBAR (FIXED TOP) -->
-  <div class="navbar">
-    <div class="logo">SwiftShine</div>
-
-    <div class="nav-links">
-      <a href="index.html">🏠 Home</a>
-      <a href="about.html">About</a>
-      <a href="how-to-use.html">How to Use</a>
-      <a href="guide.html">Guide</a>
-      <a href="booking.html">Booking</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-
-  <!-- PAGE CONTENT -->
-  <div class="booking-page">
-    <div class="booking-card">
-      <h1>Order SwiftShine</h1>
-
-      <p class="booking-subtext">
-        Premium waterless car care solution.<br>
-        Clean, protect, and shine — anytime, anywhere.
-      </p>
-
-      <form class="booking-form" onsubmit="sendWhatsApp(); return false;">
-  <input type="text" id="name" placeholder="Full Name" required>
-
-  <input type="tel" id="phone" placeholder="Phone Number" required>
-
-  <input type="text" id="vehicle" placeholder="Vehicle Type (e.g. Sedan, SUV)">
-
-  <input type="text" id="location" placeholder="Delivery Location">
-
-  <textarea id="notes" placeholder="Any questions or notes? (optional)"></textarea>
-
-  <button type="submit">Place Order</button>
-</form>
-    </div>
-  </div>
-
 </body>
 </html>
-
