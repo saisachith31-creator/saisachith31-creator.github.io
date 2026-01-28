@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Guide | SwiftShine</title>
+  <meta charset="UTF-8">
+  <title>SwiftShine | Car Care Guide</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      padding-top: 120px;
+    }
+
+    .guide-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 30px 100px;
+    }
+
+    .guide-hero {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .guide-hero h1 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .guide-hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .guide-section {
+      margin-bottom: 60px;
+    }
+
+    .guide-section h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .guide-section p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.7;
+      max-width: 900px;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-top: 35px;
+    }
+
+    .guide-card {
+      background: #f7f9fc;
+      padding: 35px;
+      border-radius: 14px;
+    }
+
+    .guide-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .guide-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .guide-highlight {
+      background: linear-gradient(135deg, #0f4c75, #3282b8);
+      color: #ffffff;
+      padding: 60px;
+      border-radius: 18px;
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .guide-highlight h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .guide-highlight p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+  </style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">SwiftShine</div>
   <div class="nav-links">
@@ -18,9 +115,84 @@
   </div>
 </div>
 
-<div class="container">
-  <h1>Guide</h1>
-  <p>Content coming soon.</p>
+<!-- GUIDE CONTENT -->
+<div class="guide-wrapper">
+
+  <!-- HERO -->
+  <div class="guide-hero">
+    <h1>Car Care Guide</h1>
+    <p>
+      This guide helps you get the best results from your SwiftShine products
+      while keeping your vehicle’s surface safe and well-maintained.
+    </p>
+  </div>
+
+  <!-- WHEN TO USE -->
+  <div class="guide-section">
+    <h2>When to Use Waterless Car Care</h2>
+    <p>
+      Waterless car care products are best used when your vehicle has light to
+      moderate dirt, dust, or fingerprints. They are ideal for quick clean-ups,
+      apartment living, or areas where traditional washing is not convenient.
+    </p>
+  </div>
+
+  <!-- GRID -->
+  <div class="guide-grid">
+
+    <div class="guide-card">
+      <h3>Best Surfaces</h3>
+      <p>
+        SwiftShine works best on painted surfaces, clear coat finishes,
+        glass, and smooth exterior panels.
+      </p>
+    </div>
+
+    <div class="guide-card">
+      <h3>When Not to Use</h3>
+      <p>
+        Avoid using waterless products on heavily muddy vehicles or
+        surfaces with thick sand or grit, as this may cause scratches.
+      </p>
+    </div>
+
+    <div class="guide-card">
+      <h3>Use Quality Towels</h3>
+      <p>
+        Always use clean microfiber towels. Dirty or rough cloths can
+        damage the vehicle’s finish.
+      </p>
+    </div>
+
+    <div class="guide-card">
+      <h3>Work in Sections</h3>
+      <p>
+        Clean one panel at a time to maintain control and ensure even
+        results across the vehicle.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- MAINTENANCE -->
+  <div class="guide-section" style="margin-top: 70px;">
+    <h2>Maintaining Your Vehicle’s Finish</h2>
+    <p>
+      Regular light cleaning helps prevent dirt buildup and keeps your
+      vehicle looking fresh. Consistent care can also help preserve the
+      appearance of your paint over time.
+    </p>
+  </div>
+
+  <!-- HIGHLIGHT -->
+  <div class="guide-highlight">
+    <h2>Smart Care, Better Results</h2>
+    <p>
+      Using the right technique and understanding when to use waterless
+      products ensures the best balance between convenience and protection.
+    </p>
+  </div>
+
 </div>
 
 </body>
