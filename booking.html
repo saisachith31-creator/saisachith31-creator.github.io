@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Order SwiftShine</title>
   <link rel="stylesheet" href="style.css">
+
   <style>
     body {
       margin: 0;
@@ -12,36 +13,33 @@
       padding-top: 120px;
     }
 
-    /* BOOKING CARD */
     .booking-wrapper {
-      max-width: 700px;
-      margin: 0 auto;
+      max-width: 720px;
+      margin: 0 auto 80px;
       background: #ffffff;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 50px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
     }
 
-    .booking-wrapper h1 {
+    h1 {
       text-align: center;
       margin-bottom: 10px;
     }
 
-    .booking-wrapper p {
+    .subtitle {
       text-align: center;
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
-    .booking-wrapper label {
+    label {
       font-weight: 600;
-      display: block;
       margin-top: 20px;
+      display: block;
     }
 
-    .booking-wrapper input,
-    .booking-wrapper select,
-    .booking-wrapper textarea {
+    input, select, textarea {
       width: 100%;
       padding: 14px;
       margin-top: 8px;
@@ -56,104 +54,145 @@
       align-items: center;
     }
 
-    .qty-row input {
-      width: 100px;
+    .qty-row button {
+      padding: 10px 16px;
+      font-size: 18px;
+      cursor: pointer;
     }
 
-    .submit-btn {
-      margin-top: 30px;
+    .price-box {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f4c75;
+    }
+
+    .action-btn {
       width: 100%;
+      margin-top: 25px;
       padding: 16px;
-      background: #000;
-      color: #fff;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       border: none;
       border-radius: 6px;
       cursor: pointer;
     }
 
-    .submit-btn:hover {
-      opacity: 0.85;
+    .whatsapp-btn {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .paynow-btn {
+      background: #000;
+      color: #fff;
+    }
+
+    .confirm-box {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background: #f1f8ff;
+      border-radius: 8px;
+      text-align: center;
     }
   </style>
 
   <script>
-    function sendToWhatsApp() {
+    const prices = {
+      "SwiftShine Waterless Wash": 25,
+      "SwiftShine Microfiber Towel": 10,
+      "SwiftShine Combo Pack": 30
+    };
+
+    function updatePrice() {
+      const product = document.getElementById("product").value;
+      const qty = document.getElementById("quantity").value;
+      const total = prices[product] * qty;
+      document.getElementById("totalPrice").innerText = "Total: SGD $" + total;
+    }
+
+    function sendWhatsApp() {
       const name = document.getElementById("name").value;
       const phone = document.getElementById("phone").value;
       const product = document.getElementById("product").value;
       const qty = document.getElementById("quantity").value;
       const location = document.getElementById("location").value;
-      const notes = document.getElementById("notes").value;
+      const total = prices[product] * qty;
 
-      const message =
-        `SwiftShine Product Order%0A%0A` +
-        `Name: ${name}%0A` +
-        `Phone: ${phone}%0A` +
-        `Product: ${product}%0A` +
-        `Quantity: ${qty}%0A` +
-        `Delivery Location: ${location}%0A` +
-        `Notes: ${notes}`;
+      const msg =
+        "SwiftShine Order%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Product: " + product + "%0A" +
+        "Quantity: " + qty + "%0A" +
+        "Total: SGD $" + total + "%0A" +
+        "Location: " + location;
 
-      const whatsappURL =
-        `https://wa.me/6590040534?text=${message}`;
+      window.open("https://wa.me/6590040534?text=" + msg, "_blank");
 
-      window.open(whatsappURL, "_blank");
+      document.getElementById("confirmBox").style.display = "block";
     }
   </script>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="logo">SwiftShine</div>
-    <div class="nav-links">
-      <a href="index.html">🏠 Home</a>
-      <a href="about.html">About</a>
-      <a href="how-to-use.html">How to Use</a>
-      <a href="guide.html">Guide</a>
-      <a href="booking.html">Booking</a>
-      <a href="contact.html">Contact</a>
-    </div>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">SwiftShine</div>
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">About</a>
+    <a href="how-to-use.html">How to Use</a>
+    <a href="guide.html">Guide</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<!-- BOOKING -->
+<div class="booking-wrapper">
+  <h1>Order SwiftShine</h1>
+  <p class="subtitle">Premium waterless car care products</p>
+
+  <label>Full Name</label>
+  <input id="name" required>
+
+  <label>Phone Number</label>
+  <input id="phone" required>
+
+  <label>Product</label>
+  <select id="product" onchange="updatePrice()">
+    <option>SwiftShine Waterless Wash</option>
+    <option>SwiftShine Microfiber Towel</option>
+    <option>SwiftShine Combo Pack</option>
+  </select>
+
+  <label>Quantity</label>
+  <div class="qty-row">
+    <button onclick="quantity.stepDown(); updatePrice()">−</button>
+    <input type="number" id="quantity" value="1" min="1" onchange="updatePrice()">
+    <button onclick="quantity.stepUp(); updatePrice()">+</button>
   </div>
 
-  <!-- BOOKING FORM -->
-  <div class="booking-wrapper">
-    <h1>Order SwiftShine Product</h1>
-    <p>Premium waterless car care product for drivers who care about their cars.</p>
+  <div class="price-box" id="totalPrice">Total: SGD $25</div>
 
-    <label>Full Name</label>
-    <input type="text" id="name" placeholder="Your name" required>
+  <label>Delivery Location</label>
+  <input id="location">
 
-    <label>Phone Number</label>
-    <input type="text" id="phone" placeholder="Your phone number" required>
+  <button class="action-btn whatsapp-btn" onclick="sendWhatsApp()">
+    SEND ORDER TO WHATSAPP
+  </button>
 
-    <label>Choose Product</label>
-    <select id="product">
-      <option>SwiftShine Waterless Wash</option>
-      <option>SwiftShine Microfiber Towel</option>
-    </select>
+  <a href="#" class="action-btn paynow-btn" style="display:block;text-align:center;text-decoration:none;">
+    PAY WITH PAYNOW (MANUAL)
+  </a>
 
-    <label>Quantity</label>
-    <input type="number" id="quantity" value="1" min="1">
-
-    <label>Delivery Location</label>
-    <input type="text" id="location" placeholder="Your address">
-
-    <label>Additional Notes (optional)</label>
-    <textarea id="notes" rows="4" placeholder="Anything we should know?"></textarea>
-
-    <button class="submit-btn" onclick="sendToWhatsApp()">
-      PLACE ORDER VIA WHATSAPP
-    </button>
+  <div class="confirm-box" id="confirmBox">
+    ✅ Order sent! We’ll contact you shortly.
   </div>
-
-</body>
-</html>
-
-  </div>
+</div>
 
 </body>
 </html>
