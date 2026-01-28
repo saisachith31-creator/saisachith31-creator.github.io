@@ -14,51 +14,88 @@
     }
 
     .about-wrapper {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 60px 30px;
+      padding: 60px 30px 100px;
     }
 
     .about-hero {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
     }
 
     .about-hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
+      font-size: 52px;
+      margin-bottom: 20px;
     }
 
     .about-hero p {
-      font-size: 18px;
+      font-size: 19px;
       color: #555;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    .about-section {
+    .about-block {
+      margin-bottom: 60px;
+    }
+
+    .about-block h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .about-block p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 900px;
+    }
+
+    .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 40px;
-      margin-top: 50px;
+      margin-top: 40px;
     }
 
     .about-card {
       background: #f7f9fc;
-      padding: 35px;
-      border-radius: 12px;
+      padding: 40px;
+      border-radius: 14px;
     }
 
     .about-card h3 {
-      margin-bottom: 12px;
       font-size: 22px;
+      margin-bottom: 12px;
     }
 
     .about-card p {
+      font-size: 15px;
       color: #555;
       line-height: 1.6;
-      font-size: 15px;
+    }
+
+    .about-highlight {
+      background: linear-gradient(135deg, #0f4c75, #3282b8);
+      color: #ffffff;
+      padding: 60px;
+      border-radius: 18px;
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .about-highlight h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .about-highlight p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
     }
   </style>
 </head>
@@ -81,51 +118,90 @@
 <!-- ABOUT CONTENT -->
 <div class="about-wrapper">
 
+  <!-- HERO -->
   <div class="about-hero">
     <h1>About SwiftShine</h1>
     <p>
-      SwiftShine was created for drivers who want a clean, protected, and glossy
-      vehicle without wasting time or water.
+      SwiftShine is a modern waterless car care brand created for drivers who
+      want their vehicles to look clean, protected, and presentable — without
+      wasting time, water, or effort.
     </p>
   </div>
 
-  <div class="about-section">
+  <!-- STORY -->
+  <div class="about-block">
+    <h2>Our Idea</h2>
+    <p>
+      Traditional car washing methods often require large amounts of water,
+      long waiting times, and access to proper washing areas.
+      SwiftShine was developed to provide a simpler alternative.
+      Our goal is to make car care more convenient while still maintaining
+      quality results.
+    </p>
+  </div>
+
+  <!-- GRID -->
+  <div class="about-grid">
 
     <div class="about-card">
-      <h3>Why SwiftShine?</h3>
+      <h3>Why Waterless?</h3>
       <p>
-        Traditional car washing takes time, water, and effort.
-        SwiftShine offers a modern alternative — a waterless car care solution
-        designed for busy lifestyles.
+        Waterless car care allows you to clean and maintain your vehicle
+        without needing hoses, buckets, or runoff.
+        It’s ideal for urban environments, apartments, and quick touch-ups.
       </p>
     </div>
 
     <div class="about-card">
-      <h3>What We Offer</h3>
+      <h3>What SwiftShine Does</h3>
       <p>
-        Our products are formulated to safely clean dirt, enhance shine,
-        and provide surface protection — all without the need for rinsing
-        or special equipment.
+        SwiftShine products are designed to lift light dirt, enhance surface
+        gloss, and help protect exterior finishes — all in one simple process.
       </p>
     </div>
 
     <div class="about-card">
-      <h3>Designed for Everyday Drivers</h3>
+      <h3>Who It’s For</h3>
       <p>
-        Whether you drive daily, park outdoors, or simply care about how your
-        car looks, SwiftShine fits easily into your routine.
+        SwiftShine is made for everyday drivers, car enthusiasts, and anyone
+        who values convenience without sacrificing appearance.
       </p>
     </div>
 
     <div class="about-card">
-      <h3>Our Approach</h3>
+      <h3>Simple by Design</h3>
       <p>
-        We focus on simplicity, efficiency, and quality.
-        No complicated processes — just effective car care you can trust.
+        We focus on ease of use. No complicated steps, no unnecessary tools —
+        just straightforward car care that fits into your routine.
       </p>
     </div>
 
   </div>
+
+  <!-- PHILOSOPHY -->
+  <div class="about-block" style="margin-top: 70px;">
+    <h2>Our Philosophy</h2>
+    <p>
+      SwiftShine believes that car care should be accessible, efficient,
+      and practical. We prioritize simplicity, clarity, and effectiveness
+      in everything we do — from product design to customer experience.
+    </p>
+  </div>
+
+  <!-- HIGHLIGHT -->
+  <div class="about-highlight">
+    <h2>Designed for Modern Drivers</h2>
+    <p>
+      Whether you’re maintaining your daily ride, preparing for an event,
+      or simply enjoy keeping your car clean, SwiftShine offers a solution
+      that works around your lifestyle.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
 
 </div>
 
