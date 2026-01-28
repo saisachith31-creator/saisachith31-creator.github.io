@@ -80,21 +80,34 @@
 
     .whatsapp-btn {
       background: #25d366;
-      color: #fff;
+      color: #ffffff;
     }
 
     .paynow-btn {
-      background: #000;
-      color: #fff;
+      background: #000000;
+      color: #ffffff;
+      display: block;
+      text-align: center;
+      text-decoration: none;
     }
 
     .confirm-box {
       display: none;
       margin-top: 30px;
-      padding: 20px;
+      padding: 25px;
       background: #f1f8ff;
-      border-radius: 8px;
+      border-radius: 10px;
       text-align: center;
+    }
+
+    .order-summary {
+      margin: 15px 0;
+      font-size: 15px;
+    }
+
+    .paynow-section img {
+      margin-top: 10px;
+      max-width: 200px;
     }
   </style>
 
@@ -109,7 +122,8 @@
       const product = document.getElementById("product").value;
       const qty = document.getElementById("quantity").value;
       const total = prices[product] * qty;
-      document.getElementById("totalPrice").innerText = "Total: SGD $" + total;
+      document.getElementById("totalPrice").innerText =
+        "Total: SGD $" + total;
     }
 
     function sendWhatsApp() {
@@ -120,7 +134,12 @@
       const location = document.getElementById("location").value;
       const total = prices[product] * qty;
 
-      const msg =
+      if (!name || !phone) {
+        alert("Please fill in your name and phone number.");
+        return;
+      }
+
+      const message =
         "SwiftShine Order%0A%0A" +
         "Name: " + name + "%0A" +
         "Phone: " + phone + "%0A" +
@@ -129,7 +148,15 @@
         "Total: SGD $" + total + "%0A" +
         "Location: " + location;
 
-      window.open("https://wa.me/6590040534?text=" + msg, "_blank");
+      window.open(
+        "https://wa.me/6590040534?text=" + message,
+        "_blank"
+      );
+
+      document.getElementById("orderSummary").innerHTML =
+        "<strong>Product:</strong> " + product + "<br>" +
+        "<strong>Quantity:</strong> " + qty + "<br>" +
+        "<strong>Total:</strong> SGD $" + total;
 
       document.getElementById("confirmBox").style.display = "block";
     }
@@ -151,16 +178,16 @@
   </div>
 </div>
 
-<!-- BOOKING -->
+<!-- BOOKING PAGE -->
 <div class="booking-wrapper">
   <h1>Order SwiftShine</h1>
   <p class="subtitle">Premium waterless car care products</p>
 
   <label>Full Name</label>
-  <input id="name" required>
+  <input id="name" placeholder="Your name">
 
   <label>Phone Number</label>
-  <input id="phone" required>
+  <input id="phone" placeholder="Your phone number">
 
   <label>Product</label>
   <select id="product" onchange="updatePrice()">
@@ -179,18 +206,30 @@
   <div class="price-box" id="totalPrice">Total: SGD $25</div>
 
   <label>Delivery Location</label>
-  <input id="location">
+  <input id="location" placeholder="Address / area">
 
   <button class="action-btn whatsapp-btn" onclick="sendWhatsApp()">
     SEND ORDER TO WHATSAPP
   </button>
 
-  <a href="#" class="action-btn paynow-btn" style="display:block;text-align:center;text-decoration:none;">
-    PAY WITH PAYNOW (MANUAL)
+  <a href="#" class="action-btn paynow-btn">
+    PAY WITH PAYNOW (AFTER WHATSAPP)
   </a>
 
   <div class="confirm-box" id="confirmBox">
-    ✅ Order sent! We’ll contact you shortly.
+    <h3>Order Confirmed ✅</h3>
+    <p>Your order has been sent to WhatsApp.</p>
+
+    <div class="order-summary" id="orderSummary"></div>
+
+    <div class="paynow-section">
+      <h4>Pay with PayNow</h4>
+      <p>
+        Please complete payment after confirming on WhatsApp.<br>
+        Use your name as the payment reference.
+      </p>
+      <img src="paynow-qr.png" alt="PayNow QR Code">
+    </div>
   </div>
 </div>
 
