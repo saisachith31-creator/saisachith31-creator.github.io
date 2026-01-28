@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About | SwiftShine</title>
+  <meta charset="UTF-8">
+  <title>About SwiftShine</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      padding-top: 120px;
+    }
+
+    .about-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+
+    .about-hero {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .about-hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .about-hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .about-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .about-card {
+      background: #f7f9fc;
+      padding: 35px;
+      border-radius: 12px;
+    }
+
+    .about-card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .about-card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+  </style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">SwiftShine</div>
   <div class="nav-links">
@@ -18,9 +78,55 @@
   </div>
 </div>
 
-<div class="container">
-  <h1>About SwiftShine</h1>
-  <p>This page will explain what SwiftShine is about.</p>
+<!-- ABOUT CONTENT -->
+<div class="about-wrapper">
+
+  <div class="about-hero">
+    <h1>About SwiftShine</h1>
+    <p>
+      SwiftShine was created for drivers who want a clean, protected, and glossy
+      vehicle without wasting time or water.
+    </p>
+  </div>
+
+  <div class="about-section">
+
+    <div class="about-card">
+      <h3>Why SwiftShine?</h3>
+      <p>
+        Traditional car washing takes time, water, and effort.
+        SwiftShine offers a modern alternative — a waterless car care solution
+        designed for busy lifestyles.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>What We Offer</h3>
+      <p>
+        Our products are formulated to safely clean dirt, enhance shine,
+        and provide surface protection — all without the need for rinsing
+        or special equipment.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>Designed for Everyday Drivers</h3>
+      <p>
+        Whether you drive daily, park outdoors, or simply care about how your
+        car looks, SwiftShine fits easily into your routine.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>Our Approach</h3>
+      <p>
+        We focus on simplicity, efficiency, and quality.
+        No complicated processes — just effective car care you can trust.
+      </p>
+    </div>
+
+  </div>
+
 </div>
 
 </body>
