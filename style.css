@@ -127,3 +127,8 @@ nav ul li a {
 nav ul li a:hover {
     color: #00bfff; /* nice blue hover effect */
 }
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
