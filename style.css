@@ -117,3 +117,13 @@ footer {
     padding: 60px 20px;
     text-align: center;
 }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #00bfff; /* nice blue hover effect */
+}
