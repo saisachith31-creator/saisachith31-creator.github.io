@@ -1,53 +1,106 @@
-/* RESET */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BODY */
+/* ===== BODY ===== */
 body {
-    background: #f5f7fa;
-    color: #111;
+    background: #f4f6f9;
+    color: #333;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 nav {
-    background: #0f2e4d;
+    background: #0f2f4a;
     color: white;
-    padding: 15px 50px;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+nav h2 {
+    font-size: 20px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 14px;
 }
 
-nav ul li a:hover {
-    color: #3b82f6;
+/* ===== DROPDOWN ===== */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 260px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    z-index: 999;
 }
 
-/* HERO */
+.dropdown-menu li {
+    display: block;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+/* SHOW MAIN DROPDOWN */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ===== SUBMENU ===== */
+.submenu-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    width: 260px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.submenu:hover .submenu-menu {
+    display: block;
+}
+
+/* HOVER EFFECT */
+.dropdown-menu li:hover {
+    background: #f5f5f5;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
     background: #5f5f5f;
     color: white;
-    text-align: center;
     padding: 120px 20px;
-}
-
-.small-hero {
-    padding: 80px 20px;
+    text-align: center;
 }
 
 .hero h1 {
@@ -59,140 +112,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.hero button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* SECTION */
-.section {
-    padding: 60px 50px;
-    text-align: center;
-}
-
-.section.light {
-    background: #eef2f7;
-}
-
-.section h2 {
-    margin-bottom: 40px;
-}
-
-/* SERVICES GRID */
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* CARD */
-.card {
-    background: white;
-    padding: 25px;
-    width: 280px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* FORM */
-.contact-form {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-.contact-form button {
-    padding: 12px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background: #1d4ed8;
-}
-
-/* FOOTER */
-footer {
-    background: #0f2e4d;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-/* ABOUT PAGE TEXT */
-.about-container {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.6;
-    color: #333;
-}
-
-.about-container p {
-    margin-bottom: 20px;
-}
-/* ===== HOME PAGE FIX ===== */
-
-.hero {
-    background: #5f5f5f;
-    color: white;
-    padding: 120px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.light {
-    background: #f5f5f5;
-}
-
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    width: 280px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
+/* ===== BUTTON ===== */
 button {
     background: #2d5bff;
     color: white;
@@ -205,63 +125,49 @@ button {
 button:hover {
     background: #1f45cc;
 }
-/* ===== DROPDOWN MENU ===== */
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+/* ===== SECTIONS ===== */
+.section {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-nav ul li {
-    position: relative;
+.section h2 {
+    margin-bottom: 30px;
 }
 
-/* MAIN DROPDOWN */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    width: 250px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    padding: 0;
-    z-index: 1000;
-}
-
-.dropdown-menu li {
-    padding: 12px 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.dropdown-menu li a {
-    color: black;
-    text-decoration: none;
-}
-
-/* SHOW DROPDOWN */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* SUBMENU */
-.submenu-menu {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background: white;
-    width: 250px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* SHOW SUBMENU */
-.submenu:hover .submenu-menu {
-    display: block;
-}
-
-/* HOVER EFFECT */
-.dropdown-menu li:hover {
+/* LIGHT SECTION */
+.light {
     background: #f5f5f5;
+}
+
+/* ===== SERVICES GRID ===== */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0f2f4a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
 }
