@@ -195,3 +195,32 @@ footer {
 .highlight h3 {
     color: white;
 }
+/* WHAT WE DO GRID */
+
+.what-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* CARDS */
+.what-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.what-card:hover {
+    transform: translateY(-8px);
+    background: #00a86b;
+    color: white;
+}
+
+.what-card:hover h3 {
+    color: white;
+}
