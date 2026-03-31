@@ -1,105 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products - Hysent International</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Hysent International</title>
+    <link rel="stylesheet" href="products.css">
 </head>
 
 <body>
 
-<!-- NAVBAR (SAME AS INDEX) -->
+<!-- NAVBAR -->
 <header class="navbar">
-    <div class="logo">Hysent International</div>
+    <h2>Hysent International</h2>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Company</a></li>
-
-        <li class="dropdown">
-            <a href="products.html">Products ▾</a>
-            <ul class="dropdown-menu">
-                <li>Ventilation Fans</li>
-                <li>Safety Components</li>
-                <li>Fire & Blast Doors</li>
-                <li>Marine Upholstery</li>
-                <li>Valves</li>
-                <li>Bolts & Pipe Clamp</li>
-            </ul>
-        </li>
-
-        <li><a href="booking.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Company</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Our Products</h1>
-        <p>Explore our range of offshore and marine solutions</p>
-    </div>
+<section class="products-hero">
+    <h1>Our Products</h1>
+    <p>High-performance engineering solutions built for global industries</p>
 </section>
 
 <!-- PRODUCTS GRID -->
-<section class="services reveal">
-    <h2>Product Categories</h2>
+<section class="products-section">
 
-    <div class="service-container">
+    <div class="product-grid">
 
-        <div class="card">
+        <div class="product-card">
             <h3>Ventilation Fans</h3>
-            <p>High-performance airflow solutions.</p>
+            <p>Efficient air systems for industrial and marine environments.</p>
         </div>
 
-        <div class="card">
+        <div class="product-card">
             <h3>Safety Components</h3>
-            <p>Reliable protection systems.</p>
+            <p>Explosion-proof and certified safety solutions.</p>
         </div>
 
-        <div class="card">
+        <div class="product-card">
             <h3>Fire & Blast Doors</h3>
-            <p>Advanced safety engineering.</p>
+            <p>Advanced protection systems for offshore safety.</p>
         </div>
 
-        <div class="card">
+        <div class="product-card">
             <h3>Marine Upholstery</h3>
-            <p>Durable marine interior solutions.</p>
+            <p>Fire-resistant marine-grade materials and solutions.</p>
         </div>
 
-        <div class="card">
+        <div class="product-card">
             <h3>Valves</h3>
-            <p>Precision flow control systems.</p>
+            <p>Precision-engineered valves meeting global standards.</p>
         </div>
 
-        <div class="card">
+        <div class="product-card">
             <h3>Bolts & Pipe Clamp</h3>
-            <p>Industrial fastening solutions.</p>
+            <p>Reliable fastening and support systems.</p>
         </div>
 
     </div>
+
 </section>
 
+<!-- CTA -->
+<section class="cta">
+    <h2>Looking for specific products?</h2>
+    <p>Contact our team for customized engineering solutions.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
+</section>
+
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
-
-<!-- SCROLL ANIMATION -->
-<script>
-const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (top < windowHeight - 100) {
-            el.classList.add('active');
-        }
-    });
-});
-</script>
 
 </body>
 </html>
