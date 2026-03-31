@@ -158,3 +158,57 @@ footer {
     text-align: center;
     padding: 15px;
 }
+/* WHY SECTION */
+.why {
+    background: linear-gradient(to right, #0d2b45, #1e4f8a);
+    color: white;
+    padding: 60px;
+    text-align: center;
+}
+
+.why-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.why-box {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    transition: 0.4s;
+}
+
+.why-box:hover {
+    background: #007bff;
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* CTA */
+.cta {
+    padding: 60px;
+    text-align: center;
+    background: #f5f7fa;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
