@@ -6,28 +6,7 @@
 <title>Hysent International</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<script>
-const images = [
-    "images/hero1.jpg",
-    "images/hero2.jpg",
-    "images/hero3.jpg"
-];
 
-let index = 0;
-
-function changeHero() {
-    const hero = document.querySelector(".hero");
-
-    hero.style.background =
-        "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('" +
-        images[index] +
-        "') center/cover no-repeat";
-
-    index = (index + 1) % images.length;
-}
-
-setInterval(changeHero, 5000);
-</script>
 <body>
 
 <!-- NAVBAR -->
@@ -56,7 +35,7 @@ setInterval(changeHero, 5000);
 
 <!-- HERO -->
 <section class="hero">
-    <div>
+    <div class="fade-in">
         <h1>Flawless Execution in Offshore & Marine Solutions</h1>
         <p>Delivering precision engineering, offshore support, and global marine services</p>
         <button>Request a Quote</button>
@@ -64,7 +43,7 @@ setInterval(changeHero, 5000);
 </section>
 
 <!-- SERVICES -->
-<section class="section">
+<section class="section reveal">
     <h2>Our Core Services</h2>
 
     <div class="services">
@@ -85,48 +64,65 @@ setInterval(changeHero, 5000);
     </div>
 </section>
 
-<!-- TRUST SECTION -->
-<section class="section" style="background:#eef3f8;">
+<!-- TRUST -->
+<section class="section reveal" style="background:#eef3f8;">
     <h2>Trusted Offshore Partner</h2>
-    <p style="max-width:600px; margin:auto;">
-        Providing reliable engineering solutions across global industries with precision, safety, and efficiency.
-    </p>
+    <p>Providing reliable engineering solutions across global industries.</p>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section class="section">
+<!-- WHY -->
+<section class="section reveal">
     <h2>Why Choose Hysent</h2>
 
     <div class="services">
         <div class="service-card">
             <h3>Global Expertise</h3>
-            <p>Serving international offshore and marine industries with proven experience.</p>
+            <p>Serving international offshore and marine industries.</p>
         </div>
 
         <div class="service-card">
             <h3>Precision & Reliability</h3>
-            <p>Delivering flawless execution with highly skilled engineering teams.</p>
+            <p>Delivering flawless execution with skilled teams.</p>
         </div>
 
         <div class="service-card">
             <h3>Fast Deployment</h3>
-            <p>Rapid response and efficient solutions wherever your operations are.</p>
+            <p>Rapid response wherever your operations are.</p>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
-<section class="section" style="background:#0b2c48; color:white;">
+<section class="section reveal" style="background:#0b2c48; color:white;">
     <h2>Ready to Work With Us?</h2>
     <p>Let’s deliver engineering excellence together.</p>
     <br>
-    <button style="background:#007bff;">Contact Us</button>
+    <button>Contact Us</button>
 </section>
 
 <!-- FOOTER -->
 <footer>
     © 2026 Hysent International Pte Ltd | All Rights Reserved
 </footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+function reveal() {
+    let reveals = document.querySelectorAll(".reveal");
+
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", reveal);
+</script>
 
 </body>
 </html>
