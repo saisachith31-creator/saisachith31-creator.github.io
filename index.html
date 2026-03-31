@@ -9,11 +9,10 @@
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <h2>Hysent International</h2>
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="about.html">Company</a></li>
 
         <li>
@@ -35,9 +34,9 @@
 
 <!-- HERO -->
 <section class="hero">
-    <div class="fade-in">
+    <div class="hero-content">
         <h1>Flawless Execution in Offshore & Marine Solutions</h1>
-        <p>Delivering precision engineering, offshore support, and global marine services</p>
+        <p>Precision engineering. Global offshore expertise. Trusted worldwide.</p>
         <button>Request a Quote</button>
     </div>
 </section>
@@ -49,78 +48,64 @@
     <div class="services">
         <div class="service-card">
             <h3>Marine Engineering</h3>
-            <p>Advanced maintenance, repair, and technical solutions for marine systems.</p>
+            <p>Advanced maintenance and repair solutions.</p>
         </div>
 
         <div class="service-card">
             <h3>Offshore Operations</h3>
-            <p>Reliable offshore logistics, rig support, and field engineering services.</p>
+            <p>Reliable logistics and offshore execution.</p>
         </div>
 
         <div class="service-card">
-            <h3>Engineering Consultancy</h3>
-            <p>Strategic planning, advisory, and technical expertise for complex projects.</p>
+            <h3>Consultancy</h3>
+            <p>Strategic engineering advisory for complex projects.</p>
         </div>
     </div>
 </section>
 
-<!-- TRUST -->
-<section class="section reveal" style="background:#eef3f8;">
-    <h2>Trusted Offshore Partner</h2>
-    <p>Providing reliable engineering solutions across global industries.</p>
-</section>
-
 <!-- WHY -->
-<section class="section reveal">
+<section class="section reveal dark">
     <h2>Why Choose Hysent</h2>
 
     <div class="services">
-        <div class="service-card">
-            <h3>Global Expertise</h3>
-            <p>Serving international offshore and marine industries.</p>
+        <div class="service-card glass">
+            <h3>Global Reach</h3>
+            <p>Serving offshore industries worldwide.</p>
         </div>
 
-        <div class="service-card">
-            <h3>Precision & Reliability</h3>
-            <p>Delivering flawless execution with skilled teams.</p>
+        <div class="service-card glass">
+            <h3>Precision</h3>
+            <p>Delivering flawless engineering execution.</p>
         </div>
 
-        <div class="service-card">
-            <h3>Fast Deployment</h3>
-            <p>Rapid response wherever your operations are.</p>
+        <div class="service-card glass">
+            <h3>Speed</h3>
+            <p>Fast deployment and reliable support.</p>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
-<section class="section reveal" style="background:#0b2c48; color:white;">
-    <h2>Ready to Work With Us?</h2>
-    <p>Let’s deliver engineering excellence together.</p>
-    <br>
+<section class="cta reveal">
+    <h2>Let’s Build Something Powerful</h2>
     <button>Contact Us</button>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    © 2026 Hysent International Pte Ltd | All Rights Reserved
+    © 2026 Hysent International Pte Ltd
 </footer>
 
-<!-- SCROLL ANIMATION SCRIPT -->
 <script>
 function reveal() {
-    let reveals = document.querySelectorAll(".reveal");
+    let elements = document.querySelectorAll(".reveal");
 
-    for (let i = 0; i < reveals.length; i++) {
-        let windowHeight = window.innerHeight;
-        let elementTop = reveals[i].getBoundingClientRect().top;
-        let elementVisible = 100;
-
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+    elements.forEach(el => {
+        let top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add("active");
         }
-    }
+    });
 }
-
 window.addEventListener("scroll", reveal);
 </script>
 
