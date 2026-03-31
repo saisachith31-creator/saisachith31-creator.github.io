@@ -1,90 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hysent International</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hysent International</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
-    <div class="logo">Hysent International</div>
+    <h2>Hysent International</h2>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Company</a></li>
-
-        <li class="dropdown">
-            <a href="#">Products ▾</a>
-            <ul class="dropdown-menu">
-                <li>Ventilation Fans</li>
-                <li>Safety Components</li>
-                <li>Fire & Blast Doors</li>
-                <li>Marine Upholstery</li>
-                <li>Valves</li>
-                <li>Bolts & Pipe Clamp</li>
-            </ul>
-        </li>
-
-        <li><a href="booking.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">Company</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO (SLIDER READY) -->
 <section class="hero">
-    <h1>Flawless Execution in Offshore & Marine Solutions</h1>
-    <p>Delivering precision engineering and offshore support worldwide</p>
-    <a href="contact.html" class="btn">Request a Quote</a>
-</section>
-
-<!-- SERVICES -->
-<section class="services reveal">
-    <h2>Our Core Services</h2>
-
-    <div class="service-container">
-        <div class="card">Marine Engineering</div>
-        <div class="card">Offshore Operations</div>
-        <div class="card">Consultancy</div>
+    <div class="hero-content">
+        <h1>Flawless Execution in Offshore & Marine Solutions</h1>
+        <p>Delivering precision engineering, offshore support, and global marine services</p>
+        <a href="contact.html" class="btn">Request a Quote</a>
     </div>
 </section>
 
-<!-- WHY -->
-<section class="why reveal">
+<!-- SERVICES -->
+<section class="services">
+    <h2>Our Core Services</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Marine Engineering</h3>
+            <p>Advanced maintenance and repair solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Offshore Operations</h3>
+            <p>Reliable logistics and offshore execution.</p>
+        </div>
+
+        <div class="card">
+            <h3>Consultancy</h3>
+            <p>Strategic engineering advisory.</p>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why">
     <h2>Why Choose Hysent</h2>
 
-    <div class="why-container">
-        <div class="why-box">Global Reach</div>
-        <div class="why-box">Precision</div>
-        <div class="why-box">Fast Response</div>
+    <div class="cards">
+        <div class="card">
+            <h3>Global Reach</h3>
+            <p>Supporting projects worldwide.</p>
+        </div>
+
+        <div class="card">
+            <h3>Precision</h3>
+            <p>Highly skilled engineering teams.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fast Response</h3>
+            <p>Quick mobilization globally.</p>
+        </div>
     </div>
 </section>
 
 <!-- CTA -->
-<section class="cta reveal">
+<section class="cta">
     <h2>Ready to Work With Us?</h2>
-    <p>Let’s build something powerful together.</p>
+    <p>Let’s build world-class engineering solutions together.</p>
     <a href="contact.html" class="btn">Contact Us</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
-
-<!-- ANIMATION SCRIPT -->
-<script>
-const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-            el.classList.add('active');
-        }
-    });
-});
-</script>
 
 </body>
 </html>
