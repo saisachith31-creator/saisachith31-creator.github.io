@@ -1,111 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Hysent International</title>
-
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Hysent International</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav>
-    <h2>Hysent International</h2>
-    <ul>
+<header class="navbar">
+    <div class="logo">Hysent International</div>
+
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Company</a></li>
+
+        <li class="dropdown">
+            <a href="products.html">Products ▾</a>
+            <ul class="dropdown-menu">
+                <li>Ventilation Fans</li>
+                <li>Safety Components</li>
+                <li>Fire & Blast Doors</li>
+                <li>Marine Upholstery</li>
+                <li>Valves</li>
+                <li>Bolts & Pipe Clamp</li>
+            </ul>
+        </li>
+
         <li><a href="booking.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-</nav>
+</header>
 
 <!-- HERO -->
-url('your-image.jpg')
+<section class="about-hero">
     <h1>About Hysent International</h1>
     <p>Delivering precision, reliability, and engineering excellence worldwide</p>
 </section>
 
-<!-- INTRO -->
-<section class="section">
-    <h2>Who We Are</h2>
-    <p style="max-width: 800px; margin: auto; color:#555;">
-        Hysent International Pte Ltd is a trusted provider of offshore and marine engineering solutions. 
-        We specialize in delivering high-performance services across global industries with precision, 
-        innovation, and reliability.
-    </p>
+<!-- WHO WE ARE -->
+<section class="about-section reveal">
+    <div class="about-container">
+
+        <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>
+                Hysent International Pte Ltd is a trusted provider of offshore and marine
+                engineering solutions. We specialize in delivering high-performance
+                services across global industries with precision, innovation, and reliability.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <h3>Global Expertise</h3>
+            <p>Supporting offshore and marine industries worldwide.</p>
+        </div>
+
+    </div>
 </section>
 
 <!-- WHAT WE DO -->
-<section class="section light">
+<section class="about-services reveal">
     <h2>What We Do</h2>
 
-    <div class="what-grid">
+    <div class="about-grid">
 
-        <div class="what-card">
+        <div class="about-card">
             <h3>Ventilation Fans</h3>
-            <p>Advanced ventilation systems designed for efficiency, durability, and performance.</p>
+            <p>High-efficiency ventilation systems built for durability and performance.</p>
         </div>
 
-        <div class="what-card">
+        <div class="about-card">
             <h3>Safety Components</h3>
-            <p>Explosion-proof and industrial safety-certified components for hazardous environments.</p>
+            <p>Explosion-proof and industrial safety-certified components.</p>
         </div>
 
-        <div class="what-card">
+        <div class="about-card">
             <h3>Fire & Blast Systems</h3>
-            <p>High-performance fire-resistant doors, blast-proof windows, and protection systems.</p>
+            <p>Advanced protection systems for high-risk environments.</p>
         </div>
 
-        <div class="what-card">
+        <div class="about-card">
             <h3>Marine Upholstery</h3>
-            <p>Premium fire-retardant marine upholstery and materials for vessels and offshore use.</p>
+            <p>Premium fire-resistant materials for offshore vessels.</p>
         </div>
 
-        <div class="what-card">
+        <div class="about-card">
             <h3>Valves</h3>
-            <p>Industrial-grade valves manufactured to meet global engineering standards.</p>
+            <p>Industrial-grade valves meeting international standards.</p>
+        </div>
+
+        <div class="about-card">
+            <h3>Pipe & Clamp Systems</h3>
+            <p>Reliable fastening solutions for marine engineering.</p>
         </div>
 
     </div>
 </section>
 
 <!-- VALUES -->
-<section class="section">
+<section class="about-values reveal">
     <h2>Our Core Values</h2>
 
-    <div class="services">
-        <div class="card">
+    <div class="values-container">
+
+        <div class="value-card">
             <h3>Excellence</h3>
             <p>Delivering high-quality engineering solutions.</p>
         </div>
 
-        <div class="card">
+        <div class="value-card">
             <h3>Integrity</h3>
             <p>Operating with transparency and professionalism.</p>
         </div>
 
-        <div class="card">
+        <div class="value-card">
             <h3>Innovation</h3>
-            <p>Adapting to modern offshore and marine challenges.</p>
+            <p>Adapting to modern offshore challenges.</p>
         </div>
+
     </div>
 </section>
 
 <!-- CTA -->
-<section class="section light">
-    <h2>Work With Us</h2>
-    <p>Partner with Hysent for reliable offshore and engineering solutions.</p>
-    <button onclick="location.href='contact.html'">Contact Us</button>
+<section class="cta reveal">
+    <h2>Partner With Us</h2>
+    <p>Let’s deliver engineering excellence together.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Hysent International Pte Ltd | All Rights Reserved</p>
+    <p>© 2026 Hysent International</p>
 </footer>
 
 </body>
