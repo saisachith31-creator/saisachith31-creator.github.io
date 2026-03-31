@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Hysent International</title>
-<link rel="stylesheet" href="about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company - Hysent International</title>
+    <link rel="stylesheet" href="about.css">
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <header class="navbar">
     <h2>Hysent International</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">Company</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <!-- HERO -->
 <section class="about-hero">
     <h1>Global Engineering. Offshore Excellence.</h1>
-    <p>Building reliability, precision and trust worldwide</p>
+    <p>Delivering precision, reliability and innovation worldwide</p>
 </section>
 
 <!-- WHO WE ARE -->
-<section class="about-section reveal">
-    <div class="about-grid">
-
+<section class="about-section">
+    <div class="container">
         <div class="about-text">
             <h2>Who We Are</h2>
             <p>
-                Hysent International Pte Ltd is a global provider of offshore and marine
-                engineering solutions. We deliver high-performance systems designed
-                for reliability, safety and long-term efficiency.
+                Hysent International Pte Ltd is a global provider of offshore and marine engineering solutions. 
+                We specialize in delivering high-performance systems designed for safety, durability and long-term efficiency.
+            </p>
+            <p>
+                With a strong international presence, we support industries worldwide through innovation, expertise and reliability.
             </p>
         </div>
-
-        <div class="about-card">
-            <h3>Our Mission</h3>
-            <p>Deliver world-class engineering solutions across global industries.</p>
-        </div>
-
     </div>
 </section>
 
 <!-- WHAT WE DO -->
-<section class="about-section dark reveal">
+<section class="what-we-do">
     <h2>What We Do</h2>
 
-    <div class="card-grid">
+    <div class="cards">
         <div class="card">Ventilation Systems</div>
         <div class="card">Safety Components</div>
         <div class="card">Fire & Blast Protection</div>
@@ -56,39 +58,56 @@
 </section>
 
 <!-- STATS -->
-<section class="stats reveal">
-    <div class="stat">10+ Years Experience</div>
-    <div class="stat">100+ Projects</div>
-    <div class="stat">Global Clients</div>
+<section class="stats">
+    <div class="stat">
+        <h2>10+</h2>
+        <p>Years Experience</p>
+    </div>
+
+    <div class="stat">
+        <h2>100+</h2>
+        <p>Projects Delivered</p>
+    </div>
+
+    <div class="stat">
+        <h2>Global</h2>
+        <p>Client Network</p>
+    </div>
 </section>
 
-<!-- VALUES -->
-<section class="about-section reveal">
-    <h2>Core Values</h2>
+<!-- CORE VALUES -->
+<section class="values">
+    <h2>Our Core Values</h2>
 
-    <div class="card-grid">
-        <div class="card">Excellence</div>
-        <div class="card">Integrity</div>
-        <div class="card">Innovation</div>
+    <div class="cards">
+        <div class="card">
+            <h3>Excellence</h3>
+            <p>Delivering high-quality engineering solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Integrity</h3>
+            <p>Operating with transparency and professionalism.</p>
+        </div>
+
+        <div class="card">
+            <h3>Innovation</h3>
+            <p>Adapting to modern offshore challenges.</p>
+        </div>
     </div>
 </section>
 
 <!-- CTA -->
-<section class="cta reveal">
+<section class="cta">
     <h2>Partner With Us</h2>
-    <p>Let’s build engineering excellence together</p>
+    <p>Let’s build world-class engineering solutions together.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
 </section>
 
-<script>
-const reveals = document.querySelectorAll('.reveal');
-window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-            el.classList.add('active');
-        }
-    });
-});
-</script>
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Hysent International</p>
+</footer>
 
 </body>
 </html>
