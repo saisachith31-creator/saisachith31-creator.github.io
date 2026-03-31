@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hysent International</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hysent International</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,12 +13,11 @@
     <div class="logo">Hysent International</div>
 
     <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Company</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Company</a></li>
 
         <li class="dropdown">
             <a href="#">Products ▾</a>
-
             <ul class="dropdown-menu">
                 <li>Ventilation Fans</li>
                 <li>Safety Components</li>
@@ -29,23 +28,26 @@
             </ul>
         </li>
 
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="booking.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </header>
 
+<!-- HERO -->
 <section class="hero">
     <div class="hero-content">
         <h1>Flawless Execution in Offshore & Marine Solutions</h1>
         <p>Delivering precision engineering, offshore support, and global marine services</p>
-        <button>Request a Quote</button>
+        <a href="contact.html" class="btn">Request a Quote</a>
     </div>
 </section>
 
-<section class="services">
+<!-- SERVICES -->
+<section class="services reveal">
     <h2>Our Core Services</h2>
 
     <div class="service-container">
+
         <div class="card">
             <h3>Marine Engineering</h3>
             <p>Advanced maintenance and repair solutions.</p>
@@ -60,12 +62,29 @@
             <h3>Consultancy</h3>
             <p>Strategic engineering advisory.</p>
         </div>
+
     </div>
 </section>
 
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (top < windowHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
