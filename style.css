@@ -1,3 +1,4 @@
+/* RESET */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -9,8 +10,14 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 40px;
     background: #0b2545;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .nav-links {
@@ -22,6 +29,11 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
 }
 
 /* DROPDOWN FIX */
@@ -32,12 +44,14 @@ body {
 .dropdown-menu {
     position: absolute;
     top: 100%;
+    left: 0;
     background: white;
     color: black;
     display: none;
     padding: 10px;
-    border-radius: 8px;
-    min-width: 200px;
+    border-radius: 10px;
+    min-width: 220px;
+    z-index: 1000;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -46,6 +60,11 @@ body {
 
 .dropdown-menu li {
     padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #f1f5f9;
 }
 
 /* HERO */
@@ -55,21 +74,33 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     background: linear-gradient(135deg, #1e3a8a, #6d28d9);
+    text-align: center;
 }
 
 /* SLIDES */
 .slide {
     position: absolute;
     opacity: 0;
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     transition: 1s;
 }
 
 .slide.active {
     opacity: 1;
+}
+
+/* HERO TEXT */
+.hero-content {
+    margin-top: 80px;
+}
+
+.hero p {
+    color: #ddd;
+    margin-bottom: 20px;
 }
 
 /* DOTS */
@@ -85,7 +116,7 @@ body {
     background: white;
     border-radius: 50%;
     display: inline-block;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .dot.active {
@@ -94,55 +125,71 @@ body {
 
 /* BUTTON */
 .btn {
-    background: #2563eb;
-    padding: 10px 20px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    padding: 12px 26px;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 /* SERVICES */
 .services {
     text-align: center;
-    padding: 60px;
+    padding: 80px 20px;
 }
 
 .service-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .card {
     background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    width: 260px;
     transition: 0.3s;
 }
 
-/* HOVER BLUE EFFECT */
+/* 🔥 PREMIUM HOVER */
 .card:hover {
     transform: translateY(-10px) scale(1.05);
     background: linear-gradient(135deg, #2563eb, #7c3aed);
 }
 
 /* WHY */
+.why {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1e3a8a, #6d28d9);
+}
+
 .why-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .why-box {
-    padding: 20px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
     transition: 0.3s;
+    width: 250px;
 }
 
 .why-box:hover {
+    transform: scale(1.08);
     background: linear-gradient(135deg, #2563eb, #7c3aed);
-    transform: scale(1.1);
 }
 
 /* CTA */
@@ -154,19 +201,19 @@ body {
 }
 
 .cta h2 {
-    font-size: 28px;
     margin-bottom: 10px;
 }
 
 .cta p {
-    margin-bottom: 25px; /* 🔥 THIS FIXES YOUR ISSUE */
+    margin-bottom: 25px;
     color: #555;
 }
 
-.cta .btn {
-    display: inline-block;
-    margin-top: 10px;
-}
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
 }
 
 /* SCROLL ANIMATION */
@@ -181,30 +228,26 @@ body {
     transform: translateY(0);
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-}
+/* ========================= */
+/* 🔥 ABOUT PAGE (ISOLATED) */
+/* ========================= */
 
-/* ABOUT HERO */
-.about-hero {
+.about-page .about-hero {
     text-align: center;
     padding: 100px 20px;
     background: linear-gradient(135deg, #1e3a8a, #6d28d9);
 }
 
-.about-hero h1 {
+.about-page .about-hero h1 {
     font-size: 42px;
 }
 
-.about-hero p {
+.about-page .about-hero p {
     color: #ddd;
 }
 
 /* ABOUT SECTION */
-.about-container {
+.about-page .about-container {
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -212,63 +255,62 @@ footer {
     flex-wrap: wrap;
 }
 
-.about-text {
+.about-page .about-text {
     max-width: 500px;
 }
 
-.about-box {
+.about-page .about-box {
     background: rgba(255,255,255,0.05);
     padding: 30px;
     border-radius: 12px;
 }
 
-/* SERVICES GRID */
-.about-services {
+/* WHAT WE DO */
+.about-page .about-services {
     text-align: center;
     padding: 60px;
 }
 
-.about-grid {
+.about-page .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 25px;
     margin-top: 30px;
 }
 
-.about-card {
+.about-page .about-card {
     background: rgba(255,255,255,0.05);
     padding: 25px;
     border-radius: 12px;
     transition: 0.3s;
 }
 
-/* 🔥 BLUE HOVER + ANIMATION */
-.about-card:hover {
+.about-page .about-card:hover {
     transform: translateY(-10px) scale(1.05);
     background: linear-gradient(135deg, #2563eb, #7c3aed);
 }
 
 /* VALUES */
-.about-values {
+.about-page .about-values {
     text-align: center;
     padding: 60px;
 }
 
-.values-container {
+.about-page .values-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.value-card {
+.about-page .value-card {
     padding: 25px;
     background: rgba(255,255,255,0.05);
     border-radius: 12px;
     transition: 0.3s;
 }
 
-.value-card:hover {
+.about-page .value-card:hover {
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     transform: scale(1.08);
 }
