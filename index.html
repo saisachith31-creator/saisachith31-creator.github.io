@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hysent International</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hysent International</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
 <!-- NAVBAR -->
-<header class="navbar">
+<nav class="navbar">
     <div class="logo">Hysent International</div>
 
-    <nav class="nav-links">
+    <div class="nav-links">
+
         <a href="index.html">Home</a>
         <a href="about.html">Company</a>
 
         <!-- PRODUCTS DROPDOWN -->
         <div class="dropdown">
-            <a href="#">Products ▾</a>
+            <a href="products.html" class="dropbtn">Products ▾</a>
 
-            <div class="dropdown-menu">
-                <div class="dropdown-column">
-                    <p>Ventilation Fans</p>
-                    <p>Axial Flow Fans</p>
-                    <p>Car Park Fans</p>
-                    <p>Centrifugal Fans</p>
+            <div class="mega-menu">
+
+                <!-- COLUMN 1 -->
+                <div class="mega-column">
+                    <h4>Ventilation Fans</h4>
+                    <a href="products.html#axial">Axial Flow Fans</a>
+                    <a href="products.html#centrifugal">Centrifugal Fans</a>
+                    <a href="products.html#tunnel">Tunnel Fans</a>
+                    <a href="products.html#smoke">Smoke Fans</a>
                 </div>
 
-                <div class="dropdown-column">
-                    <p>Safety Components</p>
-                    <p>Fire & Blast Doors</p>
-                    <p>Marine Upholstery</p>
-                    <p>Valves</p>
-                    <p>Bolts & Pipe Clamp</p>
+                <!-- COLUMN 2 -->
+                <div class="mega-column">
+                    <h4>Safety</h4>
+                    <a href="products.html#safety">Safety Components</a>
+                    <a href="products.html#fire">Fire & Blast Doors</a>
                 </div>
+
+                <!-- COLUMN 3 -->
+                <div class="mega-column">
+                    <h4>Marine</h4>
+                    <a href="products.html#marine">Marine Upholstery</a>
+                    <a href="products.html#valves">Valves</a>
+                    <a href="products.html#bolts">Bolts & Pipe Clamp</a>
+                </div>
+
             </div>
         </div>
 
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
 
-<!-- HERO -->
+    </div>
+</nav>
+
+<!-- HERO SLIDER -->
 <section class="hero">
-    <div class="hero-content">
+
+    <div class="hero-slide active">
         <h1>Flawless Execution in Offshore & Marine Solutions</h1>
         <p>Delivering precision engineering, offshore support, and global marine services</p>
-        <a href="contact.html" class="btn">Request a Quote</a>
+        <button>Request a Quote</button>
     </div>
+
+    <div class="hero-slide">
+        <h1>Engineering Excellence Worldwide</h1>
+        <p>Trusted by global industries for reliability and performance</p>
+    </div>
+
+    <div class="hero-slide">
+        <h1>Advanced Marine Engineering</h1>
+        <p>Innovative offshore solutions for modern challenges</p>
+    </div>
+
+    <!-- DOTS -->
+    <div class="dots">
+        <span onclick="showSlide(0)" class="active-dot"></span>
+        <span onclick="showSlide(1)"></span>
+        <span onclick="showSlide(2)"></span>
+    </div>
+
 </section>
 
 <!-- SERVICES -->
@@ -57,6 +92,7 @@
     <h2>Our Core Services</h2>
 
     <div class="grid">
+
         <div class="card">
             <h3>Marine Engineering</h3>
             <p>Advanced maintenance and repair solutions.</p>
@@ -68,17 +104,19 @@
         </div>
 
         <div class="card">
-            <h3>Engineering Consultancy</h3>
-            <p>Strategic planning and advisory.</p>
+            <h3>Consultancy</h3>
+            <p>Strategic engineering advisory.</p>
         </div>
+
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section dark">
+<!-- WHY CHOOSE -->
+<section class="why">
     <h2>Why Choose Hysent</h2>
 
     <div class="grid">
+
         <div class="card">
             <h3>Global Reach</h3>
             <p>Supporting projects worldwide.</p>
@@ -93,6 +131,7 @@
             <h3>Fast Response</h3>
             <p>Quick mobilization globally.</p>
         </div>
+
     </div>
 </section>
 
@@ -100,13 +139,35 @@
 <section class="cta">
     <h2>Ready to Work With Us?</h2>
     <p>Let’s build something powerful together.</p>
-    <a href="contact.html" class="btn">Contact Us</a>
+    <button>Contact Us</button>
 </section>
 
 <!-- FOOTER -->
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
+
+<!-- SLIDER SCRIPT -->
+<script>
+let slides = document.querySelectorAll(".hero-slide");
+let dots = document.querySelectorAll(".dots span");
+let index = 0;
+
+function showSlide(i) {
+    slides[index].classList.remove("active");
+    dots[index].classList.remove("active-dot");
+
+    index = i;
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active-dot");
+}
+
+setInterval(() => {
+    let next = (index + 1) % slides.length;
+    showSlide(next);
+}, 5000);
+</script>
 
 </body>
 </html>
