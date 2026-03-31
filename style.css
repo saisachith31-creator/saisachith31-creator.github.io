@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +8,9 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #f5f7fa;
-    color: #1a1a1a;
-    line-height: 1.6;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 nav {
     background: #0b2c48;
     padding: 18px 60px;
@@ -23,14 +21,12 @@ nav {
 
 nav h2 {
     color: white;
-    font-size: 22px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
-    align-items: center;
 }
 
 nav ul li {
@@ -38,256 +34,129 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: white;
-    font-size: 15px;
-    transition: 0.3s;
+    text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #4da3ff;
-}
-
-/* ===== DROPDOWN ===== */
+/* DROPDOWN */
 .dropdown {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 35px;
     left: 0;
     background: white;
-    min-width: 240px;
+    min-width: 220px;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    padding: 10px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .dropdown li {
-    padding: 12px 20px;
+    padding: 12px;
     color: #333;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.dropdown li:hover {
-    background: #f1f1f1;
-}
-
-/* SHOW ONLY ON HOVER */
 nav ul li:hover .dropdown {
     display: block;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('your-image.jpg') center/cover no-repeat;
     height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+
+    background: linear-gradient(270deg, #0b2c48, #007bff, #00c6ff, #0b2c48);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
 }
 
+@keyframes gradientMove {
+    0% { background-position: 0% }
+    50% { background-position: 100% }
+    100% { background-position: 0% }
+}
+
+/* HERO TEXT */
 .hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
+    font-size: 44px;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    margin: 15px 0;
 }
 
-.hero button {
+/* BUTTON */
+button {
     background: #007bff;
     border: none;
     padding: 12px 28px;
     color: white;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.hero button:hover {
-    background: #0056b3;
+button:hover {
+    box-shadow: 0 0 20px rgba(0,123,255,0.7);
 }
 
-/* ===== SECTION GENERAL ===== */
+/* SECTION */
 .section {
     padding: 80px 60px;
     text-align: center;
 }
 
-.section h2 {
-    font-size: 30px;
-    margin-bottom: 40px;
-}
-
-/* ===== SERVICES CARDS ===== */
+/* SERVICES */
 .services {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .service-card {
     background: white;
     padding: 25px;
-    width: 280px;
+    width: 260px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
+/* HOVER */
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-/* ===== WHY CHOOSE US ===== */
-.why {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.why div {
-    max-width: 250px;
-}
-
-/* ===== WHAT WE DO (ABOUT PAGE) ===== */
-.what-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-/* 🔥 PREMIUM CARD */
-.what-card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: left;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-
-    transition: all 0.35s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-/* 🔥 HOVER EFFECT */
-.what-card:hover {
-    transform: translateY(-10px) scale(1.02);
-
+    transform: translateY(-10px) scale(1.05);
     background: linear-gradient(135deg, #0b2c48, #007bff);
     color: white;
-
-    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0,123,255,0.4);
 }
 
-/* TEXT CHANGE */
-.what-card h3,
-.what-card p {
-    transition: 0.3s;
-}
-
-.what-card:hover h3,
-.what-card:hover p {
-    color: white;
-}
-
-/* ✨ SHINE EFFECT */
-.what-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: 0.5s;
-}
-
-.what-card:hover::before {
-    left: 100%;
-}
-
-/* ===== FORM ===== */
-form {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-input, textarea {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-button.submit {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button.submit:hover {
-    background: #0056b3;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
     background: #0b2c48;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
-}
-/* ===== PREMIUM CARD HOVER ===== */
-
-.service-card {
-    transition: all 0.35s ease;
-    cursor: pointer;
 }
 
-.service-card:hover {
-    transform: translateY(-12px) scale(1.03);
-
-    background: linear-gradient(135deg, #0b2c48, #007bff);
-    color: white;
-
-    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.4);
-}
-
-/* TEXT COLOR CHANGE */
-.service-card:hover h3,
-.service-card:hover p {
-    color: white;
-}
-
-/* SMOOTH FADE-IN ON LOAD */
-.service-card {
+/* SCROLL ANIMATION */
+.reveal {
     opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 0.8s ease forwards;
+    transform: translateY(50px);
+    transition: 0.6s;
 }
 
-.service-card:nth-child(1) { animation-delay: 0.2s; }
-.service-card:nth-child(2) { animation-delay: 0.4s; }
-.service-card:nth-child(3) { animation-delay: 0.6s; }
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* FADE IN HERO */
+.fade-in {
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
 }
