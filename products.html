@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - Hysent International</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR (SAME AS INDEX) -->
+<header class="navbar">
+    <div class="logo">Hysent International</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Company</a></li>
+
+        <li class="dropdown">
+            <a href="products.html">Products ▾</a>
+            <ul class="dropdown-menu">
+                <li>Ventilation Fans</li>
+                <li>Safety Components</li>
+                <li>Fire & Blast Doors</li>
+                <li>Marine Upholstery</li>
+                <li>Valves</li>
+                <li>Bolts & Pipe Clamp</li>
+            </ul>
+        </li>
+
+        <li><a href="booking.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Our Products</h1>
+        <p>Explore our range of offshore and marine solutions</p>
+    </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="services reveal">
+    <h2>Product Categories</h2>
+
+    <div class="service-container">
+
+        <div class="card">
+            <h3>Ventilation Fans</h3>
+            <p>High-performance airflow solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Safety Components</h3>
+            <p>Reliable protection systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fire & Blast Doors</h3>
+            <p>Advanced safety engineering.</p>
+        </div>
+
+        <div class="card">
+            <h3>Marine Upholstery</h3>
+            <p>Durable marine interior solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Valves</h3>
+            <p>Precision flow control systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>Bolts & Pipe Clamp</h3>
+            <p>Industrial fastening solutions.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Hysent International</p>
+</footer>
+
+<!-- SCROLL ANIMATION -->
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (top < windowHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
