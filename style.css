@@ -148,7 +148,25 @@ body {
 /* CTA */
 .cta {
     text-align: center;
-    padding: 60px;
+    padding: 80px 20px;
+    background: #f1f5f9;
+    color: black;
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 25px; /* 🔥 THIS FIXES YOUR ISSUE */
+    color: #555;
+}
+
+.cta .btn {
+    display: inline-block;
+    margin-top: 10px;
+}
 }
 
 /* SCROLL ANIMATION */
