@@ -1,80 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Hysent International</title>
-    <link rel="stylesheet" href="products.css">
+    <title>Products - Hysent</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<header class="navbar">
-    <h2>Hysent International</h2>
+<nav class="navbar">
+    <div class="logo">Hysent International</div>
 
-    <nav>
+    <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">Company</a>
-        <a href="products.html" class="active">Products</a>
+        <a href="products.html">Products</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    </div>
+</nav>
 
 <!-- HERO -->
-<section class="products-hero">
-    <h1>Our Products</h1>
-    <p>High-performance engineering solutions built for global industries</p>
-</section>
-
-<!-- PRODUCTS GRID -->
-<section class="products-section">
-
-    <div class="product-grid">
-
-        <div class="product-card">
-            <h3>Ventilation Fans</h3>
-            <p>Efficient air systems for industrial and marine environments.</p>
-        </div>
-
-        <div class="product-card">
-            <h3>Safety Components</h3>
-            <p>Explosion-proof and certified safety solutions.</p>
-        </div>
-
-        <div class="product-card">
-            <h3>Fire & Blast Doors</h3>
-            <p>Advanced protection systems for offshore safety.</p>
-        </div>
-
-        <div class="product-card">
-            <h3>Marine Upholstery</h3>
-            <p>Fire-resistant marine-grade materials and solutions.</p>
-        </div>
-
-        <div class="product-card">
-            <h3>Valves</h3>
-            <p>Precision-engineered valves meeting global standards.</p>
-        </div>
-
-        <div class="product-card">
-            <h3>Bolts & Pipe Clamp</h3>
-            <p>Reliable fastening and support systems.</p>
-        </div>
-
+<section class="hero">
+    <div>
+        <h1>Our Products</h1>
+        <p>Engineered for performance, reliability, and global standards</p>
     </div>
-
 </section>
 
-<!-- CTA -->
-<section class="cta">
-    <h2>Looking for specific products?</h2>
-    <p>Contact our team for customized engineering solutions.</p>
-    <a href="contact.html" class="btn">Contact Us</a>
+<!-- VENTILATION -->
+<section id="axial" class="product-section">
+    <h2>Axial Flow Fans</h2>
+    <div class="product-grid">
+        <div class="product-card">High airflow industrial fans</div>
+        <div class="product-card">Tunnel ventilation systems</div>
+        <div class="product-card">Marine exhaust fans</div>
+    </div>
 </section>
 
-<!-- FOOTER -->
+<section id="centrifugal" class="product-section">
+    <h2>Centrifugal Fans</h2>
+    <div class="product-grid">
+        <div class="product-card">High pressure airflow</div>
+        <div class="product-card">Industrial ventilation</div>
+    </div>
+</section>
+
+<section id="tunnel" class="product-section">
+    <h2>Tunnel Fans</h2>
+    <div class="product-grid">
+        <div class="product-card">Jet fan systems</div>
+    </div>
+</section>
+
+<section id="smoke" class="product-section">
+    <h2>Smoke Fans</h2>
+    <div class="product-grid">
+        <div class="product-card">Emergency smoke extraction</div>
+    </div>
+</section>
+
+<!-- SAFETY -->
+<section id="safety" class="product-section">
+    <h2>Safety Components</h2>
+    <div class="product-grid">
+        <div class="product-card">Explosion-proof systems</div>
+    </div>
+</section>
+
+<section id="fire" class="product-section">
+    <h2>Fire & Blast Doors</h2>
+    <div class="product-grid">
+        <div class="product-card">Blast-resistant doors</div>
+    </div>
+</section>
+
+<!-- MARINE -->
+<section id="marine" class="product-section">
+    <h2>Marine Upholstery</h2>
+    <div class="product-grid">
+        <div class="product-card">Fire-resistant fabrics</div>
+    </div>
+</section>
+
+<section id="valves" class="product-section">
+    <h2>Valves</h2>
+    <div class="product-grid">
+        <div class="product-card">Industrial-grade valves</div>
+    </div>
+</section>
+
+<section id="bolts" class="product-section">
+    <h2>Bolts & Pipe Clamp</h2>
+    <div class="product-grid">
+        <div class="product-card">Heavy-duty clamps</div>
+    </div>
+</section>
+
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
