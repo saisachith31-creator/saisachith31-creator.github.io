@@ -169,3 +169,78 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+/* ================= DROPDOWN FIX ================= */
+
+.navbar ul li {
+    position: relative;
+}
+
+/* Dropdown container */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 420px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* LEFT SIDE */
+.dropdown-left {
+    width: 220px;
+    border-right: 1px solid #eee;
+}
+
+/* RIGHT SIDE */
+.dropdown-right {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ITEMS */
+.dropdown-item {
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.dropdown-item:hover {
+    background: #f2f6fb;
+}
+
+/* RIGHT SIDE ITEMS */
+.dropdown-right div {
+    padding: 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.dropdown-right div:hover {
+    background: #e6f0ff;
+    color: #007bff;
+}
+
+/* PREVENT DISAPPEAR BUG */
+.dropdown {
+    padding-bottom: 15px;
+}
