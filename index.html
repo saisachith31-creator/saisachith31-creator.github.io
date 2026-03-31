@@ -1,118 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hysent International</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hysent International</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-   <li class="dropdown">
-    <a href="#">Products ▾</a>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Hysent International</div>
 
-    <div class="dropdown-menu">
-        
-        <div class="dropdown-left">
-            <div class="dropdown-item">Ventilation Fans ▶</div>
-            <div class="dropdown-item">Safety Components</div>
-            <div class="dropdown-item">Fire & Blast Doors</div>
-            <div class="dropdown-item">Marine Upholstery</div>
-            <div class="dropdown-item">Valves</div>
-            <div class="dropdown-item">Bolts & Pipe Clamp</div>
-        </div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Company</a></li>
 
-        <div class="dropdown-right">
-            <div>ATEX Fans</div>
-            <div>Axial Flow Fans</div>
-            <div>Car Park Fans</div>
-            <div>Centrifugal Fans</div>
-            <div>Smoke Fans</div>
-            <div>Tunnel Fans</div>
-        </div>
+        <!-- DROPDOWN -->
+        <li class="dropdown">
+            <a href="#">Products ▾</a>
 
-    </div>
-</li>
-</nav>
+            <div class="dropdown-menu">
+
+                <!-- LEFT -->
+                <div class="dropdown-left">
+                    <div class="dropdown-item">Ventilation Fans ▶</div>
+                    <div class="dropdown-item">Safety Components</div>
+                    <div class="dropdown-item">Fire & Blast Doors</div>
+                    <div class="dropdown-item">Marine Upholstery</div>
+                    <div class="dropdown-item">Valves</div>
+                    <div class="dropdown-item">Bolts & Pipe Clamp</div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="dropdown-right">
+                    <div>ATEX Fans</div>
+                    <div>Axial Flow Fans</div>
+                    <div>Car Park Fans</div>
+                    <div>Centrifugal Fans</div>
+                    <div>Smoke Fans</div>
+                    <div>Tunnel Fans</div>
+                </div>
+
+            </div>
+        </li>
+
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
 
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
         <h1>Flawless Execution in Offshore & Marine Solutions</h1>
-        <p>Precision engineering. Global offshore expertise. Trusted worldwide.</p>
-        <button>Request a Quote</button>
+        <p>Delivering precision engineering, offshore support, and global marine services</p>
+        <a href="#" class="btn">Request a Quote</a>
     </div>
 </section>
 
 <!-- SERVICES -->
-<section class="section reveal">
+<section class="services">
     <h2>Our Core Services</h2>
 
-    <div class="services">
-        <div class="service-card">
+    <div class="service-boxes">
+        <div class="box">
             <h3>Marine Engineering</h3>
             <p>Advanced maintenance and repair solutions.</p>
         </div>
 
-        <div class="service-card">
+        <div class="box">
             <h3>Offshore Operations</h3>
             <p>Reliable logistics and offshore execution.</p>
         </div>
 
-        <div class="service-card">
-            <h3>Consultancy</h3>
-            <p>Strategic engineering advisory for complex projects.</p>
+        <div class="box">
+            <h3>Engineering Consultancy</h3>
+            <p>Strategic planning for complex projects.</p>
         </div>
     </div>
 </section>
 
-<!-- WHY -->
-<section class="section reveal dark">
-    <h2>Why Choose Hysent</h2>
-
-    <div class="services">
-        <div class="service-card glass">
-            <h3>Global Reach</h3>
-            <p>Serving offshore industries worldwide.</p>
-        </div>
-
-        <div class="service-card glass">
-            <h3>Precision</h3>
-            <p>Delivering flawless engineering execution.</p>
-        </div>
-
-        <div class="service-card glass">
-            <h3>Speed</h3>
-            <p>Fast deployment and reliable support.</p>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta reveal">
-    <h2>Let’s Build Something Powerful</h2>
-    <button>Contact Us</button>
-</section>
-
+<!-- FOOTER -->
 <footer>
-    © 2026 Hysent International Pte Ltd
+    <p>© 2026 Hysent International Pte Ltd</p>
 </footer>
-
-<script>
-function reveal() {
-    let elements = document.querySelectorAll(".reveal");
-
-    elements.forEach(el => {
-        let top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-            el.classList.add("active");
-        }
-    });
-}
-window.addEventListener("scroll", reveal);
-</script>
 
 </body>
 </html>
