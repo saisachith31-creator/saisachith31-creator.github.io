@@ -1,93 +1,33 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+.product-section {
+    padding: 60px 10%;
+    background: #f9fafb;
+    border-bottom: 1px solid #eee;
 }
 
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: #020617;
-}
-
-.navbar nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.navbar nav a:hover,
-.navbar .active {
-    color: #60a5fa;
-}
-
-/* HERO */
-.products-hero {
-    background: linear-gradient(135deg, #1e3a8a, #6d28d9);
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.products-hero h1 {
-    font-size: 40px;
-}
-
-/* GRID */
-.products-section {
-    padding: 60px 20px;
+.product-section h2 {
+    margin-bottom: 20px;
+    color: #0f172a;
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* CARD */
 .product-card {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-    transition: 0.4s;
-    cursor: pointer;
-}
+    flex: 1;
+    min-width: 250px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 
-/* 🔥 PREMIUM HOVER */
-.product-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-}
-
-/* CTA */
-.cta {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    color: white;
-    text-decoration: none;
     transition: 0.3s;
 }
 
-.btn:hover {
-    transform: scale(1.1);
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
+.product-card:hover {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    transform: translateY(-8px);
 }
