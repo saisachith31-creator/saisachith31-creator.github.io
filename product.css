@@ -1,3 +1,17 @@
+/* PRODUCT PAGE */
+
+/* HERO SAME STYLE */
+.hero {
+    height: 60vh;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* PRODUCT SECTIONS */
 .product-section {
     padding: 60px 10%;
     background: #f9fafb;
@@ -5,16 +19,18 @@
 }
 
 .product-section h2 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #0f172a;
 }
 
+/* GRID */
 .product-grid {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
+/* CARDS */
 .product-card {
     flex: 1;
     min-width: 250px;
@@ -22,12 +38,12 @@
     background: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-
     transition: 0.3s;
 }
 
+/* HOVER EFFECT */
 .product-card:hover {
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: white;
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.02);
 }
