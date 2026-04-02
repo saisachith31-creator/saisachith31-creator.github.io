@@ -269,3 +269,26 @@ color: white;
 text-align: center;
 padding: 15px;
 }
+/* TOP SOCIAL BAR */
+.top-bar {
+    background: #164e63;
+    padding: 8px 8%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+    transition: 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
