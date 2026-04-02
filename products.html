@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,20 +13,54 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (MATCH ALL PAGES) -->
+
 <nav class="navbar">
     <div class="logo">Hysent International</div>
 
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">Company</a>
-        <a href="products.html">Products</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+```
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">Company</a>
+
+    <div class="dropdown">
+        <a href="products.html">Products ▾</a>
+
+        <div class="mega-menu">
+
+            <div class="mega-column">
+                <h4>Ventilation Fans</h4>
+                <a href="ventilation.html">Axial Flow Fans</a>
+                <a href="ventilation.html">Centrifugal Fans</a>
+                <a href="ventilation.html">Tunnel Fans</a>
+                <a href="ventilation.html">Smoke Fans</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>Safety</h4>
+                <a href="safety.html">Safety Components</a>
+                <a href="fire.html">Fire & Blast Doors</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>Marine</h4>
+                <a href="marine.html">Marine Upholstery</a>
+                <a href="valves.html">Valves</a>
+                <a href="bolts.html">Bolts & Pipe Clamp</a>
+            </div>
+
+        </div>
     </div>
+
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</div>
+```
+
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
     <div>
         <h1>Our Products</h1>
@@ -33,139 +68,158 @@
     </div>
 </section>
 
-<!-- ===================== VENTILATION ===================== -->
+<!-- VENTILATION -->
+
 <section class="product-section" id="axial">
     <h2>Ventilation Fans</h2>
-
     <div class="product-grid">
 
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Axial Flow Fan</h3>
-            <p>High airflow ventilation for industrial and marine use.</p>
-        </div>
-
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Centrifugal Fan</h3>
-            <p>High-pressure air movement systems.</p>
-        </div>
-
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Tunnel Ventilation Fan</h3>
-            <p>Efficient airflow for tunnel systems.</p>
-        </div>
-
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Smoke Extraction Fan</h3>
-            <p>Emergency smoke control solutions.</p>
-        </div>
-
+```
+    <div class="product-card" onclick="location.href='ventilation.html'">
+        <div class="product-img"></div>
+        <h3>Axial Flow Fan</h3>
+        <p>High airflow ventilation for industrial and marine use.</p>
     </div>
+
+    <div class="product-card" onclick="location.href='ventilation.html'">
+        <div class="product-img"></div>
+        <h3>Centrifugal Fan</h3>
+        <p>High-pressure air movement systems.</p>
+    </div>
+
+    <div class="product-card" onclick="location.href='ventilation.html'">
+        <div class="product-img"></div>
+        <h3>Tunnel Ventilation Fan</h3>
+        <p>Efficient airflow for tunnel systems.</p>
+    </div>
+
+    <div class="product-card" onclick="location.href='ventilation.html'">
+        <div class="product-img"></div>
+        <h3>Smoke Extraction Fan</h3>
+        <p>Emergency smoke control solutions.</p>
+    </div>
+
+</div>
+```
+
 </section>
 
-<!-- ===================== SAFETY ===================== -->
+<!-- SAFETY -->
+
 <section class="product-section" id="safety">
     <h2>Safety Components</h2>
-
     <div class="product-grid">
 
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Explosion Proof Unit</h3>
-            <p>Designed for hazardous environments.</p>
-        </div>
-
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Industrial Safety System</h3>
-            <p>Reliable safety protection solutions.</p>
-        </div>
-
+```
+    <div class="product-card" onclick="location.href='safety.html'">
+        <div class="product-img"></div>
+        <h3>Explosion Proof Unit</h3>
+        <p>Designed for hazardous environments.</p>
     </div>
+
+    <div class="product-card" onclick="location.href='safety.html'">
+        <div class="product-img"></div>
+        <h3>Industrial Safety System</h3>
+        <p>Reliable safety protection solutions.</p>
+    </div>
+
+</div>
+```
+
 </section>
 
-<!-- ===================== FIRE ===================== -->
+<!-- FIRE -->
+
 <section class="product-section" id="fire">
     <h2>Fire & Blast Doors</h2>
-
     <div class="product-grid">
 
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Blast Resistant Door</h3>
-            <p>High-strength protection for industrial use.</p>
-        </div>
-
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Fire Rated Door</h3>
-            <p>Certified fire protection systems.</p>
-        </div>
-
+```
+    <div class="product-card" onclick="location.href='fire.html'">
+        <div class="product-img"></div>
+        <h3>Blast Resistant Door</h3>
+        <p>High-strength protection for industrial use.</p>
     </div>
+
+    <div class="product-card" onclick="location.href='fire.html'">
+        <div class="product-img"></div>
+        <h3>Fire Rated Door</h3>
+        <p>Certified fire protection systems.</p>
+    </div>
+
+</div>
+```
+
 </section>
 
-<!-- ===================== MARINE ===================== -->
+<!-- MARINE -->
+
 <section class="product-section" id="marine">
     <h2>Marine Upholstery</h2>
-
     <div class="product-grid">
 
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Fire Resistant Fabric</h3>
-            <p>Marine-grade upholstery materials.</p>
-        </div>
-
+```
+    <div class="product-card" onclick="location.href='marine.html'">
+        <div class="product-img"></div>
+        <h3>Fire Resistant Fabric</h3>
+        <p>Marine-grade upholstery materials.</p>
     </div>
+
+</div>
+```
+
 </section>
 
-<!-- ===================== VALVES ===================== -->
+<!-- VALVES -->
+
 <section class="product-section" id="valves">
     <h2>Valves</h2>
-
     <div class="product-grid">
 
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Control Valve</h3>
-            <p>Precision fluid control systems.</p>
-        </div>
-
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Industrial Valve</h3>
-            <p>Durable and high-performance valves.</p>
-        </div>
-
+```
+    <div class="product-card" onclick="location.href='valves.html'">
+        <div class="product-img"></div>
+        <h3>Control Valve</h3>
+        <p>Precision fluid control systems.</p>
     </div>
+
+    <div class="product-card" onclick="location.href='valves.html'">
+        <div class="product-img"></div>
+        <h3>Industrial Valve</h3>
+        <p>Durable and high-performance valves.</p>
+    </div>
+
+</div>
+```
+
 </section>
 
-<!-- ===================== PIPE ===================== -->
+<!-- BOLTS -->
+
 <section class="product-section" id="bolts">
     <h2>Bolts & Pipe Clamp</h2>
-
     <div class="product-grid">
 
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Pipe Clamp</h3>
-            <p>Heavy-duty support systems.</p>
-        </div>
-
-        <div class="product-card" onclick="location.href='product-detail.html'">
-            <div class="product-img"></div>
-            <h3>Industrial Bolt</h3>
-            <p>Strong fastening solutions.</p>
-        </div>
-
+```
+    <div class="product-card" onclick="location.href='bolts.html'">
+        <div class="product-img"></div>
+        <h3>Pipe Clamp</h3>
+        <p>Heavy-duty support systems.</p>
     </div>
+
+    <div class="product-card" onclick="location.href='bolts.html'">
+        <div class="product-img"></div>
+        <h3>Industrial Bolt</h3>
+        <p>Strong fastening solutions.</p>
+    </div>
+
+</div>
+```
+
 </section>
 
 <!-- FOOTER -->
+
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
