@@ -1,68 +1,120 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Contact - Hysent International</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Hysent International</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="contact.css">
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav>
-    <h2>Hysent International</h2>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Company</a></li>
-        <li><a href="booking.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+
+<nav class="navbar">
+    <div class="logo">Hysent International</div>
+
+```
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">Company</a>
+
+    <div class="dropdown">
+        <a href="products.html">Products ▾</a>
+
+        <div class="mega-menu">
+            <div class="mega-column">
+                <h4>Ventilation Fans</h4>
+                <a href="ventilation.html">Axial Flow Fans</a>
+                <a href="ventilation.html">Centrifugal Fans</a>
+                <a href="ventilation.html">Tunnel Fans</a>
+                <a href="ventilation.html">Smoke Fans</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>Safety</h4>
+                <a href="safety.html">Safety Components</a>
+                <a href="fire.html">Fire & Blast Doors</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>Marine</h4>
+                <a href="marine.html">Marine Upholstery</a>
+                <a href="valves.html">Valves</a>
+                <a href="bolts.html">Bolts & Pipe Clamp</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</div>
+```
+
 </nav>
 
 <!-- HERO -->
-<section class="hero small-hero">
+
+<section class="contact-hero">
     <h1>Contact Us</h1>
-    <p>Reach out to discuss your offshore & marine requirements</p>
+    <p>We’re here to support your engineering needs</p>
 </section>
 
-<!-- CONTACT INFO -->
-<section class="section">
-    <h2>Get In Touch</h2>
+<!-- CONTACT SECTION -->
 
-    <div class="services">
+<section class="contact-container">
 
-        <div class="card">
-            <h3>Email</h3>
-            <p>info@hysent.com</p>
-        </div>
+```
+<!-- LEFT INFO -->
+<div class="contact-info">
 
-        <div class="card">
-            <h3>Phone</h3>
-            <p>+65 XXXX XXXX</p>
-        </div>
+    <h2>Get in Touch</h2>
+    <p>Reach out to us for enquiries, quotations, or partnerships.</p>
 
-        <div class="card">
-            <h3>Location</h3>
-            <p>Singapore</p>
-        </div>
-
+    <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="">
+        <span>+65 9123 4567</span>
     </div>
-</section>
 
-<!-- CONTACT FORM -->
-<section class="section light">
-    <h2>Send Us a Message</h2>
+    <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="">
+        <span>info@hysent.com</span>
+    </div>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea placeholder="Your Message..." rows="5"></textarea>
+    <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="">
+        <span>Singapore</span>
+    </div>
+
+</div>
+
+<!-- RIGHT FORM -->
+<div class="contact-form">
+
+    <h2>Send a Message</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Company Name">
+        <textarea placeholder="Your Message"></textarea>
+
         <button type="submit">Send Message</button>
     </form>
+
+</div>
+```
+
 </section>
 
 <!-- FOOTER -->
+
 <footer>
-    <p>© 2026 Hysent International | All Rights Reserved</p>
+    <p>© 2026 Hysent International</p>
 </footer>
 
 </body>
