@@ -98,3 +98,12 @@ transition: 0.3s;
 .contact-form button:hover {
 transform: scale(1.05);
 }
+.contact-item a {
+    text-decoration: none;
+    color: #0f172a;
+    transition: 0.3s;
+}
+
+.contact-item a:hover {
+    color: #7c3aed;
+}
