@@ -1,132 +1,161 @@
+/* ========================= */
+/* HERO */
+/* ========================= */
 .about-hero {
-height: 50vh;
-background: linear-gradient(135deg, #2563eb, #7c3aed);
-color: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    height: 50vh;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-hero h1 {
-font-size: 32px;
-margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-/* SECTION */
+/* ========================= */
+/* WHO WE ARE (FIXED + CLEAN) */
+/* ========================= */
 .about-section {
-padding: 70px 10%;
+    padding: 80px 10%;
+    background: #f8fafc;
 }
 
 .about-container {
-display: flex;
-gap: 40px;
-flex-wrap: wrap;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+/* LEFT TEXT */
 .about-text {
-flex: 1;
+    flex: 1;
 }
 
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.about-text p {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* RIGHT SIDE (STATS) */
 .about-highlight {
-flex: 1;
-display: flex;
-flex-direction: column;
-gap: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
+/* CARDS */
 .about-highlight div {
-background: #f1f5f9;
-padding: 15px;
-border-radius: 8px;
-font-weight: 500;
+    background: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #0f172a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* HOVER */
+.about-highlight div:hover {
+    transform: translateX(8px);
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
 }
 
 /* ========================= */
 /* SOLUTIONS WE PROVIDE */
 /* ========================= */
 .what-we-do {
-padding: 70px 10%;
-text-align: center;
+    padding: 70px 10%;
+    text-align: center;
 }
 
 .what-we-do .card {
-background: #f1f5f9;
-padding: 25px;
-border-radius: 12px;
-min-width: 250px;
-transition: 0.3s;
+    background: #f1f5f9;
+    padding: 25px;
+    border-radius: 12px;
+    min-width: 250px;
+    transition: 0.3s;
 }
 
 .what-we-do .card h3 {
-margin-bottom: 10px;
-color: #0f172a;
+    margin-bottom: 10px;
+    color: #0f172a;
 }
 
 .what-we-do .card p {
-font-size: 14px;
-color: #475569;
+    font-size: 14px;
+    color: #475569;
 }
 
-/* hover */
 .what-we-do .card:hover {
-background: linear-gradient(135deg, #2563eb, #7c3aed);
-transform: translateY(-10px);
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    transform: translateY(-10px);
 }
 
 .what-we-do .card:hover h3,
 .what-we-do .card:hover p {
-color: white;
+    color: white;
 }
 
 /* ========================= */
-/* VALUES (FIXED VISIBILITY) */
+/* VALUES */
 /* ========================= */
 .values {
-background: #0f172a;
-color: white;
-padding: 70px 10%;
-text-align: center;
+    background: #0f172a;
+    color: white;
+    padding: 70px 10%;
+    text-align: center;
 }
 
 .values .card {
-background: rgba(255,255,255,0.08);
-backdrop-filter: blur(12px);
-border: 1px solid rgba(255,255,255,0.15);
-padding: 25px;
-border-radius: 12px;
-min-width: 250px;
-transition: 0.3s;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 12px;
+    min-width: 250px;
+    transition: 0.3s;
 }
 
-/* TEXT FIX */
 .values .card h3 {
-color: #ffffff;
-margin-bottom: 10px;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .values .card p {
-color: #cbd5e1; /* THIS FIXES YOUR INVISIBLE TEXT */
+    color: #cbd5e1;
 }
 
-/* HOVER EFFECT */
 .values .card:hover {
-background: linear-gradient(135deg, #2563eb, #7c3aed);
-transform: translateY(-10px);
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    transform: translateY(-10px);
 }
 
 .values .card:hover h3,
 .values .card:hover p {
-color: white;
+    color: white;
 }
 
 /* ========================= */
-/* COMMON CARDS LAYOUT */
+/* COMMON CARDS */
 /* ========================= */
 .cards {
-display: flex;
-gap: 20px;
-flex-wrap: wrap;
-justify-content: center;
-margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
 }
