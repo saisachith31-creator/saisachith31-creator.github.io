@@ -1,126 +1,314 @@
-<!DOCTYPE html>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services - Hysent International</title>
+/* ================= TOP SOCIAL BAR ================= */
 
-<link rel="stylesheet" href="style.css">
+.top-bar {
+    background: #1e3a8a;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
 
-</head>
+.top-content {
+    width: 100%;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-<body>
+/* push icons right */
+.spacer {
+    flex: 1;
+}
 
-<!-- NAVBAR -->
+.social-links {
+    display: flex;
+    gap: 12px;
+}
 
-<nav class="navbar">
-    <div class="logo">Hysent International</div>
+.social-links img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    transition: 0.3s;
+}
 
-```
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">Company</a>
+.social-links img:hover {
+    transform: scale(1.2);
+}
 
-    <div class="dropdown">
-        <a href="products.html">Products ▾</a>
+/* ================= NAVBAR ================= */
 
-        <div class="mega-menu">
-            <div class="mega-column">
-                <h4>Ventilation Fans</h4>
-                <a href="ventilation.html">Axial Flow Fans</a>
-                <a href="ventilation.html">Centrifugal Fans</a>
-                <a href="ventilation.html">Tunnel Fans</a>
-                <a href="ventilation.html">Smoke Fans</a>
-            </div>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #0f172a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-            <div class="mega-column">
-                <h4>Safety</h4>
-                <a href="safety.html">Safety Components</a>
-                <a href="fire.html">Fire & Blast Doors</a>
-            </div>
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
 
-            <div class="mega-column">
-                <h4>Marine</h4>
-                <a href="marine.html">Marine Upholstery</a>
-                <a href="valves.html">Valves</a>
-                <a href="bolts.html">Bolts & Pipe Clamp</a>
-            </div>
-        </div>
-    </div>
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
 
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-</div>
-```
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-</nav>
+.nav-links a:hover {
+    color: #7c3aed;
+}
 
-<!-- HERO -->
+/* ================= PRODUCTS ALIGN FIX ================= */
 
-<section class="hero">
-    <div>
-        <h1>Our Services</h1>
-        <p>Delivering engineering excellence across offshore and marine industries</p>
-    </div>
-</section>
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center; /* FIX ALIGNMENT */
+    padding-bottom: 10px;
+}
 
-<!-- SERVICES -->
+.dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    text-decoration: none;
+}
 
-<section class="section">
-    <h2>What We Offer</h2>
+/* ================= MEGA MENU ================= */
 
-```
-<div class="grid">
+.mega-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
 
-    <div class="card">
-        <h3>Marine Engineering</h3>
-        <p>Maintenance, repair, and optimization of marine systems.</p>
-    </div>
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
 
-    <div class="card">
-        <h3>Offshore Operations</h3>
-        <p>Reliable offshore logistics and project execution.</p>
-    </div>
+    transition: 0.3s;
+    z-index: 999;
+}
 
-    <div class="card">
-        <h3>Consultancy</h3>
-        <p>Expert engineering advisory and project planning.</p>
-    </div>
+.dropdown:hover .mega-menu,
+.mega-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
-    <div class="card">
-        <h3>Installation Services</h3>
-        <p>Professional installation of industrial equipment and systems.</p>
-    </div>
+.mega-column {
+    display: flex;
+    flex-direction: column;
+}
 
-    <div class="card">
-        <h3>Maintenance & Support</h3>
-        <p>Ongoing support to ensure peak performance and safety.</p>
-    </div>
+.mega-column h4 {
+    margin-bottom: 10px;
+    color: #2563eb;
+}
 
-    <div class="card">
-        <h3>Custom Solutions</h3>
-        <p>Tailored engineering solutions for unique project needs.</p>
-    </div>
+.mega-column a {
+    color: #0f172a;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: 0.2s;
+}
 
-</div>
-```
+.mega-column a:hover {
+    color: #7c3aed;
+    transform: translateX(5px);
+}
 
-</section>
+/* ================= HERO ================= */
 
-<!-- CTA -->
+.hero {
+    height: 75vh;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
 
-<section class="cta">
-    <h2>Need Our Expertise?</h2>
-    <p>Contact us to discuss your project requirements.</p>
-    <a href="contact.html" class="btn">Get in Touch</a>
-</section>
+.hero-slide {
+    position: absolute;
+    opacity: 0;
+    transition: 0.8s;
+    width: 100%;
+}
 
-<!-- FOOTER -->
+.hero-slide.active {
+    opacity: 1;
+}
 
-<footer>
-    <p>© 2026 Hysent International</p>
-</footer>
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
 
-</body>
-</html>
+.hero p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= DOTS ================= */
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+}
+
+.dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.dots .active-dot {
+    opacity: 1;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ================= CARDS ================= */
+
+.card {
+    background: #f1f5f9;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.card h3 {
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #475569;
+}
+
+.card:hover {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    transform: translateY(-8px);
+}
+
+.card:hover h3,
+.card:hover p {
+    color: white;
+}
+
+/* ================= WHY SECTION ================= */
+
+.why {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.why h2 {
+    margin-bottom: 40px;
+}
+
+.why .card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.why .card h3,
+.why .card p {
+    color: white;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.cta p {
+    margin-top: 10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
