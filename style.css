@@ -307,3 +307,19 @@ padding: 15px;
     opacity: 1;
     transform: scale(1.1);
 }
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center; /* THIS IS KEY */
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center; /* THIS FIXES PRODUCTS */
+    height: 100%;
+}
+.nav-links a {
+    display: flex;
+    align-items: center;
+}
