@@ -1,0 +1,63 @@
+/* HERO */
+.careers-hero {
+    height: 50vh;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECTION */
+.careers-section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+/* JOB LIST */
+.job-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* JOB CARD */
+.job-card {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 260px;
+}
+
+.job-card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* APPLY */
+.apply-section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.apply-section form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.apply-section input,
+.apply-section textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
