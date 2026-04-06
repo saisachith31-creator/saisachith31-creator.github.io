@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers - Hysent International</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="careers.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Hysent International</div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Company</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="news.html">News</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="careers-hero">
+    <h1>Build Your Career With Us</h1>
+    <p>Join a team delivering world-class offshore and marine solutions</p>
+</section>
+
+<!-- WHY JOIN -->
+<section class="careers-section">
+    <h2>Why Join Hysent</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Growth Opportunities</h3>
+            <p>Develop your skills in a global engineering environment.</p>
+        </div>
+
+        <div class="card">
+            <h3>Innovative Projects</h3>
+            <p>Work on cutting-edge offshore and marine solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Global Exposure</h3>
+            <p>Collaborate with international teams and clients.</p>
+        </div>
+    </div>
+</section>
+
+<!-- JOB LISTINGS -->
+<section class="careers-section">
+    <h2>Current Openings</h2>
+
+    <div class="job-list">
+
+        <div class="job-card">
+            <h3>Marine Engineer</h3>
+            <p>Location: Singapore</p>
+            <p>Experience: 2+ Years</p>
+            <button onclick="applyJob('Marine Engineer')">Apply</button>
+        </div>
+
+        <div class="job-card">
+            <h3>Offshore Technician</h3>
+            <p>Location: Offshore</p>
+            <p>Experience: 1+ Years</p>
+            <button onclick="applyJob('Offshore Technician')">Apply</button>
+        </div>
+
+        <div class="job-card">
+            <h3>Project Engineer</h3>
+            <p>Location: Singapore</p>
+            <p>Experience: 3+ Years</p>
+            <button onclick="applyJob('Project Engineer')">Apply</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- APPLY FORM -->
+<section class="apply-section" id="apply">
+
+    <h2>Apply Now</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" id="jobRole" placeholder="Position Applying For" required>
+        <textarea placeholder="Your Experience / Message"></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Hysent International</p>
+</footer>
+
+<script>
+function applyJob(role) {
+    document.getElementById("jobRole").value = role;
+    document.getElementById("apply").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
