@@ -126,6 +126,20 @@ function showEvents(date) {
 showEvents(today);
 
 </script>
+<script>
+const days = document.querySelectorAll(".day");
 
+days.forEach(day => {
+    day.addEventListener("click", () => {
+
+        // remove highlight from all
+        days.forEach(d => d.classList.remove("active"));
+
+        // add highlight to clicked
+        day.classList.add("active");
+
+    });
+});
+</script>
 </body>
 </html>
