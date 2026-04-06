@@ -9,12 +9,28 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="about.css">
 
+<style>
+
+/* 🔥 IMAGE STYLE */
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-
 <nav class="navbar">
     <div class="logo">Hysent International</div>
 
@@ -22,13 +38,11 @@
         <a href="index.html">Home</a>
         <a href="about.html">Company</a>
 
-        <!-- FULL MEGA MENU -->
         <div class="dropdown">
             <a href="products.html">Products ▾</a>
 
             <div class="mega-menu full-width">
 
-                <!-- COLUMN 1 -->
                 <div class="mega-column">
                     <h4>Ventilation Fans</h4>
                     <a href="ventilation.html">Axial Flow Fans</a>
@@ -37,14 +51,12 @@
                     <a href="ventilation.html">Smoke Fans</a>
                 </div>
 
-                <!-- COLUMN 2 -->
                 <div class="mega-column">
                     <h4>Safety</h4>
                     <a href="safety.html">Safety Components</a>
                     <a href="fire.html">Fire & Blast Doors</a>
                 </div>
 
-                <!-- COLUMN 3 -->
                 <div class="mega-column">
                     <h4>Marine</h4>
                     <a href="marine.html">Marine Upholstery</a>
@@ -60,21 +72,19 @@
         <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
     </div>
-
 </nav>
 
 <!-- HERO -->
-
 <section class="about-hero">
     <h1>Global Engineering. Offshore Excellence.</h1>
     <p>Delivering precision, reliability and innovation worldwide</p>
 </section>
 
 <!-- WHO WE ARE -->
-
 <section class="about-section">
     <div class="about-container">
 
+        <!-- TEXT -->
         <div class="about-text">
             <h2>Who We Are</h2>
 
@@ -87,17 +97,23 @@
             </p>
         </div>
 
-        <div class="about-highlight">
-            <div><strong>10+ Years</strong> Industry Experience</div>
-            <div><strong>100+</strong> Projects Successfully Delivered</div>
-            <div><strong>Global</strong> Client Network</div>
+        <!-- 🔥 IMAGE -->
+        <div class="about-image">
+            <img src="about.jpg.jpg" alt="Company Image">
         </div>
 
     </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="about-highlight">
+        <div><strong>10+ Years</strong> Industry Experience</div>
+        <div><strong>100+</strong> Projects Successfully Delivered</div>
+        <div><strong>Global</strong> Client Network</div>
+    </div>
+
 </section>
 
 <!-- SOLUTIONS -->
-
 <section class="what-we-do">
     <h2>Solutions We Provide</h2>
 
@@ -138,7 +154,6 @@
 </section>
 
 <!-- VALUES -->
-
 <section class="values">
     <h2>Our Core Values</h2>
 
@@ -162,7 +177,6 @@
 </section>
 
 <!-- CTA -->
-
 <section class="cta">
     <h2>Partner With Us</h2>
     <p>Let’s build world-class engineering solutions together.</p>
@@ -170,7 +184,6 @@
 </section>
 
 <!-- FOOTER -->
-
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
