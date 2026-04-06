@@ -207,3 +207,10 @@
 .calendar {
     order: 2;
 }
+/* ========================= */
+/* CALENDAR HEADER ALIGN */
+/* ========================= */
+.calendar h3 {
+    text-align: right;
+    margin-bottom: 15px;
+}
