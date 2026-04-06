@@ -312,3 +312,6 @@ footer {
     text-align: center;
     padding: 15px;
 }
+.hero {
+    background: url("hero7.jpg.jpg") center/cover no-repeat !important;
+}
