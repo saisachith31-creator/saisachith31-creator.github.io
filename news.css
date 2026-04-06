@@ -155,3 +155,22 @@
 .event-card {
     animation: fadeIn 0.5s ease-in-out;
 }
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header button {
+    background: #0ea5e9;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.calendar-header button:hover {
+    background: #0284c7;
+}
