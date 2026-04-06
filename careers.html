@@ -55,7 +55,7 @@
     </div>
 </section>
 
-<!-- 🔥 WORK TYPES (NEW SECTION) -->
+<!-- WORK TYPES -->
 <section class="careers-section">
     <h2>Choose Your Work Style</h2>
 
@@ -83,7 +83,6 @@
 
     </div>
 
-    <!-- DETAILS -->
     <div id="type-details" class="type-details"></div>
 
 </section>
@@ -123,7 +122,8 @@
 
     <h2>Apply Now</h2>
 
-    <form>
+    <form id="applicationForm">
+
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
 
@@ -132,7 +132,14 @@
 
         <textarea placeholder="Your Experience / Message"></textarea>
 
+        <!-- 🔥 RESUME UPLOAD -->
+        <label class="upload-label">Upload Resume (PDF / DOC)</label>
+        <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+
+        <p id="file-name" class="file-name">No file selected</p>
+
         <button type="submit">Submit Application</button>
+
     </form>
 
 </section>
@@ -165,9 +172,7 @@ const typeInfo = {
     }
 };
 
-// ============================
 // SELECT TYPE
-// ============================
 function selectType(type) {
 
     const info = typeInfo[type];
@@ -183,17 +188,44 @@ function selectType(type) {
         <ul>${perksHTML}</ul>
     `;
 
-    // fill form automatically
     document.getElementById("workType").value = type;
 }
 
-// ============================
 // APPLY BUTTON
-// ============================
 function applyJob(role) {
     document.getElementById("jobRole").value = role;
     document.getElementById("apply").scrollIntoView({ behavior: "smooth" });
 }
+
+// ============================
+// RESUME FILE NAME DISPLAY
+// ============================
+document.getElementById("resume").addEventListener("change", function() {
+    const file = this.files[0];
+
+    if (file) {
+        document.getElementById("file-name").textContent = file.name;
+    }
+});
+
+// ============================
+// FORM SUBMIT
+// ============================
+document.getElementById("applicationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const file = document.getElementById("resume").files[0];
+
+    if (!file) {
+        alert("Please upload your resume.");
+        return;
+    }
+
+    alert("Application submitted successfully! We will contact you soon.");
+
+    this.reset();
+    document.getElementById("file-name").textContent = "No file selected";
+});
 
 </script>
 
