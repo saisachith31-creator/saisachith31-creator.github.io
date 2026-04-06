@@ -11,17 +11,51 @@
 
 <style>
 
-/* 🔥 IMAGE STYLE */
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
+/* 🔥 HERO IMAGE LIKE HOME */
+.about-hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background: url("hero4.jpg.jpg") center/cover no-repeat;
 }
 
+/* DARK OVERLAY */
+.about-hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+}
+
+/* TEXT ABOVE IMAGE */
+.about-hero h1,
+.about-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+/* 🔥 KEEP YOUR SECTION CLEAN */
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 60px;
     align-items: center;
+    padding: 40px 10%;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 </style>
@@ -74,17 +108,18 @@
     </div>
 </nav>
 
-<!-- HERO -->
+<!-- 🔥 HERO (NOW MATCHES HOME PAGE STYLE) -->
 <section class="about-hero">
-    <h1>Global Engineering. Offshore Excellence.</h1>
-    <p>Delivering precision, reliability and innovation worldwide</p>
+    <div>
+        <h1>Global Engineering. Offshore Excellence.</h1>
+        <p>Delivering precision, reliability and innovation worldwide</p>
+    </div>
 </section>
 
 <!-- WHO WE ARE -->
 <section class="about-section">
     <div class="about-container">
 
-        <!-- TEXT -->
         <div class="about-text">
             <h2>Who We Are</h2>
 
@@ -97,14 +132,12 @@
             </p>
         </div>
 
-        <!-- 🔥 IMAGE -->
         <div class="about-image">
             <img src="hero4.jpg.jpg" alt="Company Image">
         </div>
 
     </div>
 
-    <!-- HIGHLIGHTS -->
     <div class="about-highlight">
         <div><strong>10+ Years</strong> Industry Experience</div>
         <div><strong>100+</strong> Projects Successfully Delivered</div>
