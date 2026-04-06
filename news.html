@@ -38,7 +38,9 @@
         <h3>April 2026</h3>
         <div class="calendar-grid" id="calendar"></div>
     </div>
-
+<div id="event-list" class="events">
+    <p>No events for this date.</p>
+</div>
     <!-- EVENTS -->
     <div class="events" id="events"></div>
 
@@ -48,101 +50,6 @@
     <p>© 2026 Hysent International</p>
 </footer>
 
-<script>
-
-// EVENTS DATA (you can add more later)
-const eventsData = [
-    {
-        date: "2026-04-06",
-        title: "Offshore Safety Conference",
-        description: "Live discussion on offshore safety standards.",
-        live: true
-    },
-    {
-        date: "2026-04-04",
-        title: "Marine Equipment Expo",
-        description: "Showcasing latest marine engineering solutions.",
-        live: false
-    }
-];
-
-// CREATE CALENDAR
-const calendar = document.getElementById("calendar");
-const eventsContainer = document.getElementById("events");
-
-const today = new Date().toISOString().split("T")[0];
-
-// create days (1–30 for demo)
-for (let i = 1; i <= 30; i++) {
-    let day = document.createElement("div");
-    day.classList.add("day");
-
-    let dateStr = `2026-04-${String(i).padStart(2, "0")}`;
-    day.innerText = i;
-
-    // highlight today
-    if (dateStr === today) {
-        day.classList.add("today");
-    }
-
-    // highlight event days
-    if (eventsData.some(e => e.date === dateStr)) {
-        day.classList.add("event-day");
-    }
-
-    day.onclick = () => showEvents(dateStr);
-
-    calendar.appendChild(day);
-}
-
-// SHOW EVENTS
-function showEvents(date) {
-    eventsContainer.innerHTML = "";
-
-    const filtered = eventsData.filter(e => e.date === date);
-
-    if (filtered.length === 0) {
-        eventsContainer.innerHTML = "<p>No events for this date.</p>";
-        return;
-    }
-
-    filtered.forEach(e => {
-        const card = document.createElement("div");
-        card.classList.add("event-card");
-
-        card.innerHTML = `
-            <h3>${e.title}</h3>
-            <p>${e.description}</p>
-            <div class="status ${e.live ? "live" : "completed"}">
-                ${e.live ? "🔴 LIVE NOW" : "⚫ Completed on " + e.date}
-            </div>
-        `;
-
-        eventsContainer.appendChild(card);
-    });
-}
-
-// AUTO LOAD TODAY EVENTS
-showEvents(today);
-
-</script>
-<script>
-const days = document.querySelectorAll(".day");
-
-days.forEach(day => {
-    day.addEventListener("click", () => {
-
-        // remove highlight from all
-        days.forEach(d => d.classList.remove("active"));
-
-        // add highlight to clicked
-        day.classList.add("active");
-
-    });
-});
-</script>
-</body>
-</html>
 <script>
 const days = document.querySelectorAll(".day");
 const eventList = document.getElementById("event-list");
@@ -226,3 +133,6 @@ function showEvents(date) {
     });
 }
 </script>
+</body>
+</html>
+
