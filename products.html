@@ -1,174 +1,316 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Company - Hysent International</title>
+<title>Products - Hysent International</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="product.css">
 
 </head>
+<script>
+const cards = document.querySelectorAll(".product-card");
 
+function revealCards() {
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        const trigger = window.innerHeight - 100;
+
+        if (top < trigger) {
+            card.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealCards);
+window.addEventListener("load", revealCards);
+</script>
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (MATCH ALL PAGES) -->
+
 <nav class="navbar">
     <div class="logo">Hysent International</div>
 
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">Company</a>
 
-        <div class="dropdown">
-            <a href="products.html">Products ▾</a>
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">Company</a>
 
-            <div class="mega-menu full-width">
+    <div class="dropdown">
+        <a href="products.html">Products ▾</a>
 
-                <div class="mega-column">
-                    <h4>Ventilation Fans</h4>
-                    <a href="ventilation.html">Axial Flow Fans</a>
-                    <a href="ventilation.html">Centrifugal Fans</a>
-                    <a href="ventilation.html">Tunnel Fans</a>
-                    <a href="ventilation.html">Smoke Fans</a>
-                </div>
+        <div class="mega-menu">
 
-                <div class="mega-column">
-                    <h4>Safety</h4>
-                    <a href="safety.html">Safety Components</a>
-                    <a href="fire.html">Fire & Blast Doors</a>
-                </div>
-
-                <div class="mega-column">
-                    <h4>Marine</h4>
-                    <a href="marine.html">Marine Upholstery</a>
-                    <a href="valves.html">Valves</a>
-                    <a href="bolts.html">Bolts & Pipe Clamp</a>
-                </div>
-
+            <div class="mega-column">
+                <h4>Ventilation Fans</h4>
+                <a href="ventilation.html">Axial Flow Fans</a>
+                <a href="ventilation.html">Centrifugal Fans</a>
+                <a href="ventilation.html">Tunnel Fans</a>
+                <a href="ventilation.html">Smoke Fans</a>
             </div>
-        </div>
 
-        <a href="services.html">Services</a>
-        <a href="news.html">News</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
+            <div class="mega-column">
+                <h4>Safety</h4>
+                <a href="safety.html">Safety Components</a>
+                <a href="fire.html">Fire & Blast Doors</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>Marine</h4>
+                <a href="marine.html">Marine Upholstery</a>
+                <a href="valves.html">Valves</a>
+                <a href="bolts.html">Bolts & Pipe Clamp</a>
+            </div>
+
+        </div>
     </div>
+
+    <a href="services.html">Services</a>
+    <a href="news.html">News</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+
 </nav>
 
 <!-- HERO -->
-<section class="about-hero">
+
+<section class="hero">
     <div>
-        <h1>Global Engineering. Offshore Excellence.</h1>
-        <p>Delivering precision, reliability and innovation worldwide</p>
+        <h1>Our Products</h1>
+        <p>Engineered for performance, reliability, and global standards</p>
     </div>
 </section>
 
-<!-- WHO WE ARE -->
-<section class="about-section">
+<!-- VENTILATION -->
 
-    <div class="about-container">
+<section class="product-detail">
 
-        <!-- TEXT -->
-        <div class="about-text">
-            <h2>Who We Are</h2>
-
-            <p>
-                Hysent International Pte Ltd is a trusted provider of offshore and marine engineering solutions, delivering high-performance systems engineered for safety, durability, and long-term operational efficiency.
-            </p>
-
-            <p>
-                With a strong global presence, we support industries worldwide through technical expertise, innovative solutions, and an unwavering commitment to reliability and excellence.
-            </p>
-        </div>
+    <div class="detail-container">
 
         <!-- IMAGE -->
-        <div class="about-image">
-            <img src="hero4.jpg.jpg" alt="Company Image">
+        <div class="detail-img">
+            <!-- Replace this with actual image -->
+            <!-- <img src="your-image.jpg" alt="Ventilation Fan"> -->
         </div>
 
-    </div>
+        <!-- DESCRIPTION -->
+        <div class="detail-info">
+            <h2>Ventilation Fans</h2>
 
-    <!-- HIGHLIGHTS -->
-    <div class="about-highlight">
-        <div><strong>10+ Years</strong> Industry Experience</div>
-        <div><strong>100+</strong> Projects Successfully Delivered</div>
-        <div><strong>Global</strong> Client Network</div>
-    </div>
+            <p>
+                Our ventilation fans are engineered to deliver efficient airflow and maintain safe operating environments across offshore and industrial applications. Designed for durability and high performance, they effectively regulate air circulation, remove hazardous gases, and control temperature in demanding conditions.
+            </p>
 
-</section>
+            <p>
+                Built with high-quality materials and precision engineering, our systems ensure reliability, energy efficiency, and long-term operational performance in both marine and industrial settings.
+            </p>
 
-<!-- SOLUTIONS -->
-<section class="what-we-do">
-    <h2>Solutions We Provide</h2>
+            <!-- OPTIONAL SPECS -->
+            <table class="spec-table">
+                <tr><td>Application</td><td>Offshore & Industrial</td></tr>
+                <tr><td>Type</td><td>Axial / Centrifugal / Tunnel</td></tr>
+                <tr><td>Material</td><td>Marine Grade Steel</td></tr>
+                <tr><td>Performance</td><td>High Efficiency Airflow</td></tr>
+            </table>
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>Ventilation Systems</h3>
-            <p>Industrial airflow systems ensuring safety, temperature control, and proper air circulation in offshore environments.</p>
-        </div>
-
-        <div class="card">
-            <h3>Safety Components</h3>
-            <p>Explosion-proof and certified components designed to protect both personnel and equipment.</p>
-        </div>
-
-        <div class="card">
-            <h3>Fire & Blast Protection</h3>
-            <p>Heavy-duty doors and windows built to withstand fire, explosions, and high-pressure conditions.</p>
-        </div>
-
-        <div class="card">
-            <h3>Marine Upholstery</h3>
-            <p>Durable marine-grade fabrics and materials designed for offshore use.</p>
-        </div>
-
-        <div class="card">
-            <h3>Industrial Valves</h3>
-            <p>Precision flow-control solutions used across marine and industrial systems.</p>
-        </div>
-
-        <div class="card">
-            <h3>Pipe & Clamp Systems</h3>
-            <p>Secure fastening systems including bolts, clamps, and supports.</p>
         </div>
 
     </div>
 
 </section>
 
-<!-- VALUES -->
-<section class="values">
-    <h2>Our Core Values</h2>
+<!-- SAFETY -->
 
-    <div class="cards">
-        <div class="card">
-            <h3>Excellence</h3>
-            <p>Delivering high-quality engineering solutions.</p>
+<section class="product-detail">
+
+    <div class="detail-container">
+
+        <!-- IMAGE -->
+        <div class="detail-img">
+            <!-- future image here -->
         </div>
 
-        <div class="card">
-            <h3>Integrity</h3>
-            <p>Operating with transparency and professionalism.</p>
+        <!-- DESCRIPTION -->
+        <div class="detail-info">
+            <h2>Safety Components</h2>
+
+            <p>
+                Our safety components are designed to ensure maximum protection for personnel and equipment in high-risk offshore and industrial environments. Engineered to meet strict safety standards, these components provide reliable performance under extreme conditions.
+            </p>
+
+            <p>
+                From explosion-proof equipment to critical safety systems, our solutions are built with precision and durability to enhance operational safety, minimize risks, and ensure compliance with international regulations.
+            </p>
+
+            <!-- SPECS TABLE -->
+            <table class="spec-table">
+                <tr><td>Application</td><td>Offshore & Industrial Safety</td></tr>
+                <tr><td>Type</td><td>Explosion-proof / Safety Systems</td></tr>
+                <tr><td>Compliance</td><td>ISO / ATEX Certified</td></tr>
+                <tr><td>Function</td><td>Personnel & Equipment Protection</td></tr>
+            </table>
+
         </div>
 
-        <div class="card">
-            <h3>Innovation</h3>
-            <p>Adapting to modern offshore challenges.</p>
-        </div>
     </div>
 
 </section>
 
-<!-- CTA -->
-<section class="cta">
-    <h2>Partner With Us</h2>
-    <p>Let’s build world-class engineering solutions together.</p>
-    <a href="contact.html" class="btn">Contact Us</a>
+<!-- FIRE -->
+
+<section class="product-detail">
+
+    <div class="detail-container">
+
+        <!-- IMAGE -->
+        <div class="detail-img">
+            <!-- future image here -->
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="detail-info">
+            <h2>Fire & Blast Doors</h2>
+
+            <p>
+                Our fire and blast doors are engineered to provide maximum protection in hazardous offshore and industrial environments. Designed to withstand extreme heat, pressure, and explosive forces, they play a critical role in safeguarding personnel, equipment, and infrastructure.
+            </p>
+
+            <p>
+                Manufactured to meet international safety standards, these systems ensure structural integrity, operational reliability, and enhanced protection against fire and blast incidents in high-risk zones.
+            </p>
+
+            <!-- SPECS TABLE -->
+            <table class="spec-table">
+                <tr><td>Application</td><td>Offshore & Industrial Safety Zones</td></tr>
+                <tr><td>Resistance</td><td>Fire / Explosion / Pressure</td></tr>
+                <tr><td>Compliance</td><td>ISO / ATEX / Safety Standards</td></tr>
+                <tr><td>Function</td><td>Protection & Containment</td></tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MARINE -->
+
+<section class="product-detail">
+
+    <div class="detail-container">
+
+        <!-- IMAGE -->
+        <div class="detail-img">
+            <!-- future image here -->
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="detail-info">
+            <h2>Marine Upholstery</h2>
+
+            <p>
+                Our marine upholstery solutions are designed to provide both durability and comfort in demanding offshore and marine environments. Using high-quality, marine-grade materials, we ensure resistance to moisture, salt, and harsh weather conditions.
+            </p>
+
+            <p>
+                From curtains and blinds to specialized fabrics and finishes, our products are crafted to enhance interior functionality while maintaining long-lasting performance and aesthetic appeal onboard vessels and offshore facilities.
+            </p>
+
+            <!-- SPECS TABLE -->
+            <table class="spec-table">
+                <tr><td>Application</td><td>Marine & Offshore Interiors</td></tr>
+                <tr><td>Materials</td><td>Marine-grade Fabrics / Leather</td></tr>
+                <tr><td>Features</td><td>Water-resistant / UV-resistant</td></tr>
+                <tr><td>Function</td><td>Comfort & Interior Protection</td></tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VALVES -->
+
+<section class="product-detail">
+
+    <div class="detail-container">
+
+        <!-- IMAGE -->
+        <div class="detail-img">
+            <!-- future image here -->
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="detail-info">
+            <h2>Industrial Valves</h2>
+
+            <p>
+                Our industrial valves are engineered for precise control and regulation of fluid flow in offshore and industrial systems. Designed for durability and performance, they ensure safe and efficient operation under high-pressure and demanding conditions.
+            </p>
+
+            <p>
+                Manufactured using high-grade materials and advanced engineering standards, our valves deliver reliability, corrosion resistance, and long-term operational efficiency across a wide range of applications.
+            </p>
+
+            <!-- SPECS TABLE -->
+            <table class="spec-table">
+                <tr><td>Application</td><td>Marine & Industrial Systems</td></tr>
+                <tr><td>Type</td><td>Ball / Gate / Globe / Check</td></tr>
+                <tr><td>Material</td><td>Stainless Steel / Alloy</td></tr>
+                <tr><td>Function</td><td>Flow Control & Regulation</td></tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOLTS -->
+
+<section class="product-detail">
+
+    <div class="detail-container" style="flex-direction: row;">
+
+        <!-- IMAGE -->
+        <div class="detail-img">
+            <!-- future image here -->
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="detail-info">
+            <h2>Bolts & Pipe Clamp Systems</h2>
+
+            <p>
+                Our bolts and pipe clamp systems are engineered to provide secure fastening and structural support in demanding offshore and industrial environments. Designed for strength and durability, they ensure stability and safety across critical installations.
+            </p>
+
+            <p>
+                Built with high-quality materials and precision manufacturing, these systems offer excellent load-bearing capacity, corrosion resistance, and long-term reliability in marine and heavy-duty applications.
+            </p>
+
+            <!-- SPECS TABLE -->
+            <table class="spec-table">
+                <tr><td>Application</td><td>Marine & Industrial Installations</td></tr>
+                <tr><td>Type</td><td>Pipe Clamps / U-Bolts / Fasteners</td></tr>
+                <tr><td>Material</td><td>Galvanized Steel / Stainless Steel</td></tr>
+                <tr><td>Function</td><td>Support, Fastening & Stability</td></tr>
+            </table>
+
+        </div>
+
+    </div>
+
 </section>
 
 <!-- FOOTER -->
+
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
