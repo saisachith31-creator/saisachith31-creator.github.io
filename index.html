@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,9 +7,94 @@
 
 <link rel="stylesheet" href="style.css">
 
+<style>
+
+/* HERO BACKGROUND IMAGES */
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* 🔥 ADD YOUR IMAGES HERE */
+.hero-slide:nth-child(1) {
+    background: url("images/hero1.jpg") center/cover no-repeat;
+}
+
+.hero-slide:nth-child(2) {
+    background: url("images/hero2.jpg") center/cover no-repeat;
+}
+
+.hero-slide:nth-child(3) {
+    background: url("images/hero3.jpg") center/cover no-repeat;
+}
+
+/* DARK OVERLAY */
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+}
+
+.hero-slide h1,
+.hero-slide p,
+.hero-slide a {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* DOTS */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dots span {
+    height: 10px;
+    width: 10px;
+    background: white;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.active-dot {
+    opacity: 1;
+}
+
+</style>
+
 </head>
 
 <body>
+
 <!-- TOP SOCIAL BAR -->
 <div class="top-bar">
     <div class="top-content">
@@ -19,71 +103,64 @@
 
         <div class="social-links">
             <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
             </a>
 
             <a href="https://linkedin.com/company/YOUR_LINKEDIN" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png">
             </a>
         </div>
 
     </div>
 </div>
-<!-- NAVBAR -->
 
+<!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">Hysent International</div>
 
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Company</a>
 
-<div class="nav-links">
+        <div class="dropdown">
+            <a href="products.html" class="dropbtn">Products ▾</a>
 
-    <a href="index.html">Home</a>
-    <a href="about.html">Company</a>
+            <div class="mega-menu">
 
-    <!-- PRODUCTS MEGA MENU -->
-    <div class="dropdown">
-    <a href="products.html" class="dropbtn">Products ▾</a>
+                <div class="mega-column">
+                    <h4>Ventilation Fans</h4>
+                    <a href="ventilation.html">Axial Flow Fans</a>
+                    <a href="ventilation.html">Centrifugal Fans</a>
+                    <a href="ventilation.html">Tunnel Fans</a>
+                    <a href="ventilation.html">Smoke Fans</a>
+                </div>
 
-        <div class="mega-menu">
+                <div class="mega-column">
+                    <h4>Safety</h4>
+                    <a href="safety.html">Safety Components</a>
+                    <a href="fire.html">Fire & Blast Doors</a>
+                </div>
 
-            <div class="mega-column">
-                <h4>Ventilation Fans</h4>
-                <a href="ventilation.html">Axial Flow Fans</a>
-                <a href="ventilation.html">Centrifugal Fans</a>
-                <a href="ventilation.html">Tunnel Fans</a>
-                <a href="ventilation.html">Smoke Fans</a>
+                <div class="mega-column">
+                    <h4>Marine</h4>
+                    <a href="marine.html">Marine Upholstery</a>
+                    <a href="valves.html">Valves</a>
+                    <a href="bolts.html">Bolts & Pipe Clamp</a>
+                </div>
+
             </div>
-
-            <div class="mega-column">
-                <h4>Safety</h4>
-                <a href="safety.html">Safety Components</a>
-                <a href="fire.html">Fire & Blast Doors</a>
-            </div>
-
-            <div class="mega-column">
-                <h4>Marine</h4>
-                <a href="marine.html">Marine Upholstery</a>
-                <a href="valves.html">Valves</a>
-                <a href="bolts.html">Bolts & Pipe Clamp</a>
-            </div>
-
         </div>
+
+        <a href="services.html">Services</a>
+        <a href="news.html">News</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
     </div>
-
-    <a href="services.html">Services</a>
-    <a href="news.html">News</a>
-    <a href="careers.html">Careers</a>
-    <a href="contact.html">Contact</a>
-
-</div>
-
-
 </nav>
 
 <!-- HERO SLIDER -->
 
 <section class="hero">
-
 
 <div class="hero-slide active">
     <h1>Flawless Execution in Offshore & Marine Solutions</h1>
@@ -101,74 +178,59 @@
     <p>Innovative offshore solutions for modern challenges</p>
 </div>
 
-<!-- DOTS -->
 <div class="dots">
     <span onclick="showSlide(0)" class="active-dot"></span>
     <span onclick="showSlide(1)"></span>
     <span onclick="showSlide(2)"></span>
 </div>
 
-
 </section>
 
 <!-- SERVICES -->
-
 <section class="section">
     <h2>Our Core Services</h2>
 
+    <div class="grid">
+        <div class="card">
+            <h3>Marine Engineering</h3>
+            <p>Advanced maintenance and repair solutions.</p>
+        </div>
 
-<div class="grid">
+        <div class="card">
+            <h3>Offshore Operations</h3>
+            <p>Reliable logistics and offshore execution.</p>
+        </div>
 
-    <div class="card">
-        <h3>Marine Engineering</h3>
-        <p>Advanced maintenance and repair solutions.</p>
+        <div class="card">
+            <h3>Consultancy</h3>
+            <p>Strategic engineering advisory.</p>
+        </div>
     </div>
-
-    <div class="card">
-        <h3>Offshore Operations</h3>
-        <p>Reliable logistics and offshore execution.</p>
-    </div>
-
-    <div class="card">
-        <h3>Consultancy</h3>
-        <p>Strategic engineering advisory.</p>
-    </div>
-
-</div>
-
-
 </section>
 
 <!-- WHY CHOOSE -->
-
 <section class="why">
     <h2>Why Choose Hysent</h2>
 
+    <div class="grid">
+        <div class="card">
+            <h3>Global Reach</h3>
+            <p>Supporting projects worldwide.</p>
+        </div>
 
-<div class="grid">
+        <div class="card">
+            <h3>Precision</h3>
+            <p>Highly skilled engineering teams.</p>
+        </div>
 
-    <div class="card">
-        <h3>Global Reach</h3>
-        <p>Supporting projects worldwide.</p>
+        <div class="card">
+            <h3>Fast Response</h3>
+            <p>Quick mobilization globally.</p>
+        </div>
     </div>
-
-    <div class="card">
-        <h3>Precision</h3>
-        <p>Highly skilled engineering teams.</p>
-    </div>
-
-    <div class="card">
-        <h3>Fast Response</h3>
-        <p>Quick mobilization globally.</p>
-    </div>
-
-</div>
-
-
 </section>
 
 <!-- CTA -->
-
 <section class="cta">
     <h2>Ready to Work With Us?</h2>
     <p>Let’s build something powerful together.</p>
@@ -176,13 +238,11 @@
 </section>
 
 <!-- FOOTER -->
-
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
 
 <!-- SLIDER SCRIPT -->
-
 <script>
 let slides = document.querySelectorAll(".hero-slide");
 let dots = document.querySelectorAll(".dots span");
