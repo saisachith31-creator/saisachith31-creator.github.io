@@ -188,3 +188,22 @@
     left: 50%;
     transform: translateX(-50%);
 }
+/* ========================= */
+/* LAYOUT SIDE BY SIDE */
+/* ========================= */
+.news-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* events bigger, calendar smaller */
+    gap: 30px;
+    align-items: start;
+}
+
+/* LEFT SIDE (EVENTS) */
+.events {
+    order: 1;
+}
+
+/* RIGHT SIDE (CALENDAR) */
+.calendar {
+    order: 2;
+}
