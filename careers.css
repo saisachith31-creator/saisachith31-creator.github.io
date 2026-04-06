@@ -249,3 +249,14 @@
     background: #f8fafc;
     border-radius: 10px;
 }
+.upload-label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.file-name {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 5px;
+}
