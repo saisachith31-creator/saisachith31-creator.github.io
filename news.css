@@ -1,0 +1,121 @@
+/* ========================= */
+/* NEWS PAGE */
+/* ========================= */
+
+.news-page {
+    padding: 60px 10%;
+}
+
+.news-page h1 {
+    margin-bottom: 10px;
+}
+
+.news-page p {
+    margin-bottom: 30px;
+    color: #64748b;
+}
+
+/* ========================= */
+/* CALENDAR */
+/* ========================= */
+
+.calendar {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.calendar h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+/* GRID */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+/* DAY */
+.day {
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f1f5f9;
+    transition: 0.25s;
+    font-weight: 500;
+}
+
+.day:hover {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* TODAY */
+.today {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+/* EVENT DAY */
+.event-day {
+    border: 2px solid #7c3aed;
+}
+
+/* ========================= */
+/* EVENTS */
+/* ========================= */
+
+.events {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CARD */
+.event-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+/* TEXT */
+.event-card h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.event-card p {
+    color: #475569;
+    font-size: 14px;
+}
+
+/* STATUS */
+.status {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* LIVE */
+.live {
+    color: #ef4444;
+}
+
+/* COMPLETED */
+.completed {
+    color: #6b7280;
+}
