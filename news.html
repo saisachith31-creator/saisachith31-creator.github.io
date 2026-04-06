@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -38,11 +38,11 @@
         <h3>April 2026</h3>
         <div class="calendar-grid" id="calendar"></div>
     </div>
-<div id="event-list" class="events">
-    <p>No events for this date.</p>
-</div>
-    <!-- EVENTS -->
-    <div class="events" id="events"></div>
+
+    <!-- EVENTS DISPLAY -->
+    <div id="event-list" class="events">
+        <p>No events for this date.</p>
+    </div>
 
 </section>
 
@@ -51,10 +51,9 @@
 </footer>
 
 <script>
-const days = document.querySelectorAll(".day");
-const eventList = document.getElementById("event-list");
-
-// 🔥 EVENTS DATABASE (EDIT THIS ANYTIME)
+// ============================
+// EVENTS DATABASE
+// ============================
 const events = {
     "2026-04-06": [
         {
@@ -76,27 +75,47 @@ const events = {
     ]
 };
 
-// TODAY DATE
+// ============================
+// GENERATE CALENDAR
+// ============================
+const calendar = document.getElementById("calendar");
+
+// April 2026 → 30 days
+const totalDays = 30;
+
+// Today
 const today = new Date();
 const todayStr = today.toISOString().split("T")[0];
 
-// HANDLE CLICK
-days.forEach(day => {
-    day.addEventListener("click", () => {
+// Create days
+for (let i = 1; i <= totalDays; i++) {
+    const day = document.createElement("div");
+    day.classList.add("day");
+    day.textContent = i;
 
-        // remove active
-        days.forEach(d => d.classList.remove("active"));
+    const dateStr = `2026-04-${String(i).padStart(2, "0")}`;
+
+    // highlight today
+    if (dateStr === todayStr) {
+        day.classList.add("today");
+    }
+
+    // click event
+    day.addEventListener("click", () => {
+        document.querySelectorAll(".day").forEach(d => d.classList.remove("active"));
         day.classList.add("active");
 
-        // get clicked date
-        const dayNum = day.textContent.trim();
-        const selectedDate = `2026-04-${dayNum.padStart(2, "0")}`;
-
-        showEvents(selectedDate);
+        showEvents(dateStr);
     });
-});
 
-// SHOW EVENTS FUNCTION
+    calendar.appendChild(day);
+}
+
+// ============================
+// SHOW EVENTS
+// ============================
+const eventList = document.getElementById("event-list");
+
 function showEvents(date) {
     eventList.innerHTML = "";
 
@@ -118,7 +137,6 @@ function showEvents(date) {
             statusClass = "completed";
         } else {
             status = "🔵 UPCOMING";
-            statusClass = "";
         }
 
         const card = `
@@ -132,7 +150,13 @@ function showEvents(date) {
         eventList.innerHTML += card;
     });
 }
+
+// ============================
+// AUTO LOAD TODAY EVENTS
+// ============================
+showEvents(todayStr);
+
 </script>
+
 </body>
 </html>
-
