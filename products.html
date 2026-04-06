@@ -3,63 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products - Hysent International</title>
+<title>Company - Hysent International</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="product.css">
-
-<style>
-
-/* HERO */
-.hero {
-    position: relative;
-    height: 80vh;
-    background: url("hero6.jpg.jpg") center/cover no-repeat;
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    top: 0;
-    left: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-/* 🔥 FIX PRODUCT LAYOUT */
-.detail-container {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    padding: 60px 10%;
-}
-
-.detail-img {
-    flex: 1;
-}
-
-.detail-info {
-    flex: 1;
-}
-
-</style>
+<link rel="stylesheet" href="about.css">
 
 </head>
 
@@ -69,86 +16,159 @@
 <nav class="navbar">
     <div class="logo">Hysent International</div>
 
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">Company</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Company</a>
 
-    <div class="dropdown">
-        <a href="products.html">Products ▾</a>
+        <div class="dropdown">
+            <a href="products.html">Products ▾</a>
 
-        <div class="mega-menu">
+            <div class="mega-menu full-width">
 
-            <div class="mega-column">
-                <h4>Ventilation Fans</h4>
-                <a href="ventilation.html">Axial Flow Fans</a>
-                <a href="ventilation.html">Centrifugal Fans</a>
-                <a href="ventilation.html">Tunnel Fans</a>
-                <a href="ventilation.html">Smoke Fans</a>
+                <div class="mega-column">
+                    <h4>Ventilation Fans</h4>
+                    <a href="ventilation.html">Axial Flow Fans</a>
+                    <a href="ventilation.html">Centrifugal Fans</a>
+                    <a href="ventilation.html">Tunnel Fans</a>
+                    <a href="ventilation.html">Smoke Fans</a>
+                </div>
+
+                <div class="mega-column">
+                    <h4>Safety</h4>
+                    <a href="safety.html">Safety Components</a>
+                    <a href="fire.html">Fire & Blast Doors</a>
+                </div>
+
+                <div class="mega-column">
+                    <h4>Marine</h4>
+                    <a href="marine.html">Marine Upholstery</a>
+                    <a href="valves.html">Valves</a>
+                    <a href="bolts.html">Bolts & Pipe Clamp</a>
+                </div>
+
             </div>
-
-            <div class="mega-column">
-                <h4>Safety</h4>
-                <a href="safety.html">Safety Components</a>
-                <a href="fire.html">Fire & Blast Doors</a>
-            </div>
-
-            <div class="mega-column">
-                <h4>Marine</h4>
-                <a href="marine.html">Marine Upholstery</a>
-                <a href="valves.html">Valves</a>
-                <a href="bolts.html">Bolts & Pipe Clamp</a>
-            </div>
-
         </div>
+
+        <a href="services.html">Services</a>
+        <a href="news.html">News</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
     </div>
-
-    <a href="services.html">Services</a>
-    <a href="news.html">News</a>
-    <a href="careers.html">Careers</a>
-    <a href="contact.html">Contact</a>
-</div>
-
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Our Products</h1>
-        <p>Engineered for performance, reliability, and global standards</p>
+<section class="about-hero">
+    <div>
+        <h1>Global Engineering. Offshore Excellence.</h1>
+        <p>Delivering precision, reliability and innovation worldwide</p>
     </div>
 </section>
 
-<!-- PRODUCT -->
-<section class="product-detail">
-    <div class="detail-container">
+<!-- WHO WE ARE -->
+<section class="about-section">
 
-        <div class="detail-img">
-            <!-- later you add image -->
+    <div class="about-container">
+
+        <!-- TEXT -->
+        <div class="about-text">
+            <h2>Who We Are</h2>
+
+            <p>
+                Hysent International Pte Ltd is a trusted provider of offshore and marine engineering solutions, delivering high-performance systems engineered for safety, durability, and long-term operational efficiency.
+            </p>
+
+            <p>
+                With a strong global presence, we support industries worldwide through technical expertise, innovative solutions, and an unwavering commitment to reliability and excellence.
+            </p>
         </div>
 
-        <div class="detail-info">
-            <h2>Ventilation Fans</h2>
-
-            <p>
-                Our ventilation fans are engineered to deliver efficient airflow and maintain safe operating environments across offshore and industrial applications.
-            </p>
-
-            <p>
-                Built with high-quality materials and precision engineering, our systems ensure reliability and long-term performance.
-            </p>
-
-            <table class="spec-table">
-                <tr><td>Application</td><td>Offshore & Industrial</td></tr>
-                <tr><td>Type</td><td>Axial / Centrifugal / Tunnel</td></tr>
-                <tr><td>Material</td><td>Marine Grade Steel</td></tr>
-                <tr><td>Performance</td><td>High Efficiency Airflow</td></tr>
-            </table>
-
+        <!-- IMAGE -->
+        <div class="about-image">
+            <img src="hero4.jpg.jpg" alt="Company Image">
         </div>
 
     </div>
+
+    <!-- HIGHLIGHTS -->
+    <div class="about-highlight">
+        <div><strong>10+ Years</strong> Industry Experience</div>
+        <div><strong>100+</strong> Projects Successfully Delivered</div>
+        <div><strong>Global</strong> Client Network</div>
+    </div>
+
 </section>
 
+<!-- SOLUTIONS -->
+<section class="what-we-do">
+    <h2>Solutions We Provide</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Ventilation Systems</h3>
+            <p>Industrial airflow systems ensuring safety, temperature control, and proper air circulation in offshore environments.</p>
+        </div>
+
+        <div class="card">
+            <h3>Safety Components</h3>
+            <p>Explosion-proof and certified components designed to protect both personnel and equipment.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fire & Blast Protection</h3>
+            <p>Heavy-duty doors and windows built to withstand fire, explosions, and high-pressure conditions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Marine Upholstery</h3>
+            <p>Durable marine-grade fabrics and materials designed for offshore use.</p>
+        </div>
+
+        <div class="card">
+            <h3>Industrial Valves</h3>
+            <p>Precision flow-control solutions used across marine and industrial systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>Pipe & Clamp Systems</h3>
+            <p>Secure fastening systems including bolts, clamps, and supports.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VALUES -->
+<section class="values">
+    <h2>Our Core Values</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Excellence</h3>
+            <p>Delivering high-quality engineering solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Integrity</h3>
+            <p>Operating with transparency and professionalism.</p>
+        </div>
+
+        <div class="card">
+            <h3>Innovation</h3>
+            <p>Adapting to modern offshore challenges.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Partner With Us</h2>
+    <p>Let’s build world-class engineering solutions together.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
+</section>
+
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
