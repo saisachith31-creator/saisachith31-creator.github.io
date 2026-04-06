@@ -143,3 +143,86 @@ days.forEach(day => {
 </script>
 </body>
 </html>
+<script>
+const days = document.querySelectorAll(".day");
+const eventList = document.getElementById("event-list");
+
+// 🔥 EVENTS DATABASE (EDIT THIS ANYTIME)
+const events = {
+    "2026-04-06": [
+        {
+            title: "Offshore Safety Seminar",
+            desc: "Live training on offshore safety systems.",
+        }
+    ],
+    "2026-04-10": [
+        {
+            title: "Marine Engineering Expo",
+            desc: "Showcasing latest marine innovations.",
+        }
+    ],
+    "2026-04-15": [
+        {
+            title: "Client Project Launch",
+            desc: "Deployment of ventilation systems.",
+        }
+    ]
+};
+
+// TODAY DATE
+const today = new Date();
+const todayStr = today.toISOString().split("T")[0];
+
+// HANDLE CLICK
+days.forEach(day => {
+    day.addEventListener("click", () => {
+
+        // remove active
+        days.forEach(d => d.classList.remove("active"));
+        day.classList.add("active");
+
+        // get clicked date
+        const dayNum = day.textContent.trim();
+        const selectedDate = `2026-04-${dayNum.padStart(2, "0")}`;
+
+        showEvents(selectedDate);
+    });
+});
+
+// SHOW EVENTS FUNCTION
+function showEvents(date) {
+    eventList.innerHTML = "";
+
+    if (!events[date]) {
+        eventList.innerHTML = "<p>No events for this date.</p>";
+        return;
+    }
+
+    events[date].forEach(event => {
+
+        let status = "";
+        let statusClass = "";
+
+        if (date === todayStr) {
+            status = "🔴 LIVE";
+            statusClass = "live";
+        } else if (date < todayStr) {
+            status = "⚪ ENDED";
+            statusClass = "completed";
+        } else {
+            status = "🔵 UPCOMING";
+            statusClass = "";
+        }
+
+        const card = `
+            <div class="event-card">
+                <h3>${event.title}</h3>
+                <p>${event.desc}</p>
+                <div class="status ${statusClass}">${status}</div>
+            </div>
+        `;
+
+        eventList.innerHTML += card;
+    });
+}
+</script>
