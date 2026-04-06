@@ -55,6 +55,39 @@
     </div>
 </section>
 
+<!-- 🔥 WORK TYPES (NEW SECTION) -->
+<section class="careers-section">
+    <h2>Choose Your Work Style</h2>
+
+    <div class="cards">
+
+        <div class="card selectable" onclick="selectType('Full-Time')">
+            <h3>Full-Time</h3>
+            <p>Stable long-term career growth</p>
+        </div>
+
+        <div class="card selectable" onclick="selectType('Part-Time')">
+            <h3>Part-Time</h3>
+            <p>Flexible work for students</p>
+        </div>
+
+        <div class="card selectable" onclick="selectType('Remote')">
+            <h3>Work From Home</h3>
+            <p>Work from anywhere</p>
+        </div>
+
+        <div class="card selectable" onclick="selectType('Onsite')">
+            <h3>Onsite</h3>
+            <p>Hands-on field experience</p>
+        </div>
+
+    </div>
+
+    <!-- DETAILS -->
+    <div id="type-details" class="type-details"></div>
+
+</section>
+
 <!-- JOB LISTINGS -->
 <section class="careers-section">
     <h2>Current Openings</h2>
@@ -93,7 +126,10 @@
     <form>
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
+
         <input type="text" id="jobRole" placeholder="Position Applying For" required>
+        <input type="text" id="workType" placeholder="Work Type" required>
+
         <textarea placeholder="Your Experience / Message"></textarea>
 
         <button type="submit">Submit Application</button>
@@ -106,10 +142,59 @@
 </footer>
 
 <script>
+
+// ============================
+// WORK TYPE DETAILS
+// ============================
+const typeInfo = {
+    "Full-Time": {
+        desc: "Join our core engineering team with long-term growth.",
+        perks: ["Stable salary", "Career progression", "Training provided"]
+    },
+    "Part-Time": {
+        desc: "Flexible work ideal for students.",
+        perks: ["Flexible hours", "Weekly pay", "Hands-on learning"]
+    },
+    "Remote": {
+        desc: "Work from anywhere with our digital teams.",
+        perks: ["Work from home", "Flexible schedule", "Online collaboration"]
+    },
+    "Onsite": {
+        desc: "Gain real-world field experience.",
+        perks: ["Industry exposure", "Work with engineers", "Practical skills"]
+    }
+};
+
+// ============================
+// SELECT TYPE
+// ============================
+function selectType(type) {
+
+    const info = typeInfo[type];
+
+    let perksHTML = "";
+    info.perks.forEach(p => {
+        perksHTML += `<li>${p}</li>`;
+    });
+
+    document.getElementById("type-details").innerHTML = `
+        <h3>${type}</h3>
+        <p>${info.desc}</p>
+        <ul>${perksHTML}</ul>
+    `;
+
+    // fill form automatically
+    document.getElementById("workType").value = type;
+}
+
+// ============================
+// APPLY BUTTON
+// ============================
 function applyJob(role) {
     document.getElementById("jobRole").value = role;
     document.getElementById("apply").scrollIntoView({ behavior: "smooth" });
 }
+
 </script>
 
 </body>
