@@ -1,3 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company - Hysent International</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="about.css">
+
+<style>
+
+/* HERO IMAGE */
+.about-hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background: url("hero4.jpg.jpg") center/cover no-repeat;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+}
+
+.about-hero h1,
+.about-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 40px 10%;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Hysent International</div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Company</a>
+
+        <div class="dropdown">
+            <a href="products.html">Products ▾</a>
+
+            <div class="mega-menu full-width">
+
+                <div class="mega-column">
+                    <h4>Ventilation Fans</h4>
+                    <a href="ventilation.html">Axial Flow Fans</a>
+                    <a href="ventilation.html">Centrifugal Fans</a>
+                    <a href="ventilation.html">Tunnel Fans</a>
+                    <a href="ventilation.html">Smoke Fans</a>
+                </div>
+
+                <div class="mega-column">
+                    <h4>Safety</h4>
+                    <a href="safety.html">Safety Components</a>
+                    <a href="fire.html">Fire & Blast Doors</a>
+                </div>
+
+                <div class="mega-column">
+                    <h4>Marine</h4>
+                    <a href="marine.html">Marine Upholstery</a>
+                    <a href="valves.html">Valves</a>
+                    <a href="bolts.html">Bolts & Pipe Clamp</a>
+                </div>
+
+            </div>
+        </div>
+
+        <a href="services.html">Services</a>
+        <a href="news.html">News</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="about-hero">
+    <div>
+        <h1>Global Engineering. Offshore Excellence.</h1>
+        <p>Delivering precision, reliability and innovation worldwide</p>
+    </div>
+</section>
+
 <!-- OUR CORE CAPABILITIES -->
 <section class="about-section">
     <div class="about-container">
@@ -31,3 +145,81 @@
     </div>
 
 </section>
+
+<!-- SOLUTIONS -->
+<section class="what-we-do">
+    <h2>Solutions We Provide</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Ventilation Systems</h3>
+            <p>High-performance industrial airflow systems engineered to ensure safety, temperature control, and efficient air circulation in offshore and marine environments.</p>
+        </div>
+
+        <div class="card">
+            <h3>Safety Components</h3>
+            <p>Certified and explosion-proof safety solutions designed to protect personnel, equipment, and operational integrity in high-risk environments.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fire & Blast Protection</h3>
+            <p>Robust fire-rated and blast-resistant systems engineered to withstand extreme conditions and enhance safety compliance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Marine Upholstery</h3>
+            <p>Premium marine-grade materials, blinds, and upholstery solutions designed for durability, comfort, and long-term offshore use.</p>
+        </div>
+
+        <div class="card">
+            <h3>Industrial Valves</h3>
+            <p>Precision-engineered flow control solutions ensuring efficiency, reliability, and operational safety across marine and industrial systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>Pipe & Clamp Systems</h3>
+            <p>Heavy-duty fastening and support systems providing structural integrity and secure installation for industrial applications.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VALUES -->
+<section class="values">
+    <h2>Our Core Values</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Excellence</h3>
+            <p>We are committed to delivering high-quality engineering solutions that exceed industry standards.</p>
+        </div>
+
+        <div class="card">
+            <h3>Integrity</h3>
+            <p>We operate with transparency, professionalism, and accountability in every project we undertake.</p>
+        </div>
+
+        <div class="card">
+            <h3>Innovation</h3>
+            <p>We continuously adapt and innovate to meet evolving offshore and marine engineering challenges.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Partner With Us</h2>
+    <p>Let’s build world-class engineering solutions together.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Hysent International</p>
+</footer>
+
+</body>
+</html>
