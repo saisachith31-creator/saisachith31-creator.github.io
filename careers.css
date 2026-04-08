@@ -1,138 +1,293 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Careers - Hysent International</title>
+/* ========================= */
+/* HERO */
+/* ========================= */
+.careers-hero {
+    height: 50vh;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="careers.css">
-</head>
+    animation: fadeIn 1s ease-in-out;
+}
 
-<body>
+.careers-hero h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">Hysent International</div>
+.careers-hero p {
+    font-size: 15px;
+    opacity: 0.9;
+}
 
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">Company</a>
-        <a href="products.html">Products</a>
-        <a href="services.html">Services</a>
-        <a href="news.html">News</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
+/* ========================= */
+/* SECTION */
+/* ========================= */
+.careers-section {
+    padding: 70px 10%;
+    text-align: center;
+}
 
-<!-- HERO -->
-<section class="careers-hero">
-    <h1>Careers at Hysent</h1>
-    <p>Build your future in marine & offshore engineering</p>
-</section>
+/* TITLE STYLE */
+.careers-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #0f172a;
+    position: relative;
+}
 
-<!-- WHY JOIN -->
-<section class="careers-section">
-    <h2>Why Join Us</h2>
+/* underline accent */
+.careers-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto 0;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 2px;
+}
 
-    <div class="cards">
-        <div class="card">
-            <h3>Global Exposure</h3>
-            <p>Work on marine and offshore projects across international markets with leading shipyards and industry partners.</p>
-        </div>
+/* ========================= */
+/* WHY JOIN GRID */
+/* ========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
 
-        <div class="card">
-            <h3>Technical Growth</h3>
-            <p>Gain hands-on experience across HVAC, electrical, structural, and mechanical systems.</p>
-        </div>
+/* CARD BASE */
+.cards .card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 14px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
 
-        <div class="card">
-            <h3>Engineering Excellence</h3>
-            <p>Be part of a team delivering high-performance solutions with strong technical expertise.</p>
-        </div>
-    </div>
-</section>
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
 
-<!-- JOBS -->
-<section class="careers-section">
-    <h2>Opportunities</h2>
+/* LEFT ACCENT BAR */
+.cards .card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
 
-    <div class="job-list">
+/* TITLE */
+.cards .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
 
-        <div class="job-card">
-            <h3>Marine HVAC Technician</h3>
-            <p>
-                Responsible for installation, maintenance, and troubleshooting of HVAC systems in offshore and marine environments. 
-                Work includes ventilation systems, airflow optimization, and system integration onboard vessels and offshore platforms.
-            </p>
-            <button>Apply Now</button>
-        </div>
+/* TEXT */
+.cards .card p {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+}
 
-        <div class="job-card">
-            <h3>Structural Fitting Technician</h3>
-            <p>
-                Perform structural installation and fitting works including pipe supports, brackets, and marine components. 
-                Ensure precision alignment, durability, and compliance with offshore engineering standards.
-            </p>
-            <button>Apply Now</button>
-        </div>
+/* HOVER EFFECT */
+.cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
 
-        <div class="job-card">
-            <h3>Electrical Technician</h3>
-            <p>
-                Handle installation and maintenance of electrical systems including control panels, safety systems, and onboard wiring. 
-                Ensure safe operation and compliance with marine electrical standards.
-            </p>
-            <button>Apply Now</button>
-        </div>
+/* subtle glow */
+.cards .card:hover::before {
+    width: 100%;
+    opacity: 0.1;
+}
 
-        <div class="job-card">
-            <h3>Mechanical Technician</h3>
-            <p>
-                Support mechanical system operations including equipment servicing, pump repair, and system troubleshooting. 
-                Ensure reliable performance in demanding offshore environments.
-            </p>
-            <button>Apply Now</button>
-        </div>
+/* ========================= */
+/* JOB LIST */
+/* ========================= */
+.job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
 
-        <div class="job-card">
-            <h3>Project Engineer</h3>
-            <p>
-                Manage project execution including planning, coordination, and technical support. 
-                Responsible for troubleshooting, system integration, and ensuring project delivery meets client specifications.
-            </p>
-            <button>Apply Now</button>
-        </div>
+/* JOB CARD */
+.job-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
 
-        <div class="job-card">
-            <h3>Offshore Safety & Outfitting Specialist</h3>
-            <p>
-                Work on outfitting LQ (Living Quarters) and safety systems including fire protection, marine safety installations, 
-                and compliance with offshore safety regulations.
-            </p>
-            <button>Apply Now</button>
-        </div>
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
 
-    </div>
-</section>
+.job-card h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+}
 
-<!-- APPLY -->
-<section class="apply-section">
-    <h2>Apply Now</h2>
+.job-card p {
+    font-size: 14px;
+    color: #475569;
+}
 
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea placeholder="Tell us about yourself"></textarea>
-        <button type="submit">Submit Application</button>
-    </form>
-</section>
+/* hover */
+.job-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Hysent International</p>
-</footer>
+/* BUTTON */
+.job-card button {
+    margin-top: 15px;
+    padding: 10px 14px;
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
 
-</body>
-</html>
+    transition: 0.3s;
+}
+
+.job-card button:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* APPLY SECTION */
+/* ========================= */
+.apply-section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.apply-section form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUTS */
+.apply-section input,
+.apply-section textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+/* focus effect */
+.apply-section input:focus,
+.apply-section textarea:focus {
+    border-color: #7c3aed;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(124,58,237,0.15);
+}
+
+/* SUBMIT BUTTON */
+.apply-section button {
+    padding: 12px;
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.apply-section button:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.selectable {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.selectable:hover {
+    transform: translateY(-5px);
+    border: 2px solid #0ea5e9;
+}
+
+.type-details {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+.upload-label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.file-name {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 5px;
+}
+/* ========================= */
+/* HERO IMAGE */
+/* ========================= */
+.careers-hero {
+    position: relative;
+    height: 80vh;
+    background: url("hero8.jpg.jpg") center/cover no-repeat !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+.careers-hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+}
+
+.careers-hero h1,
+.careers-hero p {
+    position: relative;
+    z-index: 2;
+}
