@@ -10,7 +10,6 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Hysent International</div>
 
@@ -27,6 +26,7 @@
             <a href="ventilation.html">Axial Flow Fans</a>
             <a href="ventilation.html">Centrifugal Fans</a>
             <a href="ventilation.html">Tunnel Fans</a>
+            <a href="ventilation.html">Smoke Fans</a>
           </div>
 
           <div class="mega-column">
@@ -49,7 +49,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div>
       <h1 id="hero-title">Axial Flow Fans</h1>
@@ -57,55 +56,64 @@
     </div>
   </section>
 
-  <!-- PRODUCT DETAIL -->
-  <section class="product-detail">
-    <div class="detail-container">
+  <section class="product-detail ventilation-detail">
+    <div class="ventilation-shell">
 
-      <!-- LEFT BUTTON -->
       <button class="fan-nav fan-nav-left" id="prevFan" aria-label="Previous fan">&#10094;</button>
 
-      <!-- IMAGE -->
-      <div class="detail-img">
-        <img id="fan-image" src="images/axial-flow-fan.jpg" alt="Axial Flow Fans">
+      <div class="ventilation-main">
+        <div class="vent-top">
+          <div class="detail-img">
+            <img id="fan-image" src="images/axial-flow-fan.jpg" alt="Axial Flow Fans">
+          </div>
+
+          <div class="vent-summary">
+            <h2 id="product-title">Axial Flow Fans</h2>
+            <h3>Product Overview</h3>
+            <div id="product-overview"></div>
+            <a href="contact.html" class="inquiry-btn">Contact us for more info</a>
+          </div>
+        </div>
+
+        <div class="vent-bottom">
+          <div class="info-card">
+            <h3>Key Features</h3>
+            <ul id="key-features"></ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Technical Specifications</h3>
+            <table class="spec-table">
+              <tbody id="spec-table-body"></tbody>
+            </table>
+          </div>
+
+          <div class="info-card">
+            <h3>Applications</h3>
+            <ul id="applications"></ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Advantages</h3>
+            <div id="advantages"></div>
+          </div>
+
+          <div class="info-card">
+            <h3>Certifications & Standards</h3>
+            <ul id="certifications"></ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Maintenance & Service</h3>
+            <div id="maintenance"></div>
+          </div>
+        </div>
       </div>
 
-      <!-- INFO -->
-      <div class="detail-info">
-        <h2 id="product-title">Axial Flow Fans</h2>
-
-        <h3>Product Overview</h3>
-        <div id="product-overview"></div>
-
-        <h3>Key Features</h3>
-        <ul id="key-features"></ul>
-
-        <h3>Technical Specifications</h3>
-        <table class="spec-table">
-          <tbody id="spec-table-body"></tbody>
-        </table>
-
-        <h3>Applications</h3>
-        <ul id="applications"></ul>
-
-        <h3>Advantages</h3>
-        <div id="advantages"></div>
-
-        <h3>Certifications & Standards</h3>
-        <ul id="certifications"></ul>
-
-        <h3>Maintenance & Service</h3>
-        <div id="maintenance"></div>
-
-        <a href="contact.html" class="inquiry-btn">Contact us for more info</a>
-      </div>
-
-      <!-- RIGHT BUTTON -->
       <button class="fan-nav fan-nav-right" id="nextFan" aria-label="Next fan">&#10095;</button>
-
     </div>
   </section>
 
-  <!-- ENQUIRY -->
   <section class="enquiry">
     <h2>Request a Quote</h2>
     <p>Get in touch with our team for pricing and specifications</p>
@@ -119,7 +127,6 @@
     </form>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2026 Hysent International</p>
   </footer>
@@ -293,6 +300,63 @@
         ],
         maintenance: [
           "Tunnel Fans are designed with accessibility in mind, allowing for routine inspection and maintenance. Regular servicing ensures optimal airflow performance and extends the lifespan of the equipment, especially in high-demand environments."
+        ]
+      },
+      {
+        title: "Smoke Fans",
+        heroText: "Emergency smoke and heat extraction for safer evacuation and fire response.",
+        image: "images/smoke-fan.jpg",
+        imageAlt: "Smoke Fans",
+        overview: [
+          "Smoke Fans are specialized ventilation systems designed to extract smoke, heat, and toxic gases from enclosed or semi-enclosed environments, particularly during fire emergencies. These fans play a critical role in maintaining visibility, reducing heat buildup, and enabling safe evacuation for personnel while supporting firefighting operations.",
+          "Engineered for high-temperature operation, smoke fans are capable of functioning under extreme conditions for a specified duration, ensuring continued performance during emergencies. They are commonly integrated into fire safety systems in marine vessels, offshore platforms, commercial buildings, and industrial facilities.",
+          "Smoke fans are built with robust materials and advanced motor systems to withstand harsh operating conditions, including exposure to high temperatures, corrosive environments, and continuous operation requirements."
+        ],
+        features: [
+          "High-temperature resistance for fire emergency operation",
+          "Efficient smoke extraction and heat removal",
+          "Designed for continuous operation under extreme conditions",
+          "Corrosion-resistant construction for marine and offshore environments",
+          "Low vibration and stable performance",
+          "High airflow capacity for rapid smoke clearance",
+          "Integrated safety features for emergency systems",
+          "Reliable performance during critical situations"
+        ],
+        specs: [
+          ["Fan Type", "Axial / Centrifugal (depending on application)"],
+          ["Airflow Direction", "Configurable based on system design"],
+          ["Construction Material", "Galvanized steel / stainless steel / fire-resistant coated steel"],
+          ["Impeller Material", "Aluminum alloy / heat-resistant materials"],
+          ["Motor Type", "High-temperature resistant motor (fire-rated)"],
+          ["Voltage", "Customizable based on project requirements"],
+          ["Frequency", "50Hz / 60Hz"],
+          ["Speed", "Variable or fixed"],
+          ["Mounting Type", "Wall-mounted / ceiling-mounted / duct-mounted"],
+          ["Temperature Rating", "Designed for high-temperature operation (e.g. 250°C–400°C for specific durations)"],
+          ["Protection Rating", "IP-rated motors available"],
+          ["Compliance", "Fire safety and smoke control standards"]
+        ],
+        applications: [
+          "Marine vessels (engine rooms, accommodation areas, escape routes)",
+          "Offshore oil and gas platforms",
+          "Commercial and industrial buildings",
+          "Underground facilities and enclosed spaces",
+          "Fire safety and emergency ventilation systems",
+          "Smoke extraction systems in tunnels and corridors",
+          "HVAC systems with fire safety integration"
+        ],
+        advantages: [
+          "Smoke Fans are essential for enhancing safety in emergency situations by effectively removing smoke and heat, thereby improving visibility and reducing risks to personnel. Their ability to operate under high temperatures ensures continuous ventilation during critical moments.",
+          "These fans are engineered for reliability and durability, making them suitable for integration into fire safety systems across various industries. Their efficient airflow performance ensures rapid smoke extraction, contributing to faster evacuation and improved firefighting conditions."
+        ],
+        certifications: [
+          "Designed in compliance with international fire safety standards",
+          "ISO-certified manufacturing processes",
+          "Meets smoke extraction and ventilation safety requirements",
+          "Suitable for marine and offshore safety regulations (if applicable)"
+        ],
+        maintenance: [
+          "Smoke Fans are designed for periodic inspection and maintenance to ensure readiness during emergencies. Routine checks of motors, impellers, and control systems are essential to maintain optimal performance and compliance with safety standards."
         ]
       }
     ];
