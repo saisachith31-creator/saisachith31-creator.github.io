@@ -30,7 +30,9 @@
     z-index: 2;
 }
 
-/* SECTION */
+/* ========================= */
+/* PRODUCT SECTION */
+/* ========================= */
 .product-section {
     padding: 80px 10%;
     background: #f8fafc;
@@ -57,13 +59,11 @@
     position: relative;
     cursor: pointer;
     transition: all 0.4s ease;
-
-    /* SCROLL START STATE */
     transform: translateY(40px);
     opacity: 0;
 }
 
-/* IMAGE */
+/* IMAGE PLACEHOLDER */
 .product-img {
     height: 160px;
     background: linear-gradient(135deg, #2563eb, #7c3aed);
@@ -116,9 +116,7 @@
     z-index: 1;
 }
 
-/* ========================= */
 /* SCROLL ANIMATION */
-/* ========================= */
 .product-card.show {
     transform: translateY(0);
     opacity: 1;
@@ -140,17 +138,27 @@
     align-items: flex-start;
 }
 
+/* KEEP IMAGE SPACE */
 .detail-img {
     flex: 1;
     min-width: 300px;
+    min-height: 300px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
+/* REAL IMAGE INSIDE THE SPACE */
 .detail-img img {
     width: 100%;
     max-width: 500px;
-    border-radius: 10px;
-    display: block;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    border-radius: 10px;
 }
 
 .detail-info {
@@ -197,7 +205,7 @@
     border-bottom: none;
 }
 
-/* PRODUCT BUTTON */
+/* PRODUCT INFO BUTTON */
 .inquiry-btn {
     display: inline-block;
     margin-top: 20px;
@@ -264,6 +272,3 @@
     transform: scale(1.05);
 }
 
-.enquiry button:hover {
-transform: scale(1.05);
-}
