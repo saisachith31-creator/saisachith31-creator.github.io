@@ -1,0 +1,86 @@
+/* ========================= */
+/* VENTILATION PAGE ONLY */
+/* ========================= */
+
+.detail-container {
+    position: relative;
+    align-items: flex-start;
+}
+
+/* SIDE ARROW BUTTONS */
+.fan-nav {
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+.fan-nav:hover {
+    transform: scale(1.08);
+}
+
+.fan-nav-left {
+    align-self: center;
+}
+
+.fan-nav-right {
+    align-self: center;
+}
+
+/* OPTIONAL PRODUCT CONTENT SMOOTH LOOK */
+.detail-info {
+    animation: fadeInContent 0.4s ease;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BETTER IMAGE LOOK FOR VENTILATION */
+.detail-img img {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .detail-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fan-nav {
+        width: 46px;
+        height: 46px;
+        font-size: 24px;
+        margin: 10px auto;
+    }
+
+    .fan-nav-left,
+    .fan-nav-right {
+        align-self: center;
+    }
+
+    .detail-img img {
+        min-height: 220px;
+    }
+}
