@@ -15,39 +15,42 @@
     overflow: hidden;
 }
 
+/* UPDATED HERO STYLE */
 .hero-slide {
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    justify-content: flex-start;
+    padding-left: 8%;
+    text-align: left;
     color: white;
 
     opacity: 0;
     transition: 0.5s;
 }
 
+/* FIXED IMAGE PATH */
 .hero-slide:nth-child(1) {
-    background: url("hero1.jpg.jpg") center/cover no-repeat;
+    background: url("hero1.jpg") center/cover no-repeat;
 }
 
 .hero-slide:nth-child(2) {
-    background: url("hero2.jpg.jpg") center/cover no-repeat;
+    background: url("hero2.jpg") center/cover no-repeat;
 }
 
 .hero-slide:nth-child(3) {
-    background: url("hero3.jpg.jpg") center/cover no-repeat;
+    background: url("hero3.jpg") center/cover no-repeat;
 }
 
+/* BETTER OVERLAY */
 .hero-slide::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 60, 100, 0.45);
     top: 0;
     left: 0;
 }
@@ -59,8 +62,37 @@
     z-index: 2;
 }
 
+.hero-slide h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    max-width: 700px;
+    margin-bottom: 15px;
+}
+
+.hero-slide p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
 .hero-slide.active {
     opacity: 1;
+}
+
+/* BUTTON STYLE */
+.btn {
+    background: #1abc9c;
+    padding: 12px 28px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #16a085;
 }
 
 .dots {
@@ -85,11 +117,44 @@
     opacity: 1;
 }
 
+/* CLEANER NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3aa6d0;
+}
+
+.nav-links a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #1abc9c;
+}
+
 </style>
 
 </head>
 
 <body>
+
+<!-- TOP CONTACT BAR -->
+<div style="background:#0b4f6c; color:white; padding:8px 8%; font-size:14px;">
+    📞 +86 411 3954 9055 &nbsp;&nbsp;&nbsp;
+    ✉️ info@hysentgroup.com
+</div>
 
 <div class="top-bar">
     <div class="top-content">
@@ -108,7 +173,7 @@
 </div>
 
 <nav class="navbar">
-    <div class="logo">Hysent International</div>
+    <div class="logo">Hysent</div>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
@@ -151,9 +216,12 @@
 <section class="hero">
 
 <div class="hero-slide active">
-    <h1>Flawless Execution in Offshore & Marine Solutions</h1>
-    <p>Delivering precision engineering, offshore support, and global marine services</p>
-    <a href="contact.html" class="btn">Request a Quote</a>
+    <h1>Hysent International (China) Limited</h1>
+    <p>
+        Provide customers with efficient and high-quality reliable products,
+        professional technical support and prompt services.
+    </p>
+    <a href="about.html" class="btn">READ MORE</a>
 </div>
 
 <div class="hero-slide">
@@ -230,7 +298,7 @@
     </div>
 </section>
 
-<!-- ADDED SECTION -->
+<!-- OPERATIONS -->
 <section class="operations">
     <h2>Our Operations</h2>
 
@@ -239,26 +307,21 @@
         <div class="operation-card">
             <h3>HYI China</h3>
             <p>
-                Hysent International (China) Ltd manages core manufacturing, engineering, and project execution.
-                With offices in Dalian and Shanghai, the China team supports large-scale industrial and marine projects across global markets.
-                Additionally, the China division is responsible for product development, quality assurance, and technical support, ensuring all solutions meet international standards and project requirements.
+                Hysent International (China) Ltd manages core manufacturing, engineering, and project execution...
             </p>
         </div>
 
         <div class="operation-card">
             <h3>HYI Singapore</h3>
             <p>
-                Hysent International Pte Ltd focuses on sales, customer support, and technical coordination in Singapore.
-                It serves as a key hub for Southeast Asia operations, providing localized service and faster response to clients.
-                The Singapore office also works closely with the China team to coordinate project execution, strengthen client relationships, and support regional business development.
+                Hysent International Pte Ltd focuses on sales, customer support, and technical coordination in Singapore...
             </p>
         </div>
 
         <div class="operation-card">
             <h3>HYI Solution</h3>
             <p>
-                Hysent provides a wide range of ventilation and engineering solutions including axial fans, centrifugal fans, tunnel fans, smoke extraction systems, and customized industrial applications.
-                These solutions are designed to deliver high performance, energy efficiency, and reliability across various industries such as marine, infrastructure, and industrial facilities.
+                Hysent provides a wide range of ventilation and engineering solutions...
             </p>
         </div>
 
