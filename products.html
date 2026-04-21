@@ -105,11 +105,12 @@
       }
     }
 
+    /* ADDED BUTTON STYLE */
     .btn {
       display: inline-block;
       margin-top: 20px;
       padding: 10px 20px;
-      background: #10b981;
+      background: #0ea5e9;
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -181,17 +182,23 @@
       <div class="detail-info">
         <h2 id="ventTitle">Axial Flow Fans</h2>
 
-        <p id="ventPara1"></p>
-        <p id="ventPara2"></p>
+        <p id="ventPara1">
+          Axial Flow Fans are designed to move large volumes of air efficiently...
+        </p>
+
+        <p id="ventPara2">
+          The design of axial flow fans allows for high airflow rates...
+        </p>
 
         <table class="spec-table">
-          <tr><td id="ventRow1Label"></td><td id="ventRow1Value"></td></tr>
-          <tr><td id="ventRow2Label"></td><td id="ventRow2Value"></td></tr>
-          <tr><td id="ventRow3Label"></td><td id="ventRow3Value"></td></tr>
-          <tr><td id="ventRow4Label"></td><td id="ventRow4Value"></td></tr>
+          <tr><td id="ventRow1Label">Fan Type</td><td id="ventRow1Value">Axial Flow</td></tr>
+          <tr><td id="ventRow2Label">Airflow Direction</td><td id="ventRow2Value">Parallel to shaft</td></tr>
+          <tr><td id="ventRow3Label">Construction Material</td><td id="ventRow3Value">Galvanized steel / stainless steel / aluminum alloy</td></tr>
+          <tr><td id="ventRow4Label">Applications</td><td id="ventRow4Value">Marine vessels, offshore platforms, HVAC systems</td></tr>
         </table>
 
-        <a id="ventReadMore" href="ventilation.html" class="btn">Read More</a>
+        <!-- ADDED -->
+        <a id="ventReadMore" href="axial.html" class="btn">Read More</a>
       </div>
     </div>
   </section>
@@ -202,10 +209,8 @@
       <div class="detail-img"></div>
       <div class="detail-info">
         <h2>Safety Components</h2>
-        <p>Our safety components are designed to provide reliable protection in high-risk environments.</p>
-        <table class="spec-table">
-          <tr><td>Application</td><td>Offshore & Industrial Safety</td></tr>
-        </table>
+        <p>...</p>
+        <table class="spec-table"></table>
         <a href="safety.html" class="btn">Read More</a>
       </div>
     </div>
@@ -217,10 +222,8 @@
       <div class="detail-img"></div>
       <div class="detail-info">
         <h2>Fire & Blast Doors</h2>
-        <p>Engineered to withstand extreme conditions.</p>
-        <table class="spec-table">
-          <tr><td>Application</td><td>Offshore Safety Zones</td></tr>
-        </table>
+        <p>...</p>
+        <table class="spec-table"></table>
         <a href="fire.html" class="btn">Read More</a>
       </div>
     </div>
@@ -232,10 +235,8 @@
       <div class="detail-img"></div>
       <div class="detail-info">
         <h2>Marine Upholstery</h2>
-        <p>High-grade marine materials.</p>
-        <table class="spec-table">
-          <tr><td>Application</td><td>Marine Interiors</td></tr>
-        </table>
+        <p>...</p>
+        <table class="spec-table"></table>
         <a href="marine.html" class="btn">Read More</a>
       </div>
     </div>
@@ -247,10 +248,8 @@
       <div class="detail-img"></div>
       <div class="detail-info">
         <h2>Industrial Valves</h2>
-        <p>Precision engineered valves.</p>
-        <table class="spec-table">
-          <tr><td>Application</td><td>Marine & Industrial</td></tr>
-        </table>
+        <p>...</p>
+        <table class="spec-table"></table>
         <a href="valves.html" class="btn">Read More</a>
       </div>
     </div>
@@ -262,10 +261,8 @@
       <div class="detail-img"></div>
       <div class="detail-info">
         <h2>Bolts & Pipe Clamp Systems</h2>
-        <p>Heavy-duty fastening systems.</p>
-        <table class="spec-table">
-          <tr><td>Application</td><td>Pipeline Support Systems</td></tr>
-        </table>
+        <p>...</p>
+        <table class="spec-table"></table>
         <a href="bolts.html" class="btn">Read More</a>
       </div>
     </div>
@@ -277,16 +274,17 @@
 
   <script>
     const ventilationProducts = [
-      { title: "Axial Flow Fans", label: "Axial Flow Fans", link: "ventilation.html#axial" },
-      { title: "Centrifugal Fans", label: "Centrifugal Fans", link: "ventilation.html#centrifugal" },
-      { title: "Tunnel Fans", label: "Tunnel Fans", link: "ventilation.html#tunnel" },
-      { title: "Smoke Fans", label: "Smoke Fans", link: "ventilation.html#smoke" }
+      { title: "Axial Flow Fans", label: "Axial Flow Fans", link: "axial.html" },
+      { title: "Centrifugal Fans", label: "Centrifugal Fans", link: "centrifugal.html" },
+      { title: "Tunnel Fans", label: "Tunnel Fans", link: "tunnel.html" },
+      { title: "Smoke Fans", label: "Smoke Fans", link: "smoke.html" }
     ];
 
     let currentVentIndex = 0;
 
     function renderVentilation(index) {
       const item = ventilationProducts[index];
+
       document.getElementById("ventTitle").textContent = item.title;
       document.getElementById("ventLabel").textContent = item.label;
       document.getElementById("ventReadMore").href = item.link;
