@@ -104,6 +104,16 @@
         font-size: 14px;
       }
     }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #10b981;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
   </style>
 </head>
 
@@ -163,28 +173,25 @@
     <div class="detail-container ventilation-switcher">
 
       <div class="detail-img">
-        <button class="vent-arrow left" id="ventPrev" aria-label="Previous fan">&#10094;</button>
-        <button class="vent-arrow right" id="ventNext" aria-label="Next fan">&#10095;</button>
+        <button class="vent-arrow left" id="ventPrev">&#10094;</button>
+        <button class="vent-arrow right" id="ventNext">&#10095;</button>
         <div class="vent-label" id="ventLabel">Axial Flow Fans</div>
       </div>
 
       <div class="detail-info">
         <h2 id="ventTitle">Axial Flow Fans</h2>
 
-        <p id="ventPara1">
-          Axial Flow Fans are designed to move large volumes of air efficiently in a direction parallel to the fan shaft. These fans are widely used in marine and offshore environments where continuous ventilation, cooling, and air circulation are critical for both operational efficiency and safety.
-        </p>
-
-        <p id="ventPara2">
-          The design of axial flow fans allows for high airflow rates with relatively low pressure, making them suitable for applications requiring consistent air movement over extended periods. These fans are engineered to operate under demanding environmental conditions, including exposure to humidity, salt air, and varying temperatures typically found in marine and offshore settings.
-        </p>
+        <p id="ventPara1"></p>
+        <p id="ventPara2"></p>
 
         <table class="spec-table">
-          <tr><td id="ventRow1Label">Fan Type</td><td id="ventRow1Value">Axial Flow</td></tr>
-          <tr><td id="ventRow2Label">Airflow Direction</td><td id="ventRow2Value">Parallel to shaft</td></tr>
-          <tr><td id="ventRow3Label">Construction Material</td><td id="ventRow3Value">Galvanized steel / stainless steel / aluminum alloy</td></tr>
-          <tr><td id="ventRow4Label">Applications</td><td id="ventRow4Value">Marine vessels, offshore platforms, HVAC systems</td></tr>
+          <tr><td id="ventRow1Label"></td><td id="ventRow1Value"></td></tr>
+          <tr><td id="ventRow2Label"></td><td id="ventRow2Value"></td></tr>
+          <tr><td id="ventRow3Label"></td><td id="ventRow3Value"></td></tr>
+          <tr><td id="ventRow4Label"></td><td id="ventRow4Value"></td></tr>
         </table>
+
+        <a id="ventReadMore" href="ventilation.html" class="btn">Read More</a>
       </div>
     </div>
   </section>
@@ -192,26 +199,14 @@
   <!-- SAFETY -->
   <section class="product-detail">
     <div class="detail-container">
-
       <div class="detail-img"></div>
-
       <div class="detail-info">
         <h2>Safety Components</h2>
-
-        <p>
-          Our safety components are designed to provide reliable protection in high-risk offshore and industrial environments. Engineered in accordance with stringent safety standards, these systems ensure operational integrity under extreme conditions.
-        </p>
-
-        <p>
-          From explosion-proof equipment to specialized safety assemblies, our solutions enhance personnel safety, reduce operational risks, and ensure compliance with international regulations and industry requirements.
-        </p>
-
+        <p>Our safety components are designed to provide reliable protection in high-risk environments.</p>
         <table class="spec-table">
           <tr><td>Application</td><td>Offshore & Industrial Safety</td></tr>
-          <tr><td>Type</td><td>Explosion-proof / Safety Systems</td></tr>
-          <tr><td>Compliance</td><td>ISO / ATEX</td></tr>
-          <tr><td>Function</td><td>Protection & Risk Mitigation</td></tr>
         </table>
+        <a href="safety.html" class="btn">Read More</a>
       </div>
     </div>
   </section>
@@ -219,26 +214,14 @@
   <!-- FIRE -->
   <section class="product-detail">
     <div class="detail-container">
-
       <div class="detail-img"></div>
-
       <div class="detail-info">
         <h2>Fire & Blast Doors</h2>
-
-        <p>
-          Our fire and blast protection systems are engineered to withstand extreme heat, pressure, and explosive forces in hazardous offshore environments. These systems are critical in ensuring structural integrity and safeguarding personnel and equipment.
-        </p>
-
-        <p>
-          Manufactured to meet international safety standards, they provide reliable containment, enhanced durability, and long-term performance in high-risk operational zones.
-        </p>
-
+        <p>Engineered to withstand extreme conditions.</p>
         <table class="spec-table">
           <tr><td>Application</td><td>Offshore Safety Zones</td></tr>
-          <tr><td>Resistance</td><td>Fire / Explosion</td></tr>
-          <tr><td>Compliance</td><td>International Standards</td></tr>
-          <tr><td>Function</td><td>Protection & Containment</td></tr>
         </table>
+        <a href="fire.html" class="btn">Read More</a>
       </div>
     </div>
   </section>
@@ -246,26 +229,14 @@
   <!-- MARINE -->
   <section class="product-detail">
     <div class="detail-container">
-
       <div class="detail-img"></div>
-
       <div class="detail-info">
         <h2>Marine Upholstery</h2>
-
-        <p>
-          Our marine upholstery solutions are developed using high-grade materials designed to withstand moisture, salt exposure, and harsh marine conditions. These products ensure both durability and comfort in offshore environments.
-        </p>
-
-        <p>
-          Engineered for long-term performance, they provide resistance against wear, UV exposure, and environmental damage while maintaining aesthetic quality onboard vessels.
-        </p>
-
+        <p>High-grade marine materials.</p>
         <table class="spec-table">
           <tr><td>Application</td><td>Marine Interiors</td></tr>
-          <tr><td>Material</td><td>Marine-grade Fabric</td></tr>
-          <tr><td>Features</td><td>Water & UV Resistant</td></tr>
-          <tr><td>Function</td><td>Durability & Comfort</td></tr>
         </table>
+        <a href="marine.html" class="btn">Read More</a>
       </div>
     </div>
   </section>
@@ -273,53 +244,29 @@
   <!-- VALVES -->
   <section class="product-detail">
     <div class="detail-container">
-
       <div class="detail-img"></div>
-
       <div class="detail-info">
         <h2>Industrial Valves</h2>
-
-        <p>
-          Our industrial valves are precision-engineered for accurate flow control across marine and industrial systems. Designed to operate under high-pressure conditions, they ensure efficiency, safety, and operational reliability.
-        </p>
-
-        <p>
-          Manufactured using corrosion-resistant materials, these valves provide long service life and consistent performance in demanding offshore applications.
-        </p>
-
+        <p>Precision engineered valves.</p>
         <table class="spec-table">
           <tr><td>Application</td><td>Marine & Industrial</td></tr>
-          <tr><td>Type</td><td>Ball / Gate / Globe</td></tr>
-          <tr><td>Material</td><td>Stainless Steel / Alloy</td></tr>
-          <tr><td>Function</td><td>Flow Control</td></tr>
         </table>
+        <a href="valves.html" class="btn">Read More</a>
       </div>
     </div>
   </section>
 
-  <!-- BOLTS / CLAMPS -->
+  <!-- BOLTS -->
   <section class="product-detail">
     <div class="detail-container">
-
       <div class="detail-img"></div>
-
       <div class="detail-info">
         <h2>Bolts & Pipe Clamp Systems</h2>
-
-        <p>
-          Our pipe clamp and fastening systems are engineered for securing pipelines in offshore and marine environments, as highlighted in our product range including rubber-lined, PTFE-lined, and U-type pipe clamps. These systems are designed to reduce vibration, prevent abrasion, and accommodate pipeline expansion.
-        </p>
-
-        <p>
-          Manufactured with high-strength materials and protective linings, they provide excellent corrosion resistance, load-bearing capacity, and long-term durability across applications involving steam, water, gas, and industrial piping systems.
-        </p>
-
+        <p>Heavy-duty fastening systems.</p>
         <table class="spec-table">
           <tr><td>Application</td><td>Pipeline Support Systems</td></tr>
-          <tr><td>Type</td><td>U-Bolts / Rubber-lined / PTFE Clamps</td></tr>
-          <tr><td>Material</td><td>Galvanized / Stainless Steel</td></tr>
-          <tr><td>Function</td><td>Support, Vibration Control</td></tr>
         </table>
+        <a href="bolts.html" class="btn">Read More</a>
       </div>
     </div>
   </section>
@@ -330,99 +277,30 @@
 
   <script>
     const ventilationProducts = [
-      {
-        title: "Axial Flow Fans",
-        label: "Axial Flow Fans",
-        para1: "Axial Flow Fans are designed to move large volumes of air efficiently in a direction parallel to the fan shaft. These fans are widely used in marine and offshore environments where continuous ventilation, cooling, and air circulation are critical for both operational efficiency and safety.",
-        para2: "The design of axial flow fans allows for high airflow rates with relatively low pressure, making them suitable for applications requiring consistent air movement over extended periods. These fans are engineered to operate under demanding environmental conditions, including exposure to humidity, salt air, and varying temperatures typically found in marine and offshore settings.",
-        specs: [
-          ["Fan Type", "Axial Flow"],
-          ["Airflow Direction", "Parallel to shaft"],
-          ["Construction Material", "Galvanized steel / stainless steel / aluminum alloy"],
-          ["Applications", "Marine vessels, offshore platforms, HVAC systems"]
-        ]
-      },
-      {
-        title: "Centrifugal Fans",
-        label: "Centrifugal Fans",
-        para1: "Centrifugal Fans, also known as radial fans, are designed to move air or gases by increasing the pressure through centrifugal force. Air enters the fan through the inlet and is discharged at a 90-degree angle through the outlet, making these fans highly effective for applications requiring higher pressure and controlled airflow.",
-        para2: "These fans are widely used in marine, offshore, and industrial environments where air needs to be moved through duct systems, filters, or equipment. Their design allows them to handle both clean and contaminated air, including dust, fumes, and other particles, making them versatile for various operational conditions.",
-        specs: [
-          ["Fan Type", "Centrifugal / Radial"],
-          ["Airflow Direction", "Radial (90-degree discharge)"],
-          ["Construction Material", "Galvanized steel / stainless steel / coated steel"],
-          ["Applications", "Duct systems, filtration units, industrial exhaust"]
-        ]
-      },
-      {
-        title: "Tunnel Fans",
-        label: "Tunnel Fans",
-        para1: "Tunnel Fans are specialized ventilation systems designed to provide efficient airflow in confined or enclosed tunnel environments. These fans are engineered to ensure proper air circulation, removal of exhaust gases, smoke extraction, and temperature control within tunnels, underground passages, and similar structures.",
-        para2: "Tunnel fans typically operate under demanding conditions where consistent airflow and reliability are critical for safety and operational efficiency. They are capable of handling high air volumes over long distances, making them suitable for applications where effective longitudinal ventilation is required.",
-        specs: [
-          ["Fan Type", "Axial (Jet / Tunnel configuration)"],
-          ["Airflow Direction", "Unidirectional longitudinal airflow"],
-          ["Construction Material", "Galvanized steel / stainless steel / coated steel"],
-          ["Applications", "Tunnels, enclosed passageways, smoke extraction"]
-        ]
-      },
-      {
-        title: "Smoke Fans",
-        label: "Smoke Fans",
-        para1: "Smoke Fans are specialized ventilation systems designed to extract smoke, heat, and toxic gases from enclosed or semi-enclosed environments, particularly during fire emergencies. These fans play a critical role in maintaining visibility, reducing heat buildup, and enabling safe evacuation for personnel while supporting firefighting operations.",
-        para2: "Engineered for high-temperature operation, smoke fans are capable of functioning under extreme conditions for a specified duration, ensuring continued performance during emergencies. They are commonly integrated into fire safety systems in marine vessels, offshore platforms, commercial buildings, and industrial facilities.",
-        specs: [
-          ["Fan Type", "Axial / Centrifugal (depending on application)"],
-          ["Temperature Rating", "Designed for high-temperature operation"],
-          ["Construction Material", "Galvanized steel / stainless steel / fire-resistant coated steel"],
-          ["Applications", "Emergency ventilation, smoke extraction, fire safety systems"]
-        ]
-      }
+      { title: "Axial Flow Fans", label: "Axial Flow Fans", link: "ventilation.html#axial" },
+      { title: "Centrifugal Fans", label: "Centrifugal Fans", link: "ventilation.html#centrifugal" },
+      { title: "Tunnel Fans", label: "Tunnel Fans", link: "ventilation.html#tunnel" },
+      { title: "Smoke Fans", label: "Smoke Fans", link: "ventilation.html#smoke" }
     ];
 
     let currentVentIndex = 0;
 
-    const ventTitle = document.getElementById("ventTitle");
-    const ventLabel = document.getElementById("ventLabel");
-    const ventPara1 = document.getElementById("ventPara1");
-    const ventPara2 = document.getElementById("ventPara2");
-
-    const ventRow1Label = document.getElementById("ventRow1Label");
-    const ventRow1Value = document.getElementById("ventRow1Value");
-    const ventRow2Label = document.getElementById("ventRow2Label");
-    const ventRow2Value = document.getElementById("ventRow2Value");
-    const ventRow3Label = document.getElementById("ventRow3Label");
-    const ventRow3Value = document.getElementById("ventRow3Value");
-    const ventRow4Label = document.getElementById("ventRow4Label");
-    const ventRow4Value = document.getElementById("ventRow4Value");
-
     function renderVentilation(index) {
       const item = ventilationProducts[index];
-
-      ventTitle.textContent = item.title;
-      ventLabel.textContent = item.label;
-      ventPara1.textContent = item.para1;
-      ventPara2.textContent = item.para2;
-
-      ventRow1Label.textContent = item.specs[0][0];
-      ventRow1Value.textContent = item.specs[0][1];
-      ventRow2Label.textContent = item.specs[1][0];
-      ventRow2Value.textContent = item.specs[1][1];
-      ventRow3Label.textContent = item.specs[2][0];
-      ventRow3Value.textContent = item.specs[2][1];
-      ventRow4Label.textContent = item.specs[3][0];
-      ventRow4Value.textContent = item.specs[3][1];
+      document.getElementById("ventTitle").textContent = item.title;
+      document.getElementById("ventLabel").textContent = item.label;
+      document.getElementById("ventReadMore").href = item.link;
     }
 
-    document.getElementById("ventPrev").addEventListener("click", function () {
+    document.getElementById("ventPrev").onclick = () => {
       currentVentIndex = (currentVentIndex - 1 + ventilationProducts.length) % ventilationProducts.length;
       renderVentilation(currentVentIndex);
-    });
+    };
 
-    document.getElementById("ventNext").addEventListener("click", function () {
+    document.getElementById("ventNext").onclick = () => {
       currentVentIndex = (currentVentIndex + 1) % ventilationProducts.length;
       renderVentilation(currentVentIndex);
-    });
+    };
 
     renderVentilation(currentVentIndex);
   </script>
