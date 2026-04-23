@@ -156,18 +156,73 @@ footer {
   <div class="spinner"></div>
 </div>
 <!-- NAVBAR -->
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3aa6d0;
+}
+
+.nav-links a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #1abc9c;
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+<!-- TOP CONTACT BAR -->
+<div style="background:#0b4f6c; color:white; padding:8px 8%; font-size:14px;">
+    📞 +65 9123 4567 &nbsp;&nbsp;&nbsp;
+    ✉️ info@hysentgroup.com
+</div>
+
+<div class="top-bar">
+    <div class="top-content">
+        <div class="spacer"></div>
+
+        <div class="social-links">
+            <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+            </a>
+
+            <a href="https://linkedin.com/company/YOUR_LINKEDIN" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png">
+            </a>
+        </div>
+    </div>
+</div>
+
 <nav class="navbar">
-    <div class="logo">Hysent International</div>
+    <div class="logo">Hysent</div>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">Company</a>
 
         <div class="dropdown">
-            <a href="products.html">Products ▾</a>
+            <a href="products.html" class="dropbtn">Products ▾</a>
 
-            <div class="mega-menu full-width">
-
+            <div class="mega-menu">
                 <div class="mega-column">
                     <h4>Ventilation Fans</h4>
                     <a href="ventilation.html">Axial Flow Fans</a>
@@ -188,7 +243,6 @@ footer {
                     <a href="valves.html">Valves</a>
                     <a href="bolts.html">Bolts & Pipe Clamp</a>
                 </div>
-
             </div>
         </div>
 
