@@ -149,7 +149,9 @@
 </head>
 
 <body>
-
+<div id="loader">
+  <div class="spinner"></div>
+</div>
 <!-- TOP CONTACT BAR -->
 <div style="background:#0b4f6c; color:white; padding:8px 8%; font-size:14px;">
     📞 +65 9123 4567 &nbsp;&nbsp;&nbsp;
@@ -358,12 +360,7 @@ setInterval(() => {
     showSlide(next);
 }, 5000);
 </script>
-
-</body>
-<div id="loader">
-  <div class="spinner"></div>
-</div>
-    <script>
+  <script>
 const loader = document.getElementById("loader");
 
 // Fade out when page loads
@@ -386,4 +383,5 @@ document.querySelectorAll("a").forEach(link => {
   }
 });
 </script>
+</body>
 </html>
