@@ -37,7 +37,7 @@
     z-index: 2;
 }
 
-/* MAIN ABOUT SECTION */
+/* MAIN ABOUT */
 .about-main {
     padding: 60px 10%;
     background: #f7f7f7;
@@ -53,7 +53,6 @@
 .about-header h2 {
     font-size: 32px;
     border-bottom: 3px solid #0d6efd;
-    display: inline-block;
     padding-bottom: 5px;
 }
 
@@ -62,12 +61,10 @@
     color: #777;
 }
 
-/* CONTENT GRID */
 .about-container {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 40px;
-    align-items: start;
 }
 
 /* TEXT */
@@ -75,7 +72,6 @@
     margin-bottom: 18px;
     line-height: 1.8;
     color: #333;
-    font-size: 15px;
 }
 
 /* IMAGE PLACEHOLDER */
@@ -83,15 +79,13 @@
     width: 100%;
     height: 320px;
     background: #ddd;
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #666;
-    font-size: 14px;
 }
 
-/* THUMBNAIL PLACEHOLDER ROW */
+/* THUMBNAILS */
 .image-thumbnails {
     margin-top: 15px;
     display: flex;
@@ -102,10 +96,9 @@
     width: 60px;
     height: 40px;
     background: #ccc;
-    border-radius: 4px;
 }
 
-/* CARDS (reuse but improved spacing) */
+/* CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -117,7 +110,6 @@
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* CTA */
@@ -132,7 +124,6 @@
     background: white;
     color: #0d6efd;
     padding: 12px 25px;
-    border-radius: 6px;
     text-decoration: none;
     display: inline-block;
     margin-top: 15px;
@@ -147,50 +138,16 @@ footer {
 }
 
 </style>
-
 </head>
 
 <body>
-<body>
+
+<!-- ✅ LOADER -->
 <div id="loader">
   <div class="spinner"></div>
 </div>
-<!-- NAVBAR -->
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 8%;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #3aa6d0;
-}
-
-.nav-links a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: #1abc9c;
-}
-
-</style>
-
-</head>
-
-<body>
-<div id="loader">
-  <div class="spinner"></div>
-</div>
-<!-- TOP CONTACT BAR -->
+<!-- TOP BAR -->
 <div style="background:#0b4f6c; color:white; padding:8px 8%; font-size:14px;">
     📞 +65 9123 4567 &nbsp;&nbsp;&nbsp;
     ✉️ info@hysentgroup.com
@@ -201,17 +158,13 @@ footer {
         <div class="spacer"></div>
 
         <div class="social-links">
-            <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-            </a>
-
-            <a href="https://linkedin.com/company/YOUR_LINKEDIN" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png">
-            </a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png"></a>
         </div>
     </div>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">Hysent</div>
 
@@ -220,7 +173,7 @@ footer {
         <a href="about.html">Company</a>
 
         <div class="dropdown">
-            <a href="products.html" class="dropbtn">Products ▾</a>
+            <a href="products.html">Products ▾</a>
 
             <div class="mega-menu">
                 <div class="mega-column">
@@ -261,7 +214,7 @@ footer {
     </div>
 </section>
 
-<!-- MAIN ABOUT (MATCHES THEIR STYLE) -->
+<!-- MAIN CONTENT -->
 <section class="about-main">
 
     <div class="about-header">
@@ -271,39 +224,23 @@ footer {
 
     <div class="about-container">
 
-        <!-- TEXT LEFT -->
+        <!-- TEXT -->
         <div class="about-text">
+            <p>Hysent International (China) Limited, headquartered in Hong Kong, is dedicated to promoting premium quality equipment and products in marine & offshore segments, having offices located in China’s Shanghai, Dalian and Japan’s Osaka.</p>
 
-            <p>
-                Hysent International (China) Limited, headquartered in Hong Kong, is dedicated to promoting premium quality equipment and products in marine & offshore segments, having offices located in China’s Shanghai, Dalian and Japan’s Osaka.
-            </p>
+            <p>Professional technical supports and prompt services are our promises we made to customers. After years of rapid development, we have already forged solid cooperation with the majority of shipyards in China and ship-owners all over the world.</p>
 
-            <p>
-                Professional technical supports and prompt services are our promises we made to customers. After years of rapid development, we have already forged solid cooperation with the majority of shipyards in China and ship-owners all over the world.
-            </p>
+            <p>Integrity, Quality, and Best Service are our philosophy. We always believe that integrity is the fundamental for long-term cooperation, quality reliable is the key to customers’ trust, and professional & prompt services is the clients’ satisfaction.</p>
 
-            <p>
-                Integrity, Quality, and Best Service are our philosophy. We always believe that integrity is the fundamental for long-term cooperation, quality reliable is the key to customers’ trust, and professional & prompt services is the clients’ satisfaction.
-            </p>
-
-            <p>
-                Representing the integrity of business ethics, the first-class quality, and the best service, providing the strongest support for all the parties, fulfills the win-win and common development with our customers, rewarding our employees and society at most.
-            </p>
-
+            <p>Representing the integrity of business ethics, the first-class quality, and the best service, providing the strongest support for all the parties, fulfills the win-win and common development with our customers, rewarding our employees and society at most.</p>
         </div>
 
-        <!-- IMAGE PLACEHOLDER RIGHT -->
+        <!-- IMAGE PLACEHOLDER -->
         <div>
-            <div class="about-image">
-                Image Placeholder
-            </div>
+            <div class="about-image">Image Placeholder</div>
 
             <div class="image-thumbnails">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div></div><div></div><div></div><div></div><div></div>
             </div>
         </div>
 
@@ -311,9 +248,8 @@ footer {
 
 </section>
 
-<!-- SOLUTIONS -->
+<!-- CARDS -->
 <section class="cards">
-
     <div class="card">
         <h3>Ventilation Systems</h3>
         <p>High-performance industrial airflow systems engineered for safety and efficiency.</p>
@@ -328,7 +264,6 @@ footer {
         <h3>Fire & Blast Protection</h3>
         <p>Engineered to withstand extreme conditions and ensure compliance.</p>
     </div>
-
 </section>
 
 <!-- CTA -->
@@ -342,20 +277,19 @@ footer {
 <footer>
     <p>© 2026 Hysent International</p>
 </footer>
+
+<!-- LOADER SCRIPT -->
 <script>
 const loader = document.getElementById("loader");
 
-// Fade out when page loads
 window.addEventListener("load", () => {
   loader.classList.add("fade-out");
 });
 
-// Show loader when clicking links
 document.querySelectorAll("a").forEach(link => {
   if (link.href && !link.href.includes("#")) {
     link.addEventListener("click", function(e) {
       e.preventDefault();
-
       loader.classList.remove("fade-out");
 
       setTimeout(() => {
@@ -365,5 +299,6 @@ document.querySelectorAll("a").forEach(link => {
   }
 });
 </script>
+
 </body>
 </html>
