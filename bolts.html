@@ -227,6 +227,28 @@
   <footer>
     <p>© 2026 Hysent International</p>
   </footer>
+ <script>
+const loader = document.getElementById("loader");
 
+// Fade out when page loads
+window.addEventListener("load", () => {
+  loader.classList.add("fade-out");
+});
+
+// Show loader when clicking links
+document.querySelectorAll("a").forEach(link => {
+  if (link.href && !link.href.includes("#")) {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      loader.classList.remove("fade-out");
+
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 300);
+    });
+  }
+});
+</script>
 </body>
 </html>
