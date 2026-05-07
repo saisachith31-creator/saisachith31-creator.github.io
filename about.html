@@ -279,25 +279,23 @@ footer {
 </footer>
 
 <!-- LOADER SCRIPT -->
-<script>
-const loader = document.getElementById("loader");
+        <script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+    if (!loader) return;
 
-window.addEventListener("load", () => {
-  loader.classList.add("fade-out");
-});
+    // fade out
+    loader.style.transition = "opacity 0.5s ease";
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
 
-document.querySelectorAll("a").forEach(link => {
-  if (link.href && !link.href.includes("#")) {
-    link.addEventListener("click", function(e) {
-      e.preventDefault();
-      loader.classList.remove("fade-out");
-
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 300);
-    });
-  }
-});
+    // remove from DOM after fade
+    setTimeout(() => {
+      if (loader && loader.parentNode) {
+        loader.parentNode.removeChild(loader);
+      }
+    }, 600);
+  });
 </script>
 
 </body>
