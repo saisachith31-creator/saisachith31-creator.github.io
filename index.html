@@ -380,4 +380,22 @@ document.querySelectorAll("a").forEach(link => {
 });
 </script>
 </body>
+    <script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+    if (!loader) return;
+
+    // fade out
+    loader.style.transition = "opacity 0.5s ease";
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+
+    // remove from DOM after fade
+    setTimeout(() => {
+      if (loader && loader.parentNode) {
+        loader.parentNode.removeChild(loader);
+      }
+    }, 600);
+  });
+</script>
 </html>
