@@ -280,36 +280,43 @@ footer {
 <script>
 const loader = document.getElementById("page-loader");
 
-// Fade out when page loads
 window.addEventListener("load", () => {
-  loader.style.opacity = "0";
-  loader.style.pointerEvents = "none";
 
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 500);
+    loader.style.transition = "opacity 0.5s ease";
+
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
+    loader.style.pointerEvents = "none";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+
 });
 
-// Show loader when clicking links
 document.querySelectorAll("a").forEach(link => {
 
-  if (
-    link.href &&
-    !link.href.includes("#") &&
-    !link.target.includes("_blank")
-  ) {
+    if (
+        link.href &&
+        !link.href.includes("#") &&
+        link.target !== "_blank"
+    ) {
 
-    link.addEventListener("click", function(e) {
-      e.preventDefault();
+        link.addEventListener("click", function(e) {
 
-      loader.style.display = "flex";
+            e.preventDefault();
 
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 300);
-    });
+            loader.style.display = "flex";
+            loader.style.visibility = "visible";
+            loader.style.opacity = "1";
 
-  }
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 300);
+
+        });
+
+    }
 
 });
 </script>
