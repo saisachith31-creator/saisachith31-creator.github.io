@@ -236,6 +236,7 @@ font-size: 20px;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  transition: opacity 0.5s ease;
 }
 
 .loading-text {
