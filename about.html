@@ -277,23 +277,41 @@ footer {
 </footer>
 
 <!-- LOADER SCRIPT -->
-        <script>
-  window.addEventListener("load", function () {
-    const loader = document.getElementById("page-loader");
-    if (!loader) return;
+<script>
+const loader = document.getElementById("page-loader");
 
-    // fade out
-    loader.style.transition = "opacity 0.5s ease";
-    loader.style.opacity = "0";
-    loader.style.pointerEvents = "none";
+// Fade out when page loads
+window.addEventListener("load", () => {
+  loader.style.opacity = "0";
+  loader.style.pointerEvents = "none";
 
-    // remove from DOM after fade
-    setTimeout(() => {
-      if (loader && loader.parentNode) {
-        loader.parentNode.removeChild(loader);
-      }
-    }, 600);
-  });
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 500);
+});
+
+// Show loader when clicking links
+document.querySelectorAll("a").forEach(link => {
+
+  if (
+    link.href &&
+    !link.href.includes("#") &&
+    !link.target.includes("_blank")
+  ) {
+
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      loader.style.display = "flex";
+
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 300);
+    });
+
+  }
+
+});
 </script>
 
 </body>
