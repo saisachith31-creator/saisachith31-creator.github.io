@@ -189,27 +189,20 @@ window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 </script>
 <script>
-const loader = document.getElementById("loader");
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+    if (!loader) return;
 
-// Fade out when page loads
-window.addEventListener("load", () => {
-  loader.classList.add("fade-out");
-});
+    loader.style.transition = "opacity 0.5s ease";
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
 
-// Show loader when clicking links
-document.querySelectorAll("a").forEach(link => {
-  if (link.href && !link.href.includes("#")) {
-    link.addEventListener("click", function(e) {
-      e.preventDefault();
-
-      loader.classList.remove("fade-out");
-
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 300);
-    });
-  }
-});
+    setTimeout(() => {
+      if (loader && loader.parentNode) {
+        loader.parentNode.removeChild(loader);
+      }
+    }, 600);
+  });
 </script>
 </body>
 </html>
