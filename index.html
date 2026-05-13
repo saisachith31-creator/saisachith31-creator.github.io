@@ -173,6 +173,7 @@
     </a>
 
 </div>
+        <div id="google_translate_element"></div>
     </div>
 </div>
 
@@ -381,5 +382,19 @@ setInterval(() => {
     }, 600);
   });
 </script>
+    <script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'zh-CN,en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element'
+  );
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
