@@ -344,7 +344,7 @@ animation: swipe 2s linear infinite;
 }
 .services-hero{
     height: 45vh;
-    background: url("hero11.jpg.jpg") center/cover no-repeat;
+    background: url("hero11.jpg") center/cover no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
