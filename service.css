@@ -244,7 +244,7 @@
 /* ================= CARDS ================= */
 
 .card {
-    background: #f1f5f9;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
     padding: 25px;
     border-radius: 12px;
     width: 280px;
