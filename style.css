@@ -14,7 +14,7 @@ justify-content: space-between;
 align-items: center;
 padding: 15px 8%;
 background: #f0ffff ;
-color: #48d1cc;
+color: #73B7DC;
 position: sticky;
 top: 0;
 z-index: 1000;
@@ -33,13 +33,13 @@ align-items: center;
 }
 
 .nav-links a {
-color: #00ced;
+color: #73B7DC;
 text-decoration: none;
 transition: 0.3s;
 }
 
 .nav-links a:hover {
-color: #64f0f2;
+color: #73B7DC;
 }
 
 /* DROPDOWN */
