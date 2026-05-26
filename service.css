@@ -44,41 +44,6 @@
     transform: scale(1.2);
 }
 
-/* ================= NAVBAR ================= */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 8%;
-    background: #f0ffff;
-    color: #73B7DC;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.nav-links a {
-    color: #000000;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #7c3aed;
-}
-
 /* ================= PRODUCTS ALIGN FIX ================= */
 
 .dropdown {
