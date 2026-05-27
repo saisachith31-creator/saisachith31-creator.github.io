@@ -1,85 +1,78 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
+/* ================= TRACK RECORD PAGE ================= */
 
 header {
-    background: linear-gradient(135deg, #003087, #0052cc);
+    background: linear-gradient(135deg, #0b4f6c, #1e3a8a);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px 60px;
+    position: relative;
 }
 
 header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+    font-size: 42px;
+    margin-bottom: 12px;
+    font-weight: 700;
 }
 
 .subtitle {
-    font-size: 1.3rem;
-    opacity: 0.9;
+    font-size: 1.35rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.container {
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
+/* ================= FILTERS ================= */
 .filters {
     display: flex;
     gap: 15px;
-    margin-bottom: 30px;
+    margin: 40px 8% 30px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .filters input, .filters select {
-    padding: 12px 16px;
-    border: 1px solid #ddd;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     min-width: 280px;
     outline: none;
+    transition: all 0.3s;
 }
 
 .filters input:focus, .filters select:focus {
-    border-color: #0052cc;
-    box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.1);
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
 }
 
-/* Table Styling */
+/* ================= TABLE ================= */
 #projectsTable {
     width: 100%;
+    margin: 0 8%;
     border-collapse: collapse;
     background: white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow: hidden;
 }
 
 #projectsTable th {
-    background: #003087;
+    background: #0b4f6c;
     color: white;
-    padding: 18px 12px;
+    padding: 20px 14px;
     text-align: left;
     font-weight: 600;
+    font-size: 1.05rem;
 }
 
 #projectsTable td {
-    padding: 16px 12px;
-    border-bottom: 1px solid #eee;
+    padding: 18px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
 }
 
 #projectsTable tr:hover {
-    background-color: #f0f5ff;
+    background-color: #f0f7ff;
     transition: all 0.3s ease;
 }
 
@@ -87,30 +80,42 @@ header h1 {
     border-bottom: none;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .filters {
-        flex-direction: column;
-    }
-    
-    .filters input, .filters select {
-        min-width: 100%;
+/* Responsive Table */
+@media (max-width: 1200px) {
+    #projectsTable {
+        margin: 0 5%;
     }
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2rem;
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filters input, .filters select {
+        min-width: 100%;
+        max-width: 400px;
     }
     
     #projectsTable {
         font-size: 0.95rem;
     }
+    
+    #projectsTable th, 
+    #projectsTable td {
+        padding: 14px 10px;
+    }
 }
 
-/* Scrollable on mobile */
+/* Optional: Make table scrollable on mobile */
 @media (max-width: 768px) {
     .container {
         overflow-x: auto;
+        padding-bottom: 20px;
+    }
+    
+    #projectsTable {
+        min-width: 900px; /* Force horizontal scroll if needed */
     }
 }
