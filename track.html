@@ -229,5 +229,37 @@
             });
         }
     </script>
+              <script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+    if (!loader) return;
+
+    // fade out
+    loader.style.transition = "opacity 0.5s ease";
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+
+    // remove from DOM after fade
+    setTimeout(() => {
+      if (loader && loader.parentNode) {
+        loader.parentNode.removeChild(loader);
+      }
+    }, 600);
+  });
+</script>
+    <script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'zh-CN,en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element'
+  );
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
