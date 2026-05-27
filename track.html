@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Record | Hysent</title>
+    <link rel="stylesheet" href="track.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Our Track Record</h1>
+        <p class="subtitle">Proven Excellence in Offshore & Marine Projects</p>
+    </header>
+
+    <div class="container">
+        <!-- Filters -->
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search by project, customer, or item..." onkeyup="filterTable()">
+            
+            <select id="yearFilter" onchange="filterTable()">
+                <option value="">All Years</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+            </select>
+
+            <select id="customerFilter" onchange="filterTable()">
+                <option value="">All Customers</option>
+                <option value="PETROBRAS">PETROBRAS</option>
+                <option value="SBM">SBM</option>
+                <option value="MODEC">MODEC</option>
+                <option value="ABB">ABB</option>
+                <option value="SAIPEM">SAIPEM</option>
+                <option value="MISC">MISC</option>
+            </select>
+        </div>
+
+        <!-- Projects Table -->
+        <table id="projectsTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Customer</th>
+                    <th>Item</th>
+                    <th>Project</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- E.S Tech Marine Projects -->
+                <tr data-year="2024" data-customer="PETROBRAS">
+                    <td>2024-12-15</td>
+                    <td>PETROBRAS</td>
+                    <td>A60 WATERTIGHT DOORS</td>
+                    <td>P80/P83-M15</td>
+                    <td>JINCHUANG</td>
+                </tr>
+                <tr data-year="2024" data-customer="SBM">
+                    <td>2024-06-10</td>
+                    <td>SBM</td>
+                    <td>A60 REMOVABLE HATCH</td>
+                    <td>MERO4 ADD</td>
+                    <td>COSCO (QIDONG)</td>
+                </tr>
+                <tr data-year="2024" data-customer="ABB">
+                    <td>2024-05-10</td>
+                    <td>ABB</td>
+                    <td>J60/A60 WATERTIGHT DOORS</td>
+                    <td>P82 E-HOUSE</td>
+                    <td>CMIC</td>
+                </tr>
+                <tr data-year="2023" data-customer="SBM">
+                    <td>2023-11-16</td>
+                    <td>SBM</td>
+                    <td>H120 WINDOW</td>
+                    <td>CMHI-287</td>
+                    <td>CMHI</td>
+                </tr>
+                <tr data-year="2022" data-customer="MISC">
+                    <td>2022-07-28</td>
+                    <td>MISC</td>
+                    <td>A60 WEATHERTIGHT/GASTIGHT DOORS</td>
+                    <td>MERO 3 (Multiple Packages)</td>
+                    <td>HYSENT</td>
+                </tr>
+                <tr data-year="2022" data-customer="PETROBRAS">
+                    <td>2022-04-26</td>
+                    <td>PETROBRAS</td>
+                    <td>H60 BLAST HATCHES</td>
+                    <td>P80/P83 HULL</td>
+                    <td>CMIC</td>
+                </tr>
+                <!-- Add more rows as needed -->
+
+                <!-- UKS Projects -->
+                <tr data-year="2021" data-customer="CNOOC">
+                    <td>2021</td>
+                    <td>CNOOC</td>
+                    <td>UKS Grating Fastening System</td>
+                    <td>Lufeng 15-1/14-4 Project</td>
+                    <td>Offshore</td>
+                </tr>
+                <tr data-year="2021" data-customer="SBM">
+                    <td>2021</td>
+                    <td>SBM / Imodco</td>
+                    <td>UKS X-BT Fastening</td>
+                    <td>Calm Buoy Projects</td>
+                    <td>USA Offshore</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function filterTable() {
+            const search = document.getElementById("searchInput").value.toLowerCase();
+            const year = document.getElementById("yearFilter").value;
+            const customer = document.getElementById("customerFilter").value.toLowerCase();
+
+            const rows = document.querySelectorAll("#projectsTable tbody tr");
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                const rowYear = row.getAttribute("data-year");
+                const rowCustomer = row.getAttribute("data-customer").toLowerCase();
+
+                const matchesSearch = text.includes(search);
+                const matchesYear = !year || rowYear === year;
+                const matchesCustomer = !customer || rowCustomer.includes(customer);
+
+                row.style.display = (matchesSearch && matchesYear && matchesCustomer) ? "" : "none";
+            });
+        }
+    </script>
+</body>
+</html>
