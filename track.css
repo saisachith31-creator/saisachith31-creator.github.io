@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #003087, #0052cc);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filters input, .filters select {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 280px;
+    outline: none;
+}
+
+.filters input:focus, .filters select:focus {
+    border-color: #0052cc;
+    box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.1);
+}
+
+/* Table Styling */
+#projectsTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#projectsTable th {
+    background: #003087;
+    color: white;
+    padding: 18px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+#projectsTable td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+#projectsTable tr:hover {
+    background-color: #f0f5ff;
+    transition: all 0.3s ease;
+}
+
+#projectsTable tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filters input, .filters select {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    #projectsTable {
+        font-size: 0.95rem;
+    }
+}
+
+/* Scrollable on mobile */
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+    }
+}
