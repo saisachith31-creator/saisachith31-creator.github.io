@@ -5,7 +5,6 @@ header {
     color: white;
     text-align: center;
     padding: 80px 20px 60px;
-    position: relative;
 }
 
 header h1 {
@@ -17,8 +16,6 @@ header h1 {
 .subtitle {
     font-size: 1.35rem;
     opacity: 0.95;
-    max-width: 700px;
-    margin: 0 auto;
 }
 
 /* ================= FILTERS ================= */
@@ -35,87 +32,78 @@ header h1 {
     border: 2px solid #e2e8f0;
     border-radius: 8px;
     font-size: 1.05rem;
-    min-width: 280px;
+    min-width: 260px;
     outline: none;
-    transition: all 0.3s;
 }
 
 .filters input:focus, .filters select:focus {
     border-color: #2563eb;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
 }
 
 /* ================= TABLE ================= */
+.container {
+    padding: 0 8%;
+    overflow-x: auto;           /* This fixes the horizontal scroll */
+}
+
 #projectsTable {
     width: 100%;
-    margin: 0 8%;
+    min-width: 1100px;          /* Forces scroll instead of squeezing */
     border-collapse: collapse;
     background: white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 #projectsTable th {
     background: #0b4f6c;
     color: white;
-    padding: 20px 14px;
+    padding: 18px 12px;
     text-align: left;
     font-weight: 600;
-    font-size: 1.05rem;
+    white-space: nowrap;
 }
 
 #projectsTable td {
-    padding: 18px 14px;
+    padding: 16px 12px;
     border-bottom: 1px solid #f1f5f9;
     vertical-align: top;
 }
 
 #projectsTable tr:hover {
     background-color: #f0f7ff;
-    transition: all 0.3s ease;
 }
 
-#projectsTable tr:last-child td {
-    border-bottom: none;
+/* Make long text wrap better */
+#projectsTable td {
+    max-width: 220px;
+    word-wrap: break-word;
 }
 
-/* Responsive Table */
+/* Responsive */
 @media (max-width: 1200px) {
-    #projectsTable {
-        margin: 0 5%;
+    .container {
+        padding: 0 5%;
     }
 }
 
 @media (max-width: 768px) {
     .filters {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
     
     .filters input, .filters select {
         min-width: 100%;
-        max-width: 400px;
     }
     
     #projectsTable {
-        font-size: 0.95rem;
+        font-size: 0.92rem;
     }
     
-    #projectsTable th, 
-    #projectsTable td {
-        padding: 14px 10px;
-    }
-}
-
-/* Optional: Make table scrollable on mobile */
-@media (max-width: 768px) {
-    .container {
-        overflow-x: auto;
-        padding-bottom: 20px;
-    }
-    
-    #projectsTable {
-        min-width: 900px; /* Force horizontal scroll if needed */
+    #projectsTable th, #projectsTable td {
+        padding: 12px 8px;
     }
 }
